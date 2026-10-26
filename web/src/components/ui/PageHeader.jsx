@@ -1,0 +1,3 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+const PageHeader = ({ kicker, title, description, actions }) => (_jsxs("div", { className: "mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between", children: [_jsxs("div", { className: "min-w-0", children: [kicker && _jsx("p", { className: "mb-2 t-small font-medium text-ink-3", children: kicker }), _jsx("h1", { className: "t-h1", children: title }), description && _jsx("p", { className: "mt-1.5 t-body text-ink-3", children: description })] }), actions && _jsx("div", { className: "flex shrink-0 items-center gap-2", children: actions })] }));
+export default PageHeader;

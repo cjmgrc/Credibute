@@ -1,0 +1,7 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { cn } from '@/lib/cn';
+export const Spinner = ({ size = 16, className }) => (_jsxs("svg", { width: size, height: size, viewBox: "0 0 24 24", fill: "none", "aria-hidden": true, className: cn('animate-spin [animation-duration:0.7s] motion-reduce:[animation-duration:1.6s]', className), children: [_jsx("circle", { cx: "12", cy: "12", r: "9", stroke: "currentColor", strokeOpacity: ".2", strokeWidth: "3" }), _jsx("path", { d: "M21 12a9 9 0 0 0-9-9", stroke: "currentColor", strokeWidth: "3", strokeLinecap: "round" })] }));
+export const Skeleton = ({ className }) => (_jsx("div", { "aria-hidden": true, className: cn('animate-pulse rounded-lg bg-sunken motion-reduce:animate-none', className) }));
+export const EmptyState = ({ icon, title, children, action }) => (_jsxs("div", { className: "flex flex-col items-center px-6 py-14 text-center", children: [_jsx("span", { className: "mb-4 grid size-12 place-items-center rounded-2xl bg-accent-soft text-accent-text", children: icon }), _jsx("h3", { className: "t-h3", children: title }), children && _jsx("p", { className: "mt-1 max-w-sm t-small text-ink-3", children: children }), action && _jsx("div", { className: "mt-5", children: action })] }));
+/** Surface used everywhere. Radius steps up with size: card (1rem) → panel (1.5rem). */
+export const Card = ({ children, className, as: Tag = 'div' }) => (_jsx(Tag, { className: cn('rounded-card border border-line bg-surface', className), children: children }));

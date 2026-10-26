@@ -1,0 +1,408 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────────────────────
+   Credibute design tokens
+   Light is the default; [data-theme="dark"] is set before first
+   paint by the inline script in index.html.
+   ────────────────────────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+  --canvas: #f7f7f5;
+  --surface: #ffffff;
+  --sunken: #f0f0ed;
+  --ink: #16161d;
+  --ink-2: #4b4b57;
+  --ink-3: #6e6e7a;
+  --line: #e7e7e2;
+  --line-strong: #d3d3cc;
+  --accent: #5457d6;
+  --accent-hover: #4a4dc9;
+  --accent-text: #4346c4;
+  --accent-soft: #eef0ff;
+  --ok: #17794f;
+  --ok-soft: #e7f5ed;
+  --warn: #92580a;
+  --warn-soft: #fff3df;
+  --bad: #b3382f;
+  --bad-soft: #fdeceb;
+  --night: #17181f;
+  --night-line: #2a2b35;
+  --scrim: rgb(12 12 20 / 0.34);
+  --material: color-mix(in oklab, var(--surface) 72%, transparent);
+  --sh-float:
+    0 1px 2px rgb(20 20 30 / 0.04), 0 10px 28px -6px rgb(20 20 30 / 0.1),
+    0 32px 64px -16px rgb(20 20 30 / 0.12);
+  --sh-lift: 0 1px 2px rgb(20 20 30 / 0.05), 0 4px 12px -2px rgb(20 20 30 / 0.06);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #0e0e12;
+  --surface: #16161c;
+  --sunken: #1d1d24;
+  --ink: #f3f3f6;
+  --ink-2: #b6b6c2;
+  --ink-3: #8e8e9b;
+  --line: #25252e;
+  --line-strong: #363642;
+  --accent: #5f63e8;
+  --accent-hover: #6e72ee;
+  --accent-text: #a1a4ff;
+  --accent-soft: #1f2043;
+  --ok: #4cc38a;
+  --ok-soft: #13271e;
+  --warn: #f0b35a;
+  --warn-soft: #2a2010;
+  --bad: #f0807a;
+  --bad-soft: #2d1716;
+  --night: #101015;
+  --night-line: #25252e;
+  --scrim: rgb(0 0 0 / 0.55);
+  --sh-float:
+    0 1px 2px rgb(0 0 0 / 0.3), 0 10px 28px -6px rgb(0 0 0 / 0.5), 0 32px 64px -16px rgb(0 0 0 / 0.6);
+  --sh-lift: 0 1px 2px rgb(0 0 0 / 0.3), 0 4px 12px -2px rgb(0 0 0 / 0.35);
+}
+
+/* The printed report is always paper: re-declare the light tokens inside it. */
+.paper {
+  --surface: #ffffff;
+  --sunken: #f4f4f1;
+  --ink: #16161d;
+  --ink-2: #4b4b57;
+  --ink-3: #6e6e7a;
+  --line: #e7e7e2;
+  --line-strong: #d3d3cc;
+  --accent: #5457d6;
+  --accent-text: #4346c4;
+  --accent-soft: #eef0ff;
+  --ok: #17794f;
+  --ok-soft: #e7f5ed;
+  --warn: #92580a;
+  --warn-soft: #fff3df;
+  color-scheme: light;
+  color: var(--ink);
+  background: #fff;
+}
+
+@theme inline {
+  --font-sans:
+    "Manrope Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-text: var(--accent-text);
+  --color-accent-soft: var(--accent-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --color-night: var(--night);
+  --color-night-line: var(--night-line);
+
+  /* Radius follows hierarchy: small controls < cards < large surfaces. */
+  --radius-control: 0.625rem;
+  --radius-card: 1rem;
+  --radius-panel: 1.5rem;
+
+  --shadow-float: var(--sh-float);
+  --shadow-lift: var(--sh-lift);
+
+  /* Motion: strong custom curves. Built-ins are too weak. Never ease-in. */
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* ── Type scale ──────────────────────────────────────────────
+   Tracking tightens as size grows; leading tightens too.
+   Everything is rem so it follows the user's text size. */
+@utility t-display {
+  font-size: clamp(2.75rem, 7.2vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  font-weight: 800;
+}
+@utility t-h1 {
+  font-size: clamp(1.75rem, 3.4vw, 2.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.032em;
+  font-weight: 450;
+}
+@utility t-h2 {
+  font-size: 1.375rem;
+  line-height: 1.25;
+  letter-spacing: -0.022em;
+  font-weight: 500;
+}
+@utility t-h3 {
+  font-size: 1rem;
+  line-height: 1.35;
+  letter-spacing: -0.011em;
+  font-weight: 600;
+}
+@utility t-body {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+}
+@utility t-small {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+@utility t-micro {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Base ───────────────────────────────────────────────────── */
+html {
+  background: var(--canvas);
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 5rem;
+}
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+::selection {
+  background: color-mix(in oklab, var(--accent) 24%, transparent);
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+button,
+a,
+[role="button"] {
+  touch-action: manipulation;
+}
+input,
+select,
+textarea {
+  font: inherit;
+  font-size: max(16px, 1em); /* prevents iOS zoom-on-focus */
+}
+@media (min-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: 0.875rem;
+  }
+}
+
+/* ── Materials (translucent chrome) ─────────────────────────── */
+.material {
+  background: var(--material);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+}
+.material-thick {
+  background: color-mix(in oklab, var(--surface) 82%, transparent);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+  backdrop-filter: blur(32px) saturate(180%);
+}
+@media (prefers-reduced-transparency: reduce) {
+  .material,
+  .material-thick {
+    background: var(--surface);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+@media (prefers-contrast: more) {
+  :root {
+    --line: #a9a9a2;
+    --line-strong: #6e6e68;
+  }
+}
+
+/* ── Overlays: <dialog>-based modal + side sheet ─────────────
+   Enter/exit are CSS transitions toggled by data-visible, so they
+   retarget cleanly if the user closes mid-open. Exit is faster than
+   enter, and leaves along the same path it arrived on. */
+dialog.overlay {
+  border: 0;
+  padding: 0;
+  color: inherit;
+  overflow: visible;
+  max-width: none;
+  max-height: none;
+  background: transparent;
+}
+dialog.overlay::backdrop {
+  background: rgb(12 12 20 / 0);
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  transition:
+    background-color 200ms var(--ease-out-strong),
+    backdrop-filter 200ms var(--ease-out-strong);
+}
+dialog.overlay[data-visible="true"]::backdrop {
+  background: rgb(12 12 20 / 0.34);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  transition-duration: 260ms;
+}
+[data-theme="dark"] dialog.overlay[data-visible="true"]::backdrop {
+  background: rgb(0 0 0 / 0.55);
+}
+
+/* Centered modal: modals keep a centered origin. */
+dialog.overlay-center {
+  width: min(30rem, calc(100vw - 2rem));
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+  box-shadow: var(--sh-float);
+  border: 1px solid var(--line);
+  opacity: 0;
+  transform: scale(0.96) translateY(6px);
+  transition:
+    opacity 150ms var(--ease-out-strong),
+    transform 150ms var(--ease-out-strong);
+}
+dialog.overlay-center[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+  transition-duration: 240ms;
+}
+
+/* Side sheet: translucent, thick material, anchored to the right edge. */
+dialog.overlay-side {
+  margin: 0 0 0 auto;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: min(31rem, 100vw);
+  height: 100dvh;
+  max-height: 100dvh;
+  border-left: 1px solid var(--line);
+  background: color-mix(in oklab, var(--surface) 84%, transparent);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+  backdrop-filter: blur(32px) saturate(180%);
+  box-shadow: var(--sh-float);
+  transform: translateX(100%);
+  transition: transform 220ms var(--ease-drawer);
+  will-change: transform;
+}
+dialog.overlay-side[data-visible="true"] {
+  transform: translateX(0);
+  transition-duration: 340ms;
+}
+dialog.overlay-side[data-dragging="true"] {
+  transition: none;
+}
+@media (prefers-reduced-transparency: reduce) {
+  dialog.overlay-side {
+    background: var(--surface);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  dialog.overlay-side {
+    transform: none;
+    opacity: 0;
+    transition: opacity 160ms ease;
+  }
+  dialog.overlay-side[data-visible="true"] {
+    opacity: 1;
+  }
+  dialog.overlay-center {
+    transform: none;
+  }
+}
+
+/* Soft scroll-edge instead of a hard divider under floating chrome */
+.scroll-edge {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12px);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 12px);
+}
+
+/* Entrance used once per page, not per element. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 360ms var(--ease-out-strong) both;
+  animation-delay: calc(var(--i, 0) * 50ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+}
+
+/* ── Print: only the report paper is printed ──────────────── */
+@media print {
+  @page {
+    margin: 14mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+  }
+  body * {
+    visibility: hidden;
+  }
+  .paper,
+  .paper * {
+    visibility: visible;
+  }
+  .paper {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    box-shadow: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Soft colour cross-fade while the theme flips (set by ThemeContext for ~260ms). */
+html[data-theme-fade] *,
+html[data-theme-fade] *::before,
+html[data-theme-fade] *::after {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    fill 220ms ease,
+    stroke 220ms ease !important;
+}

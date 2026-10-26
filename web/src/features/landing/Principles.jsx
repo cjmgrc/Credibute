@@ -1,0 +1,11 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { ArrowRight, Code2, ExternalLink, FileCheck2, Lock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { REPO_URL } from '@/domain/rubric';
+const cardLink = 'mt-6 inline-flex items-center gap-1.5 t-small font-semibold text-accent-text transition-[gap] duration-150 ease-out-strong hover:gap-2.5';
+const Principles = () => (_jsxs("section", { className: "mx-auto max-w-6xl px-5 py-24 sm:px-8", children: [_jsxs("div", { className: "mx-auto max-w-xl text-center", children: [_jsx("h2", { className: "t-h1", children: "Evidence, not guesswork." }), _jsx("p", { className: "mt-4 t-body text-ink-3", children: "Every number links back to measurable repository activity. Nothing hidden, nothing invented." })] }), _jsx("div", { className: "mt-12 grid gap-4 md:grid-cols-3", children: [
+                { Icon: FileCheck2, title: 'Explainable by design', body: 'Inspect the exact commits, reviews, tests, and weighting rules behind every result.', link: _jsxs(Link, { to: "/methodology", className: cardLink, children: ["Explore the methodology ", _jsx(ArrowRight, { size: 15 })] }) },
+                { Icon: Lock, title: 'Private by default', body: 'Analysis runs with least-privilege access. Source code is read to measure changes, never stored.', link: _jsxs(Link, { to: "/privacy", className: cardLink, children: ["Read our privacy approach ", _jsx(ArrowRight, { size: 15 })] }) },
+                { Icon: Code2, title: 'Open source, always', body: 'Audit the calculations, host it yourself, or contribute improvements on GitHub.', link: _jsxs("a", { href: REPO_URL, target: "_blank", rel: "noreferrer noopener", className: cardLink, children: ["View source ", _jsx(ExternalLink, { size: 14 })] }) },
+            ].map(({ Icon, title, body, link }) => (_jsxs("article", { className: "rounded-panel border border-line bg-surface p-7", children: [_jsx("span", { className: "grid size-10 place-items-center rounded-xl bg-accent-soft text-accent-text", children: _jsx(Icon, { size: 19, "aria-hidden": true }) }), _jsx("h3", { className: "t-h3 mt-6", children: title }), _jsx("p", { className: "mt-2 t-small text-ink-3", children: body }), link] }, title))) })] }));
+export default Principles;

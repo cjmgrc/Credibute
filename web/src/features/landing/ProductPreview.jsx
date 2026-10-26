@@ -1,0 +1,16 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { useMemo } from 'react';
+import { BarChart3, FileText, FolderGit2, LayoutDashboard } from 'lucide-react';
+import { LogoMark } from '@/components/brand/Logo';
+import ShareList from '@/features/results/ShareList';
+import { useInView } from '@/hooks/useInView';
+import { getSampleResult } from '@/services/projectService';
+import { BRAND } from '@/domain/rubric';
+/** A window onto the real results components with sample data. Its bars fill in once, when scrolled into view. */
+const ProductPreview = () => {
+    const data = useMemo(getSampleResult, []);
+    const [ref, seen] = useInView('-120px');
+    const rail = [LayoutDashboard, FolderGit2, BarChart3, FileText];
+    return (_jsx("div", { ref: ref, "aria-hidden": true, className: "relative mx-auto max-w-4xl text-left", inert: true, children: _jsxs("div", { className: "overflow-hidden rounded-panel border border-line bg-surface shadow-float [mask-image:linear-gradient(to_bottom,#000_72%,transparent)]", children: [_jsxs("div", { className: "flex items-center justify-between border-b border-line bg-sunken px-4 py-3", children: [_jsx("div", { className: "flex gap-1.5", children: [0, 1, 2].map((i) => _jsx("span", { className: "size-2.5 rounded-full bg-line-strong" }, i)) }), _jsxs("p", { className: "t-micro text-ink-3", children: [BRAND, " / ", data.projectName] }), _jsx("span", { className: "w-12" })] }), _jsxs("div", { className: "flex", children: [_jsxs("div", { className: "hidden w-14 shrink-0 flex-col items-center gap-3 border-r border-line py-5 sm:flex", children: [_jsx(LogoMark, { size: 22 }), rail.map((Icon, i) => _jsx("span", { className: `grid size-9 place-items-center rounded-lg ${i === 0 ? 'bg-accent-soft text-accent-text' : 'text-ink-3'}`, children: _jsx(Icon, { size: 17 }) }, i))] }), _jsxs("div", { className: "min-w-0 flex-1 p-5 sm:p-7", children: [_jsxs("div", { className: "flex items-start justify-between gap-3", children: [_jsxs("div", { children: [_jsx("p", { className: "t-micro font-semibold text-ok", children: "Evaluation complete" }), _jsx("p", { className: "mt-1 text-[1.5rem] leading-tight tracking-[-0.03em]", children: data.projectName })] }), _jsx("span", { className: "rounded-lg bg-accent px-3 py-1.5 t-micro font-semibold text-white", children: "Export report" })] }), _jsx("div", { className: "mt-5 grid grid-cols-3 gap-3", children: [['Team activity', '251', 'commits analyzed'], ['Contributors', '4', 'every identity matched'], ['Coverage', '98%', 'of commits attributed']].map(([l, v, h]) => (_jsxs("div", { className: "rounded-xl border border-line p-3.5", children: [_jsx("p", { className: "t-micro text-ink-3", children: l }), _jsx("p", { className: "mt-1.5 text-[1.375rem] font-semibold leading-none tracking-[-0.03em]", children: v }), _jsx("p", { className: "mt-1.5 hidden t-micro text-ink-3 sm:block", children: h })] }, l))) }), _jsxs("div", { className: "mt-4 rounded-xl border border-line p-4", children: [_jsx("p", { className: "t-small font-semibold", children: "Estimated contribution share" }), _jsx("p", { className: "mb-2 t-micro text-ink-3", children: "Based on the selected rubric" }), _jsx(ShareList, { results: data.results, members: data.members, active: seen })] })] })] })] }) }));
+};
+export default ProductPreview;

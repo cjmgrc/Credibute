@@ -1,0 +1,24 @@
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle2, Clock, FolderGit2, ShieldCheck, Users } from 'lucide-react';
+import PageHeader from '@/components/ui/PageHeader';
+import { Card, Skeleton } from '@/components/ui/Feedback';
+import StatCard from '@/features/results/StatCard';
+import ProjectRow from '@/features/dashboard/ProjectRow';
+import ActivityChart from '@/features/dashboard/ActivityChart';
+import { useAsync } from '@/hooks/useAsync';
+import { usePageTitle } from '@/hooks/usePageTitle';
+import { useAuth } from '@/context/AuthContext';
+import { getActivity, listProjects } from '@/services/projectService';
+import { greeting, relativeTime, weekday } from '@/lib/format';
+const DashboardPage = () => {
+    usePageTitle('Overview');
+    const { user } = useAuth();
+    const projects = useAsync(listProjects);
+    const activity = useAsync(getActivity);
+    const list = projects.data ?? [];
+    const done = list.filter((p) => p.status !== 'in_progress');
+    const latest = list.length ? [...list].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))[0] : null;
+    return (_jsxs(_Fragment, { children: [_jsx(PageHeader, { kicker: weekday(new Date()), title: `${greeting()}, ${user?.name.split(' ')[0]}.`, description: "Here\u2019s what\u2019s happening across your group projects." }), _jsx("div", { className: "grid gap-4 sm:grid-cols-2 xl:grid-cols-4", children: projects.loading ? Array.from({ length: 4 }, (_, i) => _jsx(Skeleton, { className: "h-[7.5rem] rounded-card" }, i)) : (_jsxs(_Fragment, { children: [_jsx(StatCard, { label: "Projects", value: list.length, hint: "all on GitHub", icon: _jsx(FolderGit2, { size: 18 }) }), _jsx(StatCard, { label: "Evaluations", value: done.length, hint: `${list.filter((p) => p.status === 'needs_review').length} need review`, icon: _jsx(CheckCircle2, { size: 18 }) }), _jsx(StatCard, { label: "Contributors", value: list.reduce((n, p) => n + p.memberCount, 0), hint: "across all projects", icon: _jsx(Users, { size: 18 }) }), _jsx(StatCard, { label: "Time analyzed", value: `${list.reduce((n, p) => n + p.weeks, 0)} wk`, hint: latest ? `Latest: ${relativeTime(latest.updatedAt)}` : undefined, icon: _jsx(Clock, { size: 18 }) })] })) }), _jsxs("div", { className: "mt-6 grid gap-6 lg:grid-cols-[1fr_20rem]", children: [_jsxs(Card, { as: "section", className: "overflow-hidden", children: [_jsxs("div", { className: "flex items-start justify-between gap-4 p-6 pb-4", children: [_jsxs("div", { children: [_jsx("h2", { className: "t-h2", children: "Recent projects" }), _jsx("p", { className: "mt-0.5 t-small text-ink-3", children: "Continue an evaluation or review your results." })] }), _jsxs(Link, { to: "/app/projects", className: "inline-flex items-center gap-1 t-small font-semibold text-accent-text", children: ["View all ", _jsx(ArrowRight, { size: 14, "aria-hidden": true })] })] }), _jsx("div", { className: "divide-y divide-line border-t border-line", children: projects.loading ? Array.from({ length: 3 }, (_, i) => _jsx(Skeleton, { className: "m-4 h-10" }, i)) : list.slice(0, 3).map((p) => _jsx(ProjectRow, { p: p }, p.id)) })] }), _jsxs(Card, { as: "aside", className: "p-6", children: [_jsx("span", { className: "grid size-10 place-items-center rounded-xl bg-accent-soft text-accent-text", children: _jsx(ShieldCheck, { size: 19, "aria-hidden": true }) }), _jsx("h2", { className: "t-h3 mt-5", children: "Transparent by default" }), _jsx("p", { className: "mt-1.5 t-small text-ink-3", children: "Every estimate is traceable to repository evidence and your selected rubric." }), _jsxs(Link, { to: "/methodology", className: "mt-3 inline-flex items-center gap-1 t-small font-semibold text-accent-text", children: ["How scoring works ", _jsx(ArrowRight, { size: 14, "aria-hidden": true })] }), _jsx("p", { className: "mb-2 mt-6 t-micro text-ink-3", children: "Contribution share" }), _jsxs("p", { className: "rounded-control bg-sunken px-3.5 py-3 font-mono text-[0.75rem] leading-relaxed text-ink-2", children: ["\u03A3 ( criterion score \u00D7 weight )", _jsx("br", {}), _jsx("span", { className: "text-ink-3", children: "\u00F7 group total" })] })] })] }), _jsx("div", { className: "mt-6", children: activity.data ? _jsx(ActivityChart, { values: activity.data, latestName: latest?.name ?? 'Campus Connect' }) : _jsx(Skeleton, { className: "h-72 rounded-card" }) })] }));
+};
+export default DashboardPage;
