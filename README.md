@@ -80,8 +80,8 @@ Research, planning, meetings, mentoring, debugging outside version control, and 
 
 The initial implementation is planned around:
 
-- **Frontend:** React, TypeScript, and Vite
-- **Backend:** Node.js and TypeScript
+- **Frontend:** React, JavaScript, and Vite
+- **Backend:** Node.js and JavaScript
 - **Repository integration:** GitHub API first, with GitLab planned
 - **Validation:** Zod
 - **Testing:** Vitest
