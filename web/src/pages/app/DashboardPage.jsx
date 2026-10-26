@@ -1,24 +1,199 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Clock, FolderGit2, ShieldCheck, Users } from 'lucide-react';
-import PageHeader from '@/components/ui/PageHeader';
-import { Card, Skeleton } from '@/components/ui/Feedback';
-import StatCard from '@/features/results/StatCard';
-import ProjectRow from '@/features/dashboard/ProjectRow';
-import ActivityChart from '@/features/dashboard/ActivityChart';
-import { useAsync } from '@/hooks/useAsync';
-import { usePageTitle } from '@/hooks/usePageTitle';
-import { useAuth } from '@/context/AuthContext';
-import { getActivity, listProjects } from '@/services/projectService';
-import { greeting, relativeTime, weekday } from '@/lib/format';
+import {
+  jsx as _jsx,
+  Fragment as _Fragment,
+  jsxs as _jsxs,
+} from "react/jsx-runtime";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Clock,
+  FolderGit2,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
+import PageHeader from "@/components/ui/PageHeader";
+import { Card, Skeleton } from "@/components/ui/Feedback";
+import StatCard from "@/features/results/StatCard";
+import ProjectRow from "@/features/dashboard/ProjectRow";
+import ActivityChart from "@/features/dashboard/ActivityChart";
+import { useAsync } from "@/hooks/useAsync";
+import { usePageTitle } from "@/hooks/usePageTitle";
+import { useAuth } from "@/context/AuthContext";
+import { getActivity, listProjects } from "@/services/projectService";
+import { greeting, relativeTime, weekday } from "@/lib/format";
 const DashboardPage = () => {
-    usePageTitle('Overview');
-    const { user } = useAuth();
-    const projects = useAsync(listProjects);
-    const activity = useAsync(getActivity);
-    const list = projects.data ?? [];
-    const done = list.filter((p) => p.status !== 'in_progress');
-    const latest = list.length ? [...list].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))[0] : null;
-    return (_jsxs(_Fragment, { children: [_jsx(PageHeader, { kicker: weekday(new Date()), title: `${greeting()}, ${user?.name.split(' ')[0]}.`, description: "Here’s what’s happening across your style-ad936fcbed projects." }), _jsx("div", { className: "style-0f2a693e93 style-90fc3ec35a style-e10c57afb4 style-f3e0303085", children: projects.loading ? Array.from({ length: 4 }, (_, i) => _jsx(Skeleton, { className: "style-6378b9ea74 style-f5470b0a5f" }, i)) : (_jsxs(_Fragment, { children: [_jsx(StatCard, { label: "Projects", value: list.length, hint: "all on GitHub", icon: _jsx(FolderGit2, { size: 18 }) }), _jsx(StatCard, { label: "Evaluations", value: done.length, hint: `${list.filter((p) => p.status === 'needs_review').length} need review`, icon: _jsx(CheckCircle2, { size: 18 }) }), _jsx(StatCard, { label: "Contributors", value: list.reduce((n, p) => n + p.memberCount, 0), hint: "across all projects", icon: _jsx(Users, { size: 18 }) }), _jsx(StatCard, { label: "Time analyzed", value: `${list.reduce((n, p) => n + p.weeks, 0)} wk`, hint: latest ? `Latest: ${relativeTime(latest.updatedAt)}` : undefined, icon: _jsx(Clock, { size: 18 }) })] })) }), _jsxs("div", { className: "style-356df20822 style-0f2a693e93 style-8c7e0067a9 style-075cdb32ad", children: [_jsxs(Card, { as: "section", className: "style-d5111d0e9f", children: [_jsxs("div", { className: "style-222f930b87 style-b9677bd1cb style-32c92bb1fd style-90fc3ec35a style-c432836760 style-b04e43b886", children: [_jsxs("div", { children: [_jsx("h2", { className: "style-d138f623f0", children: "Recent projects" }), _jsx("p", { className: "style-7afae65258 style-294e640e9b style-682659f553", children: "Continue an evaluation or review your results." })] }), _jsxs(Link, { to: "/app/projects", className: "style-123306850f style-71556df3b4 style-19e97f3f40 style-294e640e9b style-87e86ce38e style-242347c218", children: ["View all ", _jsx(ArrowRight, { size: 14, "aria-hidden": true })] })] }), _jsx("div", { className: "style-d1626f14b8 style-b682aa7242 style-894c3815a5 style-4769f958af", children: projects.loading ? Array.from({ length: 3 }, (_, i) => _jsx(Skeleton, { className: "style-65c0a26039 style-fdd2f85cad" }, i)) : list.slice(0, 3).map((p) => _jsx(ProjectRow, { p: p }, p.id)) })] }), _jsxs(Card, { as: "aside", className: "style-c432836760", children: [_jsx("span", { className: "style-0f2a693e93 style-d0a383a9c2 style-4446c26b62 style-6ad537f2bb style-95debef1e0 style-242347c218", children: _jsx(ShieldCheck, { size: 19, "aria-hidden": true }) }), _jsx("h2", { className: "style-2ccfb296b9 style-a752cdc80a", children: "Transparent by default" }), _jsx("p", { className: "style-5a06344d31 style-294e640e9b style-682659f553", children: "Every estimate is traceable to repository evidence and your selected rubric." }), _jsxs(Link, { to: "/methodology", className: "style-d21b86ea41 style-123306850f style-71556df3b4 style-19e97f3f40 style-294e640e9b style-87e86ce38e style-242347c218", children: ["How scoring works ", _jsx(ArrowRight, { size: 14, "aria-hidden": true })] }), _jsx("p", { className: "style-02fd0ea53c style-356df20822 style-4010c02329 style-682659f553", children: "Contribution share" }), _jsxs("p", { className: "style-a7ab7bd722 style-2de8262ccb style-cf20b3b1c2 style-d3cea061f2 style-02ded92445 style-e7195fa694 style-0594284943 style-9e676c7431", children: ["\u03A3 ( criterion score \u00D7 weight )", _jsx("br", {}), _jsx("span", { className: "style-682659f553", children: "÷ style-ad936fcbed total" })] })] })] }), _jsx("div", { className: "style-356df20822", children: activity.data ? _jsx(ActivityChart, { values: activity.data, latestName: latest?.name ?? 'Campus Connect' }) : _jsx(Skeleton, { className: "style-f6607293f4 style-f5470b0a5f" }) })] }));
+  usePageTitle("Overview");
+  const { user } = useAuth();
+  const projects = useAsync(listProjects);
+  const activity = useAsync(getActivity);
+  const list = projects.data ?? [];
+  const done = list.filter((p) => p.status !== "in_progress");
+  const latest = list.length
+    ? [...list].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))[0]
+    : null;
+  return _jsxs(_Fragment, {
+    children: [
+      _jsx(PageHeader, {
+        kicker: weekday(new Date()),
+        title: `${greeting()}, ${user?.name.split(" ")[0]}.`,
+        description:
+          "Here’s what’s happening across your style-ad936fcbed projects.",
+      }),
+      _jsx("div", {
+        className:
+          "style-0f2a693e93 style-90fc3ec35a style-e10c57afb4 style-f3e0303085",
+        children: projects.loading
+          ? Array.from({ length: 4 }, (_, i) =>
+              _jsx(
+                Skeleton,
+                { className: "style-6378b9ea74 style-f5470b0a5f" },
+                i,
+              ),
+            )
+          : _jsxs(_Fragment, {
+              children: [
+                _jsx(StatCard, {
+                  label: "Projects",
+                  value: list.length,
+                  hint: "all on GitHub",
+                  icon: _jsx(FolderGit2, { size: 18 }),
+                }),
+                _jsx(StatCard, {
+                  label: "Evaluations",
+                  value: done.length,
+                  hint: `${list.filter((p) => p.status === "needs_review").length} need review`,
+                  icon: _jsx(CheckCircle2, { size: 18 }),
+                }),
+                _jsx(StatCard, {
+                  label: "Contributors",
+                  value: list.reduce((n, p) => n + p.memberCount, 0),
+                  hint: "across all projects",
+                  icon: _jsx(Users, { size: 18 }),
+                }),
+                _jsx(StatCard, {
+                  label: "Time analyzed",
+                  value: `${list.reduce((n, p) => n + p.weeks, 0)} wk`,
+                  hint: latest
+                    ? `Latest: ${relativeTime(latest.updatedAt)}`
+                    : undefined,
+                  icon: _jsx(Clock, { size: 18 }),
+                }),
+              ],
+            }),
+      }),
+      _jsxs("div", {
+        className:
+          "style-356df20822 style-0f2a693e93 style-8c7e0067a9 style-075cdb32ad",
+        children: [
+          _jsxs(Card, {
+            as: "section",
+            className: "style-d5111d0e9f",
+            children: [
+              _jsxs("div", {
+                className:
+                  "style-222f930b87 style-b9677bd1cb style-32c92bb1fd style-90fc3ec35a style-c432836760 style-b04e43b886",
+                children: [
+                  _jsxs("div", {
+                    children: [
+                      _jsx("h2", {
+                        className: "style-d138f623f0",
+                        children: "Recent projects",
+                      }),
+                      _jsx("p", {
+                        className:
+                          "style-7afae65258 style-294e640e9b style-682659f553",
+                        children:
+                          "Continue an evaluation or review your results.",
+                      }),
+                    ],
+                  }),
+                  _jsxs(Link, {
+                    to: "/app/projects",
+                    className:
+                      "style-123306850f style-71556df3b4 style-19e97f3f40 style-294e640e9b style-87e86ce38e style-242347c218",
+                    children: [
+                      "View all ",
+                      _jsx(ArrowRight, { size: 14, "aria-hidden": true }),
+                    ],
+                  }),
+                ],
+              }),
+              _jsx("div", {
+                className:
+                  "style-d1626f14b8 style-b682aa7242 style-894c3815a5 style-4769f958af",
+                children: projects.loading
+                  ? Array.from({ length: 3 }, (_, i) =>
+                      _jsx(
+                        Skeleton,
+                        { className: "style-65c0a26039 style-fdd2f85cad" },
+                        i,
+                      ),
+                    )
+                  : list
+                      .slice(0, 3)
+                      .map((p) => _jsx(ProjectRow, { p: p }, p.id)),
+              }),
+            ],
+          }),
+          _jsxs(Card, {
+            as: "aside",
+            className: "style-c432836760",
+            children: [
+              _jsx("span", {
+                className:
+                  "style-0f2a693e93 style-d0a383a9c2 style-4446c26b62 style-6ad537f2bb style-95debef1e0 style-242347c218",
+                children: _jsx(ShieldCheck, { size: 19, "aria-hidden": true }),
+              }),
+              _jsx("h2", {
+                className: "style-2ccfb296b9 style-a752cdc80a",
+                children: "Transparent by default",
+              }),
+              _jsx("p", {
+                className: "style-5a06344d31 style-294e640e9b style-682659f553",
+                children:
+                  "Every estimate is traceable to repository evidence and your selected rubric.",
+              }),
+              _jsxs(Link, {
+                to: "/methodology",
+                className:
+                  "style-d21b86ea41 style-123306850f style-71556df3b4 style-19e97f3f40 style-294e640e9b style-87e86ce38e style-242347c218",
+                children: [
+                  "How scoring works ",
+                  _jsx(ArrowRight, { size: 14, "aria-hidden": true }),
+                ],
+              }),
+              _jsx("p", {
+                className:
+                  "style-02fd0ea53c style-356df20822 style-4010c02329 style-682659f553",
+                children: "Contribution share",
+              }),
+              _jsxs("p", {
+                className:
+                  "style-a7ab7bd722 style-2de8262ccb style-cf20b3b1c2 style-d3cea061f2 style-02ded92445 style-e7195fa694 style-0594284943 style-9e676c7431",
+                children: [
+                  "\u03A3 ( criterion score \u00D7 weight )",
+                  _jsx("br", {}),
+                  _jsx("span", {
+                    className: "style-682659f553",
+                    children: "÷ style-ad936fcbed total",
+                  }),
+                ],
+              }),
+            ],
+          }),
+        ],
+      }),
+      _jsx("div", {
+        className: "style-356df20822",
+        children: activity.data
+          ? _jsx(ActivityChart, {
+              values: activity.data,
+              latestName: latest?.name ?? "Campus Connect",
+            })
+          : _jsx(Skeleton, { className: "style-f6607293f4 style-f5470b0a5f" }),
+      }),
+    ],
+  });
 };
 export default DashboardPage;

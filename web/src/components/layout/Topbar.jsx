@@ -1,28 +1,28 @@
-import { Link, useLocation } from 'react-router-dom'
-import { Plus } from 'lucide-react'
-import Button from '@/components/ui/Button'
-import ThemeToggle from './ThemeToggle'
-import { useScrolled } from '@/hooks/useScrolled'
-import { BRAND } from '@/domain/rubric'
-import { cn } from '@/lib/cn'
+import { Link, useLocation } from "react-router-dom";
+import { Plus } from "lucide-react";
+import Button from "@/components/ui/Button";
+import ThemeToggle from "./ThemeToggle";
+import { useScrolled } from "@/hooks/useScrolled";
+import { BRAND } from "@/domain/rubric";
+import { cn } from "@/lib/cn";
 
 const CRUMBS = [
-  [/^\/app\/new/, 'Setup'],
-  [/^\/app\/projects\/[^/]+\/results/, 'Results'],
-  [/^\/app\/projects\/[^/]+\/report/, 'Report'],
-  [/^\/app\/projects/, 'History'],
-  [/^\/app\/evaluations/, 'Evaluations'],
-  [/^\/app\/reports/, 'Reports'],
-  [/^\/app\/settings/, 'Settings'],
-  [/^\/app\/help/, 'Help & docs'],
-  [/^\/app$/, 'Dashboard'],
-]
+  [/^\/app\/new/, "Setup"],
+  [/^\/app\/projects\/[^/]+\/results/, "Results"],
+  [/^\/app\/projects\/[^/]+\/report/, "Report"],
+  [/^\/app\/projects/, "History"],
+  [/^\/app\/evaluations/, "Evaluations"],
+  [/^\/app\/reports/, "Reports"],
+  [/^\/app\/settings/, "Settings"],
+  [/^\/app\/help/, "Help & docs"],
+  [/^\/app$/, "Dashboard"],
+];
 
 const Topbar = () => {
-  const { pathname } = useLocation()
-  const scrolled = useScrolled()
-  const crumb = CRUMBS.find(([pattern]) => pattern.test(pathname))?.[1] ?? ''
-  const inWizard = pathname.startsWith('/app/new')
+  const { pathname } = useLocation();
+  const scrolled = useScrolled();
+  const crumb = CRUMBS.find(([pattern]) => pattern.test(pathname))?.[1] ?? "";
+  const inWizard = pathname.startsWith("/app/new");
 
   return (
     <header
@@ -32,7 +32,10 @@ const Topbar = () => {
       )}
     >
       <div className="style-222f930b87 style-3c2f6f8a3b style-71556df3b4 style-32c92bb1fd style-d7db3451d1 style-220ac1a984 style-d48a005697">
-        <nav aria-label="Breadcrumb" className="style-222f930b87 style-71556df3b4 style-074569488c style-294e640e9b style-682659f553">
+        <nav
+          aria-label="Breadcrumb"
+          className="style-222f930b87 style-71556df3b4 style-074569488c style-294e640e9b style-682659f553"
+        >
           <Link to="/app" className="style-eae178841c style-d82b3e060a">
             {BRAND}
           </Link>
@@ -43,14 +46,16 @@ const Topbar = () => {
           <ThemeToggle />
           {!inWizard && (
             <Button to="/app/projects?newProject=1" icon={<Plus size={16} />}>
-              <span className="style-e564b4081d style-a0a9310340">New project</span>
+              <span className="style-e564b4081d style-a0a9310340">
+                New project
+              </span>
               <span className="style-ee12d4f979">New</span>
             </Button>
           )}
         </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Topbar
+export default Topbar;

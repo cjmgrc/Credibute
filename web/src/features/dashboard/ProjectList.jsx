@@ -1,13 +1,13 @@
-import { FolderGit2, Plus } from 'lucide-react'
-import Button from '@/components/ui/Button'
-import { Card, EmptyState, Skeleton } from '@/components/ui/Feedback'
-import ProjectRow from './ProjectRow'
-import { useAsync } from '@/hooks/useAsync'
-import { listProjects } from '@/services/projectService'
+import { FolderGit2, Plus } from "lucide-react";
+import Button from "@/components/ui/Button";
+import { Card, EmptyState, Skeleton } from "@/components/ui/Feedback";
+import ProjectRow from "./ProjectRow";
+import { useAsync } from "@/hooks/useAsync";
+import { listProjects } from "@/services/projectService";
 
 const ProjectList = ({ filter, showRubric, onNewProject }) => {
-  const { data, loading } = useAsync(listProjects)
-  const rows = (data ?? []).filter(filter ?? (() => true))
+  const { data, loading } = useAsync(listProjects);
+  const rows = (data ?? []).filter(filter ?? (() => true));
 
   return (
     <Card className="style-d5111d0e9f">
@@ -43,7 +43,7 @@ const ProjectList = ({ filter, showRubric, onNewProject }) => {
         </div>
       )}
     </Card>
-  )
-}
+  );
+};
 
-export default ProjectList
+export default ProjectList;

@@ -1,27 +1,27 @@
-import { useEffect, useRef, useState } from 'react'
-import { Ellipsis } from 'lucide-react'
-import { cn } from '@/lib/cn'
+import { useEffect, useRef, useState } from "react";
+import { Ellipsis } from "lucide-react";
+import { cn } from "@/lib/cn";
 
 /** Popover menu. Scales in from its trigger corner (not from centre). */
-const Menu = ({ items, label = 'More options', placement = "bottom" }) => {
-  const [open, setOpen] = useState(false)
-  const root = useRef(null)
+const Menu = ({ items, label = "More options", placement = "bottom" }) => {
+  const [open, setOpen] = useState(false);
+  const root = useRef(null);
 
   useEffect(() => {
-    if (!open) return
+    if (!open) return;
     const down = (e) => {
-      if (!root.current?.contains(e.target)) setOpen(false)
-    }
+      if (!root.current?.contains(e.target)) setOpen(false);
+    };
     const key = (e) => {
-      if (e.key === 'Escape') setOpen(false)
-    }
-    document.addEventListener('pointerdown', down)
-    document.addEventListener('keydown', key)
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("pointerdown", down);
+    document.addEventListener("keydown", key);
     return () => {
-      document.removeEventListener('pointerdown', down)
-      document.removeEventListener('keydown', key)
-    }
-  }, [open])
+      document.removeEventListener("pointerdown", down);
+      document.removeEventListener("keydown", key);
+    };
+  }, [open]);
 
   return (
     <div ref={root} className="style-d2d9e1f134">
@@ -51,12 +51,14 @@ const Menu = ({ items, label = 'More options', placement = "bottom" }) => {
               role="menuitem"
               type="button"
               onClick={() => {
-                setOpen(false)
-                item.onSelect()
+                setOpen(false);
+                item.onSelect();
               }}
               className={cn(
                 "style-222f930b87 style-58d0413dd9 style-71556df3b4 style-08f0549eb6 style-49abc543ea style-588daa1a98 style-b5edc3ea7c style-1a5d10977b style-294e640e9b style-daaac3fbf5 style-eae178841c style-aa96ad346e style-0637e93d27",
-                item.tone === 'danger' ? "style-5640c57ccb" : "style-3c70d0a0c9",
+                item.tone === "danger"
+                  ? "style-5640c57ccb"
+                  : "style-3c70d0a0c9",
               )}
             >
               {item.icon}
@@ -66,7 +68,7 @@ const Menu = ({ items, label = 'More options', placement = "bottom" }) => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

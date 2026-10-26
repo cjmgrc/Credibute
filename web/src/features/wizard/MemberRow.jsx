@@ -1,11 +1,105 @@
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { AlertTriangle, AtSign, Check, UserMinus } from 'lucide-react';
-import Avatar from '@/components/ui/Avatar';
-import Menu from '@/components/ui/Menu';
-import { GithubMark } from '@/components/brand/BrandIcons';
+import {
+  jsx as _jsx,
+  jsxs as _jsxs,
+  Fragment as _Fragment,
+} from "react/jsx-runtime";
+import { AlertTriangle, AtSign, Check, UserMinus } from "lucide-react";
+import Avatar from "@/components/ui/Avatar";
+import Menu from "@/components/ui/Menu";
+import { GithubMark } from "@/components/brand/BrandIcons";
 const MemberRow = ({ m, onRemove }) => {
-    const id = m.identities[0];
-    return (_jsxs("li", { className: "style-222f930b87 style-faa8a23c68 style-71556df3b4 style-c109310615 style-92430aeebe style-f33d55d2db", children: [_jsx(Avatar, { name: m.name, tone: m.tone }), _jsxs("div", { className: "style-e9ab1547c9 style-7bd5bab6d7 style-235f80a30e style-8c97e6ec00", children: [_jsx("p", { className: "style-294e640e9b style-87e86ce38e", children: m.name }), _jsx("p", { className: "style-4010c02329 style-682659f553", children: m.label })] }), _jsx("div", { className: "style-922b168f4b style-222f930b87 style-184ddc11e5 style-fec0aea7f7 style-faa8a23c68 style-71556df3b4 style-9ec71db48f style-814effd933 style-4010c02329 style-9e676c7431 style-8ca24000f1 style-ad175cd241 style-badc5cc077", children: id ? (_jsxs(_Fragment, { children: [id.username && _jsxs("span", { className: "style-222f930b87 style-71556df3b4 style-70007b8768", children: [_jsx(GithubMark, { size: 14 }), "@", id.username] }), _jsxs("span", { className: "style-222f930b87 style-184ddc11e5 style-71556df3b4 style-70007b8768", children: [_jsx(AtSign, { size: 13, "aria-hidden": true, className: "style-27ead27a81 style-682659f553" }), _jsx("span", { className: "style-5a3a4ee420", children: id.email })] }), m.identities.length > 1 && _jsxs("span", { className: "style-682659f553", children: ["+", m.identities.length - 1, " more"] })] })) : _jsx("span", { className: "style-682659f553", children: "No Git identity yet" }) }), id ? _jsxs("span", { className: "style-222f930b87 style-71556df3b4 style-19e97f3f40 style-4010c02329 style-87e86ce38e style-0e23fa0f9b", children: [_jsx(Check, { size: 14, strokeWidth: 3, "aria-hidden": true }), "Matched"] })
-                : _jsxs("span", { className: "style-222f930b87 style-71556df3b4 style-19e97f3f40 style-4010c02329 style-87e86ce38e style-7294770c9c", children: [_jsx(AlertTriangle, { size: 14, "aria-hidden": true }), "Unmatched"] }), _jsx(Menu, { label: `Options for ${m.name}`, items: [{ label: 'Remove member', icon: _jsx(UserMinus, { size: 16 }), tone: 'danger', onSelect: onRemove }] })] }));
+  const id = m.identities[0];
+  return _jsxs("li", {
+    className:
+      "style-222f930b87 style-faa8a23c68 style-71556df3b4 style-c109310615 style-92430aeebe style-f33d55d2db",
+    children: [
+      _jsx(Avatar, { name: m.name, tone: m.tone }),
+      _jsxs("div", {
+        className:
+          "style-e9ab1547c9 style-7bd5bab6d7 style-235f80a30e style-8c97e6ec00",
+        children: [
+          _jsx("p", {
+            className: "style-294e640e9b style-87e86ce38e",
+            children: m.name,
+          }),
+          _jsx("p", {
+            className: "style-4010c02329 style-682659f553",
+            children: m.label,
+          }),
+        ],
+      }),
+      _jsx("div", {
+        className:
+          "style-922b168f4b style-222f930b87 style-184ddc11e5 style-fec0aea7f7 style-faa8a23c68 style-71556df3b4 style-9ec71db48f style-814effd933 style-4010c02329 style-9e676c7431 style-8ca24000f1 style-ad175cd241 style-badc5cc077",
+        children: id
+          ? _jsxs(_Fragment, {
+              children: [
+                id.username &&
+                  _jsxs("span", {
+                    className:
+                      "style-222f930b87 style-71556df3b4 style-70007b8768",
+                    children: [
+                      _jsx(GithubMark, { size: 14 }),
+                      "@",
+                      id.username,
+                    ],
+                  }),
+                _jsxs("span", {
+                  className:
+                    "style-222f930b87 style-184ddc11e5 style-71556df3b4 style-70007b8768",
+                  children: [
+                    _jsx(AtSign, {
+                      size: 13,
+                      "aria-hidden": true,
+                      className: "style-27ead27a81 style-682659f553",
+                    }),
+                    _jsx("span", {
+                      className: "style-5a3a4ee420",
+                      children: id.email,
+                    }),
+                  ],
+                }),
+                m.identities.length > 1 &&
+                  _jsxs("span", {
+                    className: "style-682659f553",
+                    children: ["+", m.identities.length - 1, " more"],
+                  }),
+              ],
+            })
+          : _jsx("span", {
+              className: "style-682659f553",
+              children: "No Git identity yet",
+            }),
+      }),
+      id
+        ? _jsxs("span", {
+            className:
+              "style-222f930b87 style-71556df3b4 style-19e97f3f40 style-4010c02329 style-87e86ce38e style-0e23fa0f9b",
+            children: [
+              _jsx(Check, { size: 14, strokeWidth: 3, "aria-hidden": true }),
+              "Matched",
+            ],
+          })
+        : _jsxs("span", {
+            className:
+              "style-222f930b87 style-71556df3b4 style-19e97f3f40 style-4010c02329 style-87e86ce38e style-7294770c9c",
+            children: [
+              _jsx(AlertTriangle, { size: 14, "aria-hidden": true }),
+              "Unmatched",
+            ],
+          }),
+      _jsx(Menu, {
+        label: `Options for ${m.name}`,
+        items: [
+          {
+            label: "Remove member",
+            icon: _jsx(UserMinus, { size: 16 }),
+            tone: "danger",
+            onSelect: onRemove,
+          },
+        ],
+      }),
+    ],
+  });
 };
 export default MemberRow;
