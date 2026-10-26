@@ -24,7 +24,7 @@ export function useAnalysisProgress(totalMs = 5200) {
         if (progress >= end)
             return 'done';
         const prev = i === 0 ? 0 : STAGE_ENDS[i - 1];
-        return progress >= prev ? 'active' : 'todo';
+        return progress >= prev ? "active" : 'todo';
     });
     const rubricT = Math.min(0.999, Math.max(0, (progress - STAGE_ENDS[1]) / (STAGE_ENDS[2] - STAGE_ENDS[1])));
     const signal = RUBRIC_SIGNALS[Math.floor(rubricT * RUBRIC_SIGNALS.length)];

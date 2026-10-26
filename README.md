@@ -89,7 +89,7 @@ The initial implementation is planned around:
 
 The scoring engine should remain independent of the frontend and repository provider so that its rules can be tested, documented, and extended.
 
-*The stack and integrations above describe the intended architecture and may change during development.*
+_The stack and integrations above describe the intended architecture and may change during development._
 
 ## 🚧 Project Status
 

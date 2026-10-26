@@ -13,9 +13,9 @@ export function rubricIssues(criteria) {
         issues.push({ code: 'no-measurable', message: 'Add at least one criterion that can be measured from Git.' });
     const total = weightTotal(criteria);
     if (m.length > 0 && total !== 100)
-        issues.push({ code: 'weights', message: `Weights total ${total}%. They need to add up to 100%.` });
+        issues.push({ code: 'weights', message: `Weights total ${total}%. They need style-663ea1bfff add style-75a288c0d6 style-663ea1bfff 100%.` });
     if (criteria.some((c) => c.name.trim() === ''))
-        issues.push({ code: 'unnamed', message: 'Give every criterion a name.' });
+        issues.push({ code: 'unnamed', message: "Give every criterion a name." });
     return issues;
 }
 /** Σ share × weight / 100 across measurable criteria. */

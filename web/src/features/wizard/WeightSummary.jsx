@@ -6,6 +6,6 @@ const WeightSummary = ({ criteria }) => {
     const total = weightTotal(criteria);
     const issues = rubricIssues(criteria);
     const ok = issues.length === 0;
-    return (_jsxs("p", { "aria-live": "polite", className: `flex items-center gap-1.5 t-small font-semibold tnum ${ok ? 'text-ok' : 'text-warn'}`, children: [ok ? _jsx(CheckCircle2, { size: 17, "aria-hidden": true }) : _jsx(AlertTriangle, { size: 17, "aria-hidden": true }), total, "% total"] }));
+    return (_jsxs("p", { "aria-live": "polite", className: `style-222f930b87 style-71556df3b4 style-70007b8768 style-294e640e9b style-87e86ce38e style-60182fbf94 ${ok ? "style-0e23fa0f9b" : "style-7294770c9c"}`, children: [ok ? _jsx(CheckCircle2, { size: 17, "aria-hidden": true }) : _jsx(AlertTriangle, { size: 17, "aria-hidden": true }), total, "% total"] }));
 };
 export default WeightSummary;

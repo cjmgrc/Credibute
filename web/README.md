@@ -1,6 +1,6 @@
 # Credibute · frontend
 
-React + JavaScript/JSX + Vite + Tailwind CSS v4. Runs entirely on mock data, so the UI can be polished before the backend exists.
+React + JavaScript/JSX + Vite with standalone CSS. Runs entirely on mock data, so the UI can be polished before the backend exists.
 
 ```bash
 npm install
@@ -32,11 +32,12 @@ src/
 ├── services/      the ONLY layer that will call the backend (mock today)
 ├── mocks/         fake data that reconciles (251 commits − 5 excluded = 246 = 98%)
 ├── lib/           cn, format, csv
-├── styles/        index.css — tokens, type scale, materials, overlays, print
 └── test/
 ```
 
 `domain/scoring.js` is deliberately framework-free: it's the seed of the backend scoring engine and can move to a shared package.
+
+Global styles live in `assets/styles/main.css`; all responsive and media-query rules live in `assets/styles/responsive.css`.
 
 ## Routes
 

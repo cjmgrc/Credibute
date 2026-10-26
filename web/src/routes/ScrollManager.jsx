@@ -7,7 +7,7 @@ const ScrollManager = () => {
         const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const el = hash ? document.getElementById(hash.slice(1)) : null;
         if (el)
-            el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+            el.scrollIntoView({ behavior: reduce ? "auto" : 'smooth', block: "start" });
         else
             window.scrollTo(0, 0);
     }, [pathname, hash]);

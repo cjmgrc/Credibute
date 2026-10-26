@@ -2,7 +2,7 @@
 
 **Direction:** modern-minimal with Apple-style craft. Quiet surfaces, one accent, motion that answers the user's action.
 
-## Tokens (`src/styles/index.css`)
+## Tokens (`assets/styles/main.css`)
 
 | Role                | Light                                         | Dark                              |
 | ------------------- | --------------------------------------------- | --------------------------------- |
@@ -24,7 +24,7 @@ Use semantic tokens (`bg-surface`, `text-ink-3`, `border-line`), never raw hex. 
 - Press feedback on every pressable: `active:scale-[0.97]`, 150ms, fires on pointer-down.
 - Transitions, not keyframes, for anything interruptible (overlays, toggles, menus). Only `transform`/`opacity` are animated.
 - Exit is faster than enter; sheets leave the way they came.
-- Hover styles apply only on real pointers (Tailwind v4 default).
+- Hover styles apply only on real pointers.
 - Entrance animation is used once per page (landing hero, results bars), never on frequent navigation.
 - `prefers-reduced-motion`: movement becomes a cross-fade. `prefers-reduced-transparency`: materials go solid. `prefers-contrast: more`: stronger borders.
 

@@ -2,12 +2,12 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { AlertTriangle, CheckCircle2, Info } from 'lucide-react';
 import { cn } from '@/lib/cn';
 const styles = {
-    info: { box: 'bg-accent-soft', icon: 'text-accent-text', Icon: Info },
-    ok: { box: 'bg-ok-soft', icon: 'text-ok', Icon: CheckCircle2 },
-    warn: { box: 'bg-warn-soft', icon: 'text-warn', Icon: AlertTriangle },
+    info: { box: "style-95debef1e0", icon: "style-242347c218", Icon: Info },
+    ok: { box: "style-c0af61bc47", icon: "style-0e23fa0f9b", Icon: CheckCircle2 },
+    warn: { box: "style-8a7ae3341a", icon: "style-7294770c9c", Icon: AlertTriangle },
 };
 const Alert = ({ tone = 'info', title, children, action, className }) => {
     const { box, icon, Icon } = styles[tone];
-    return (_jsxs("div", { role: tone === 'warn' ? 'alert' : 'status', className: cn('flex items-start gap-3 rounded-card px-4 py-3.5', box, className), children: [_jsx(Icon, { size: 18, "aria-hidden": true, className: cn('mt-0.5 shrink-0', icon) }), _jsxs("div", { className: "min-w-0 flex-1", children: [_jsx("p", { className: cn('t-small font-semibold', icon), children: title }), children && _jsx("div", { className: "mt-0.5 t-small text-ink-2", children: children })] }), action && _jsx("div", { className: "shrink-0", children: action })] }));
+    return (_jsxs("div", { role: tone === 'warn' ? 'alert' : 'status', className: cn("style-222f930b87 style-b9677bd1cb style-d7db3451d1 style-f5470b0a5f style-9513b39680 style-f763c2225c", box, className), children: [_jsx(Icon, { size: 18, "aria-hidden": true, className: cn("style-7afae65258 style-27ead27a81", icon) }), _jsxs("div", { className: "style-184ddc11e5 style-7bd5bab6d7", children: [_jsx("p", { className: cn("style-294e640e9b style-87e86ce38e", icon), children: title }), children && _jsx("div", { className: "style-7afae65258 style-294e640e9b style-9e676c7431", children: children })] }), action && _jsx("div", { className: "style-27ead27a81", children: action })] }));
 };
 export default Alert;

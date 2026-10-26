@@ -8,7 +8,7 @@ const cell = (v) => {
 export const toCsv = (rows) => rows.map((r) => r.map(cell).join(',')).join('\r\n');
 export function downloadText(filename, text, type = 'text/csv;charset=utf-8') {
     const url = URL.createObjectURL(new Blob(['\ufeff', text], { type }));
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
     a.download = filename;
     document.body.appendChild(a);

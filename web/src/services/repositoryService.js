@@ -5,7 +5,7 @@ export async function lookupRepository(url, _provider) {
     await delay(650);
     const [owner, repo] = new URL(url).pathname.split('/').filter(Boolean);
     if (/missing|nope/i.test(repo))
-        throw new Error('We couldn’t find that repository. Check the link, or grant read access if it’s private.');
+        throw new Error("We couldn’t find that repository. Check the link, or grant read access if it’s private.");
     return { ...REPO_INFO, fullName: `${owner}/${repo}`, suggestedName: title(repo) };
 }
 export async function getContributors() {

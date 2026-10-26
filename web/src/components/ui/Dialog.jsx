@@ -34,14 +34,14 @@ const Dialog = ({ open, onClose, label, variant = 'center', children }) => {
         const r1 = requestAnimationFrame(() => { r2 = requestAnimationFrame(() => setVisible(true)); });
         return () => { cancelAnimationFrame(r1); cancelAnimationFrame(r2); };
     }, [mounted, open]);
-    return (_jsx("dialog", { ref: ref, "aria-label": label, "data-visible": visible, className: cn('overlay', variant === 'center' ? 'overlay-center' : 'overlay-side'), onCancel: (e) => { e.preventDefault(); onClose(); }, onClick: (e) => { if (e.target === e.currentTarget)
+    return (_jsx("dialog", { ref: ref, "aria-label": label, "data-visible": visible, className: cn("style-b4b33d2441", variant === 'center' ? "style-13ab9c2eb2 centered-dialog" : "style-2e4d601310"), onCancel: (e) => { e.preventDefault(); onClose(); }, onClick: (e) => { if (e.target === e.currentTarget)
             onClose(); }, children: _jsx(DragCtx.Provider, { value: drag, children: mounted && children }) }));
 };
 export default Dialog;
 /** Header for the side sheet. Doubles as the drag handle. */
 export const SheetHeader = ({ onClose, children }) => {
     const drag = useContext(DragCtx);
-    return (_jsxs("header", { ...drag, className: "relative cursor-grab touch-pan-y select-none border-b border-line px-6 pb-4 pt-3 active:cursor-grabbing", children: [_jsx("span", { "aria-hidden": true, className: "mx-auto mb-3 block h-1 w-9 rounded-full bg-line-strong sm:hidden" }), _jsx("button", { type: "button", onClick: onClose, "aria-label": "Close", className: "absolute right-4 top-4 grid size-8 place-items-center rounded-full bg-sunken text-ink-2 transition-[transform,color] duration-150 active:scale-90 hover:text-ink", children: _jsx(X, { size: 16 }) }), children] }));
+    return (_jsxs("header", { ...drag, className: "style-d2d9e1f134 style-f2e47d9c52 style-93ee4331ef style-78905c9e86 style-bbe39cfb5c style-4769f958af style-25e1240045 style-b04e43b886 style-0a702d97ed style-71998ea7a2", children: [_jsx("span", { "aria-hidden": true, className: "style-1752f11474 style-7fc057c6b0 style-496aca80e4 style-54f50aff0c style-6bb768bd22 style-b005d61d09 style-06b422cf95 style-ee12d4f979" }), _jsx("button", { type: "button", onClick: onClose, "aria-label": "Close", className: "style-747355bdc2 style-830b1d2217 style-83ee6d9ede style-0f2a693e93 style-ebd37e04d4 style-4446c26b62 style-b005d61d09 style-2de8262ccb style-9e676c7431 style-41e07b9d1a style-3d53df2cf7 style-d64255261e style-d82b3e060a", children: _jsx(X, { size: 16 }) }), children] }));
 };
 /** Standard centered modal chrome. */
-export const ModalBody = ({ title, description, children, footer }) => (_jsxs("div", { className: "p-6", children: [_jsx("h2", { className: "t-h2", children: title }), description && _jsx("p", { className: "mt-1 t-small text-ink-3", children: description }), children && _jsx("div", { className: "mt-5", children: children }), footer && _jsx("div", { className: "mt-6 flex items-center justify-end gap-2", children: footer })] }));
+export const ModalBody = ({ title, description, children, footer }) => (_jsxs("div", { className: "style-c432836760", children: [_jsx("h2", { className: "style-d138f623f0", children: title }), description && _jsx("p", { className: "style-ff6e57b41c style-294e640e9b style-682659f553", children: description }), children && _jsx("div", { className: "style-a752cdc80a", children: children }), footer && _jsx("div", { className: "style-356df20822 style-222f930b87 style-71556df3b4 style-307644c34d style-074569488c", children: footer })] }));

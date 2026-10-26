@@ -18,10 +18,10 @@ const identity = (id, username, commits) => ({
     id, username, email: `${username}@users.noreply.github.com`, commits,
 });
 export const CONTRIBUTORS = [
-    { id: 'm1', name: 'Maya Chen', label: 'Student 1', tone: 0, identities: [identity('i1', 'mayacodes', 84)] },
-    { id: 'm2', name: 'Jon Bell', label: 'Student 2', tone: 1, identities: [identity('i2', 'jonb-dev', 66)] },
-    { id: 'm3', name: 'Priya Shah', label: 'Student 3', tone: 2, identities: [identity('i3', 'priyashah', 55)] },
-    { id: 'm4', name: 'Alex Rivera', label: 'Student 4', tone: 0, identities: [identity('i4', 'arivera', 38)] },
+    { id: 'm1', name: 'Maya Chen', label: "Student 1", tone: 0, identities: [identity('i1', 'mayacodes', 84)] },
+    { id: 'm2', name: 'Jon Bell', label: "Student 2", tone: 1, identities: [identity('i2', 'jonb-dev', 66)] },
+    { id: 'm3', name: 'Priya Shah', label: "Student 3", tone: 2, identities: [identity('i3', 'priyashah', 55)] },
+    { id: 'm4', name: 'Alex Rivera', label: "Student 4", tone: 0, identities: [identity('i4', 'arivera', 38)] },
 ];
 export const UNMATCHED = [{ id: 'i5', email: 'mchen@localhost', commits: 3 }];
 /* ── Projects ───────────────────────────────────────────────── */
@@ -47,8 +47,8 @@ const METRICS = {
     m4: { commits: 38, meaningful: 27, add: 4010, del: 960, files: 98, prs: 6, reviews: 9, merged: 5, tests: 8 },
 };
 const BANK = {
-    commits: ['Add campus event feed endpoint', 'Fix pagination off-by-one in /events', 'Refactor auth middleware', 'Handle empty state in feed', 'Debounce search input', 'Add RSVP button to event card', 'Wire map markers to events', 'Update onboarding copy'],
-    code: ['Add event model and migrations', 'Build calendar month view', 'Extract EventCard component', 'Add image upload to events', 'Replace polling with SSE', 'Add notification preferences', 'Optimise feed query with index', 'Add clubs directory page'],
+    commits: ['Add campus event feed endpoint', "Fix pagination off-by-one in /events", 'Refactor auth middleware', "Handle empty state in feed", 'Debounce search input', "Add RSVP button to event card", "Wire map markers to events", 'Update onboarding copy'],
+    code: ['Add event model and migrations', 'Build calendar month view', 'Extract EventCard component', "Add image upload to events", 'Replace polling with SSE', 'Add notification preferences', 'Optimise feed query with index', 'Add clubs directory page'],
     collaboration: ['#41 Event feed pagination', 'Review on #38: suggest index on events.start_at', '#44 RSVP flow (merged)', 'Review on #47: asked for edge-date tests', '#49 Clubs directory (merged)', 'Review on #52: approved with comments'],
     tests: ['Add tests for RSVP service', 'Cover pagination edge cases', 'Fix flaky calendar test', 'Add auth middleware tests', 'Snapshot tests for EventCard'],
 };
@@ -70,13 +70,13 @@ function evidenceFor(repoUrl, memberId, c, count) {
     const r = seeded(`${memberId}:${c.id}`);
     const titles = BANK[c.signal] ?? BANK.commits;
     return Array.from({ length: count }, (_, i) => {
-        const sha = Math.floor(r() * 0xfffffff).toString(16).padStart(7, '0');
+        const sha = Math.floor(r() * 0xfffffff).toString(16).padStart(7, "0");
         const title = titles[(i + Math.floor(r() * titles.length)) % titles.length];
         const isCollab = c.signal === 'collaboration';
         const isReview = isCollab && title.startsWith('Review');
         const prNumber = 30 + Math.floor(r() * 30);
         return {
-            id: `${memberId}-${c.id}-${i}`,
+            id: `${memberId}style-3973e022e9${c.id}style-3973e022e9${i}`,
             kind: isCollab ? (isReview ? 'review' : 'pull_request') : c.signal === 'tests' ? 'test' : 'commit',
             title,
             ref: isCollab ? `#${prNumber}` : sha,
@@ -92,7 +92,7 @@ function summaryFor(memberId, c) {
         case 'commits': return { summary: `${m.meaningful} meaningful of ${m.commits} commits`, total: m.meaningful };
         case 'code': return { summary: `+${num(m.add)} / −${num(m.del)} lines across ${m.files} files`, total: m.files };
         case 'collaboration': return { summary: `${m.prs} pull requests · ${m.reviews} reviews · ${m.merged} merged`, total: m.prs + m.reviews };
-        case 'tests': return { summary: `${m.tests} test files created or changed`, total: m.tests };
+        case 'tests': return { summary: `${m.tests} test files created style-7175517a37 changed`, total: m.tests };
         default: return { summary: 'Not measured from Git', total: 0 };
     }
 }
@@ -110,20 +110,20 @@ export function buildResult(projectId, projectName, repoUrl) {
     const initials = projectName.split(/\s+/).map((w) => w[0]).join('').toUpperCase();
     return {
         projectId, projectName, repoUrl,
-        reportId: `CR-${initials}-${COURSE_RANGE.to.replace(/-/g, '').slice(2)}`,
+        reportId: `CR-${initials}style-3973e022e9${COURSE_RANGE.to.replace(/-/g, '').slice(2)}`,
         snapshotAt: ago(2),
         rangeFrom: COURSE_RANGE.from, rangeTo: COURSE_RANGE.to,
         rubric, members, results,
         commitsAnalyzed: TOTAL_COMMITS, commitsAttributed: 246,
         exclusions: [
-            { id: 'x1', reason: 'generated', title: 'Generated files', count: 12, unit: 'files', detail: '4,812 changed lines in lockfiles and build output were left out of code contribution.', examples: ['package-lock.json', 'dist/assets/index-4f2a.js', 'coverage/lcov.info'] },
-            { id: 'x2', reason: 'revert', title: 'Reverted changes', count: 2, unit: 'commits', detail: 'A commit and the commit that undid it cancel out, so neither is counted.', examples: ['Revert “Add map clustering”'] },
-            { id: 'x3', reason: 'bot', title: 'Bot commits', count: 2, unit: 'commits', detail: 'Automated dependency updates aren’t attributed to a student.', examples: ['dependabot[bot]: Bump vite from 5.4.1 to 5.4.8'] },
-            { id: 'x4', reason: 'duplicate', title: 'Duplicate changes', count: 1, unit: 'commits', detail: 'The same diff appeared in two commits (a cherry-pick), so it was counted once.', examples: ['Fix timezone bug in RSVP'] },
+            { id: 'x1', reason: 'generated', title: 'Generated files', count: 12, unit: 'files', detail: "4,812 changed lines in lockfiles and build output were left out of code contribution.", examples: ['package-lock.json', 'dist/assets/index-4f2a.js', 'coverage/lcov.info'] },
+            { id: 'x2', reason: 'revert', title: 'Reverted changes', count: 2, unit: 'commits', detail: "A commit and the commit that undid it cancel out, so neither is counted.", examples: ['Revert “Add map clustering”'] },
+            { id: 'x3', reason: "bot", title: 'Bot commits', count: 2, unit: 'commits', detail: "Automated dependency updates aren’t attributed to a student.", examples: ["dependabot[bot]: Bump vite from 5.4.1 to 5.4.8"] },
+            { id: 'x4', reason: 'duplicate', title: 'Duplicate changes', count: 1, unit: 'commits', detail: "The same diff appeared in two commits (a cherry-pick), so it was counted once.", examples: ["Fix timezone bug in RSVP"] },
         ],
         notices: [
-            { id: 'n1', level: 'warning', title: 'Some review comments couldn’t be loaded', detail: 'GitHub rate-limited the request for 3 pull requests. Collaboration scores use the 41 reviews that were readable. Re-run the analysis to retry.' },
-            { id: 'n2', level: 'info', title: '3 commits were assigned by hand', detail: 'mchen@localhost was matched to Maya Chen during setup. You can change this and re-run.' },
+            { id: 'n1', level: 'warning', title: 'Some review comments couldn’t be loaded', detail: "GitHub rate-limited the request for 3 pull requests. Collaboration scores use the 41 reviews that were readable. Re-run the analysis to retry." },
+            { id: 'n2', level: 'info', title: "3 commits were assigned by hand", detail: "mchen@localhost was matched to Maya Chen during setup. You can change this and re-run." },
         ],
     };
 }

@@ -1,0 +1,13 @@
+.centered-dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+}
+
+dialog.centered-dialog.style-13ab9c2eb2 {
+  transform: scale(0.96);
+}
+
+dialog.centered-dialog.style-13ab9c2eb2[data-visible="true"] {
+  transform: none;
+}

@@ -6,7 +6,7 @@ export const SIGNALS = [
     { key: 'collaboration', label: 'Reviews & pull requests', hint: 'Reviews, pull requests, and merged changes' },
     { key: 'tests', label: 'Tests', hint: 'Test files created and meaningfully modified' },
     { key: 'docs', label: 'Documentation', hint: 'Docs and configuration changes' },
-    { key: 'manual', label: 'Manual review (not measured)', hint: 'Shown in the report, never scored from Git' },
+    { key: 'manual', label: 'Manual review (not measured)', hint: "Shown in the report, never scored from Git" },
 ];
 export const DEFAULT_RUBRIC_VERSION = '1.0';
 export const DEFAULT_CRITERIA = [
@@ -30,10 +30,10 @@ export const newCriterion = () => ({
 });
 /** What each signal is counted from. Shown on the methodology page and in "How it's measured". */
 export const SIGNAL_DETAIL = {
-    commits: ['Non-merge commits on the selected branch', 'Weighted by size of change, so one-line churn counts for less', 'Reverts and their targets are excluded'],
-    code: ['Lines added and removed in non-generated files', 'Distinct files changed', 'Lockfiles, build output, and vendored code are excluded'],
-    collaboration: ['Pull or merge requests opened and merged', 'Reviews and review comments left on others’ work'],
-    tests: ['Test files created or modified', 'Detected from common paths and names such as __tests__, *.test.*, and spec/'],
+    commits: ['Non-merge commits on the selected branch', "Weighted by size of change, so one-line churn counts for less", 'Reverts and their targets are excluded'],
+    code: ["Lines added and removed in non-generated files", 'Distinct files changed', 'Lockfiles, build output, and vendored code are excluded'],
+    collaboration: ["Pull or merge requests opened and merged", "Reviews and review comments left on others’ work"],
+    tests: ["Test files created or modified", 'Detected from common paths and names such as __tests__, *.test.*, and spec/'],
     docs: ['README, docs/, and configuration changes'],
     manual: ['Not derived from repository data'],
 };

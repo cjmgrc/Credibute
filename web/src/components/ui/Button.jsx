@@ -2,22 +2,22 @@ import { Fragment as _Fragment, jsxs as _jsxs, jsx as _jsx } from "react/jsx-run
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/cn';
 const sizes = {
-    sm: 'h-8 px-3 text-[0.8125rem]',
-    md: 'h-10 px-4 text-[0.875rem]',
-    lg: 'h-12 px-6 text-[0.9375rem]',
+    sm: "style-1fb07b38c6 style-0f9e667291 style-41d447f47e",
+    md: "style-fdd2f85cad style-9513b39680 style-e5aa42d83f",
+    lg: "style-2bf5d58a82 style-25e1240045 style-1f467b1929",
 };
 const variants = {
-    primary: 'bg-accent text-white shadow-[inset_0_1px_0_rgb(255_255_255/0.18),0_1px_2px_rgb(20_20_60/0.2)] hover:bg-accent-hover',
-    secondary: 'border border-line bg-surface text-ink shadow-lift hover:border-line-strong',
-    ghost: 'text-ink-2 hover:bg-sunken hover:text-ink',
-    danger: 'bg-bad text-white hover:opacity-90',
+    primary: "style-292affc1f7 style-5e9a40ae2b style-fefcfaed8f style-66b0a3ab8c",
+    secondary: "style-4f1a55de40 style-4769f958af style-ad04ce25f0 style-3c70d0a0c9 style-a9765437e6 style-b6d1913570",
+    ghost: "style-9e676c7431 style-0637e93d27 style-d82b3e060a",
+    danger: "style-fba8a08a00 style-5e9a40ae2b style-2c2c63d813",
 };
-export const buttonClass = (variant = 'primary', size = 'md', extra) => cn('inline-flex shrink-0 select-none items-center justify-center gap-2 whitespace-nowrap rounded-control font-semibold tracking-[-0.005em]', 'transition-[transform,background-color,border-color,box-shadow,color,opacity] duration-150 ease-out-strong', 'active:scale-[0.97] aria-disabled:pointer-events-none disabled:pointer-events-none disabled:opacity-45', sizes[size], variants[variant], extra);
+export const buttonClass = (variant = 'primary', size = "md", extra) => cn("style-123306850f style-27ead27a81 style-78905c9e86 style-71556df3b4 style-a503dd374c style-074569488c style-963f6168b7 style-a7ab7bd722 style-87e86ce38e style-f66698ebd0", "style-d3d381877a style-3d53df2cf7 style-501b3e6c9f", "style-03cc0a209d style-4a563e1d99 style-8d3c1014b9 style-3027c7bda4", sizes[size], variants[variant], extra);
 const Button = (props) => {
-    const { variant = 'primary', size = 'md', icon, trailing, className, children } = props;
+    const { variant = 'primary', size = "md", icon, trailing, className, children } = props;
     const cls = buttonClass(variant, size, className);
     const inner = (_jsxs(_Fragment, { children: [icon, children, trailing] }));
-    if ('to' in props && props.to !== undefined) {
+    if ("to" in props && props.to !== undefined) {
         const p = props;
         return _jsx(Link, { to: p.to, className: cls, onClick: p.onClick, children: inner });
     }

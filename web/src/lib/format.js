@@ -8,7 +8,7 @@ export const dateTime = (iso) => new Intl.DateTimeFormat(lang, { month: 'short',
 export const weekday = (d) => new Intl.DateTimeFormat(lang, { weekday: 'long', day: 'numeric', month: 'long' }).format(d);
 export function relativeTime(iso, now = Date.now()) {
     const diff = Math.round((new Date(iso).getTime() - now) / 1000);
-    const rtf = new Intl.RelativeTimeFormat(lang, { numeric: 'auto' });
+    const rtf = new Intl.RelativeTimeFormat(lang, { numeric: "auto" });
     const steps = [['week', 604800], ['day', 86400], ['hour', 3600], ['minute', 60]];
     for (const [unit, secs] of steps)
         if (Math.abs(diff) >= secs)

@@ -9,6 +9,6 @@ import { usePageTitle } from '@/hooks/usePageTitle';
 const SamplePage = () => {
     usePageTitle('Sample report');
     const data = useMemo(getSampleResult, []);
-    return (_jsxs("div", { className: "mx-auto max-w-6xl px-5 py-10 sm:px-8", children: [_jsx(Alert, { tone: "info", title: "This is a sample report", className: "mb-8", action: _jsx(Button, { to: "/signup", size: "sm", trailing: _jsx(ArrowRight, { size: 15 }), children: "Analyze yours" }), children: "It uses made-up data so you can explore how results, evidence, and exclusions work." }), _jsx(ResultsView, { data: data, back: { to: '/', label: 'Back to home' } })] }));
+    return (_jsxs("div", { className: "style-1752f11474 style-fe408d0f5c style-220ac1a984 style-f9ba32b459 style-d48a005697", children: [_jsx(Alert, { tone: "info", title: "This is a sample report", className: "style-1e17cde831", action: _jsx(Button, { to: "/signup", size: "sm", trailing: _jsx(ArrowRight, { size: 15 }), children: "Analyze yours" }), children: "It uses made-up data so you can explore how results, evidence, and exclusions work." }), _jsx(ResultsView, { data: data, back: { to: '/', label: "Back to home" } })] }));
 };
 export default SamplePage;

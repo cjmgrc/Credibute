@@ -4,7 +4,7 @@ import AuthLayout from '@/layouts/AuthLayout';
 import AuthForm from '@/features/auth/AuthForm';
 import { useAuth } from '@/context/AuthContext';
 import { usePageTitle } from '@/hooks/usePageTitle';
-const TITLES = { signin: 'Sign in', signup: 'Create account', forgot: 'Reset password' };
+const TITLES = { signin: "Sign in", signup: 'Create account', forgot: 'Reset password' };
 const AuthPage = ({ mode }) => {
     usePageTitle(TITLES[mode]);
     const { user } = useAuth();
