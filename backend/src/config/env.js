@@ -35,10 +35,6 @@ const schema = z.object({
     .default("info"),
 });
 
-/**
- * Validates configuration once, at startup, and fails fast with a readable message.
- * Takes the source as an argument (instead of reading process.env directly) so tests can pass their own.
- */
 export function loadEnv(source = process.env) {
   const result = schema.safeParse(source);
   const problems = result.success
