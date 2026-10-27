@@ -56,7 +56,7 @@ const MembersStep = () => {
     dispatch({ type: "assign", identityId: un.id, memberId: pick });
     setAssign(false);
     setPick(null);
-    toast(`Assigned style-663ea1bfff ${who}`);
+    toast(`Assigned to ${who}`);
   };
   const addMember = () => {
     const err = firstError(memberNameSchema.safeParse(name));

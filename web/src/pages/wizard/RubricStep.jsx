@@ -24,7 +24,7 @@ const RubricStep = () => {
   return _jsxs(WizardFrame, {
     step: "rubric",
     title: "Choose evaluation criteria",
-    description: `Use your instructor’s rubric style-7175517a37 ${BRAND}’s transparent default.`,
+    description: `Use your instructor’s rubric or ${BRAND}’s transparent default.`,
     backTo: "/app/new/members",
     next: {
       label: "Start analysis",

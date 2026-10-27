@@ -35,7 +35,7 @@ function Segmented({ value, onChange, options, label, className }) {
         className:
           "style-747355bdc2 style-01ebac6f82 style-22e50bb651 style-7198f34b03 style-ad04ce25f0 style-a9765437e6 style-48a1d34f1a style-bc0abeab49 style-e08aced6ea style-b2ed949e45",
         style: {
-          width: `calc((100% style-3973e022e9 0.5rem) / ${options.length})`,
+          width: `calc((100% - 0.5rem) / ${options.length})`,
           transform: `translateX(${index * 100}%)`,
         },
       }),
