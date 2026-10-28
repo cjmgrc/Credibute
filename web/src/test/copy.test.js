@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync } from "node:fs";
-import { join, resolve } from "node:path";
+import { join, relative, sep } from "node:path";
 import { describe, expect, it } from "vitest";
 import { rubricIssues } from "@/domain/scoring";
 import { firstError, repoUrlSchema } from "@/domain/validation";
@@ -38,14 +38,12 @@ describe("user-facing copy", () => {
   });
 });
 
-// A past restyling pass replaced words inside template literals (to, up, a, or, "-")
-// with hashed class names like "style-663ea1bfff". Class-name templates contain ONLY those
-// tokens, so any template that mixes one with real text is corrupted copy.
 describe("source hygiene", () => {
   it("has no hashed class tokens inside prose template literals", () => {
+    const rel = (file) => relative(srcDir, file).split(sep).join("/");
     const offenders = [];
     for (const file of walk(srcDir).filter(
-      (f) => /\.jsx?$/.test(f) && !f.includes("/test/"),
+      (f) => /\.jsx?$/.test(f) && !rel(f).startsWith("test/"),
     )) {
       const text = readFileSync(file, "utf8");
       for (const m of text.matchAll(/`([^`]*)`/g)) {
@@ -55,9 +53,7 @@ describe("source hygiene", () => {
           .replace(/\$\{[^}]*\}/g, "")
           .trim();
         if (rest.length > 0)
-          offenders.push(
-            `${file.replace(srcDir, "src/")}: ${m[0].slice(0, 80)}`,
-          );
+          offenders.push(`src/${rel(file)}: ${m[0].slice(0, 80)}`);
       }
     }
     expect(offenders).toEqual([]);
