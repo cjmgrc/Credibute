@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync } from "node:fs";
-import { join, relative, sep } from "node:path";
+import { join, relative, resolve, sep } from "node:path";
 import { describe, expect, it } from "vitest";
 import { rubricIssues } from "@/domain/scoring";
 import { firstError, repoUrlSchema } from "@/domain/validation";

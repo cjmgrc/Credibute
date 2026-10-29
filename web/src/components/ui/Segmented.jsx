@@ -26,18 +26,15 @@ function Segmented({ value, onChange, options, label, className }) {
     "aria-label": label,
     onKeyDown: onKey,
     className: cn(
-      "style-d2d9e1f134 style-0f2a693e93 style-49bca6a20e style-df175dde10 style-a7ab7bd722 style-2de8262ccb style-1dee6e3ec6",
+      "u-position-relative u-display-grid u-grid-auto-columns-minmax-0-1fr u-grid-auto-flow-column u-border-radius-0-625rem u-bg-var-sunken-3 u-padding-space",
       className,
     ),
     children: [
       _jsx("span", {
         "aria-hidden": true,
-        className:
-          "style-747355bdc2 style-01ebac6f82 style-22e50bb651 style-7198f34b03 style-ad04ce25f0 style-a9765437e6 style-48a1d34f1a style-bc0abeab49 style-e08aced6ea style-b2ed949e45",
-        style: {
-          width: `calc((100% - 0.5rem) / ${options.length})`,
-          transform: `translateX(${index * 100}%)`,
-        },
+        "data-count": options.length,
+        "data-index": index,
+        className: "segmented-thumb",
       }),
       options.map((o, i) =>
         _jsx(
@@ -53,10 +50,10 @@ function Segmented({ value, onChange, options, label, className }) {
             disabled: o.disabled,
             onClick: () => onChange(o.value),
             className: cn(
-              "style-d2d9e1f134 style-418e44ad4f style-1fb07b38c6 style-7198f34b03 style-0f9e667291 style-294e640e9b style-87e86ce38e style-eae178841c style-3d53df2cf7 style-03cc0a209d style-3027c7bda4",
+              "u-position-relative u-z-index-10 u-height-space-8 u-border-radius-0-45rem u-padding-inline-space-3 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-scale-0-97 u-opacity-0-45",
               o.value === value
-                ? "style-3c70d0a0c9"
-                : "style-682659f553 style-c06b7dba95",
+                ? "u-color-var-ink"
+                : "u-color-var-ink-3-2 u-color-var-ink-2-2",
             ),
             children: o.label,
           },

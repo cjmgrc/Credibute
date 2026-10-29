@@ -1,16 +1,16 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { cn } from "@/lib/cn";
 const tones = {
-  neutral: "style-2de8262ccb style-9e676c7431",
-  accent: "style-95debef1e0 style-242347c218",
-  ok: "style-c0af61bc47 style-0e23fa0f9b",
-  warn: "style-8a7ae3341a style-7294770c9c",
-  bad: "style-91f2585319 style-5640c57ccb",
+  neutral: "u-bg-var-sunken-3 u-color-var-ink-2",
+  accent: "u-bg-var-accent-soft-2 u-color-var-accent-text-2",
+  ok: "u-bg-var-ok-soft u-color-var-ok",
+  warn: "u-bg-var-warn-soft u-color-var-warn",
+  bad: "u-bg-var-bad-soft-2 u-color-var-bad-2",
 };
 const Badge = ({ tone = "neutral", dot, children, className }) =>
   _jsxs("span", {
     className: cn(
-      "style-123306850f style-71556df3b4 style-70007b8768 style-b005d61d09 style-588daa1a98 style-1fcf28756b style-4010c02329 style-87e86ce38e",
+      "u-display-inline-flex u-align-items-center-2 u-gap-space-1-5 u-border-radius-3-40282e38px u-padding-inline-space-2-5 u-padding-block-space u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
       tones[tone],
       className,
     ),
@@ -18,7 +18,7 @@ const Badge = ({ tone = "neutral", dot, children, className }) =>
       dot &&
         _jsx("span", {
           "aria-hidden": true,
-          className: "style-dc797fcc71 style-b005d61d09 style-0cf6c2e8fe",
+          className: "u-width-space-1-5-height-space-1-5 u-border-radius-3-40282e38px u-bg-currentcolor",
         }),
       children,
     ],

@@ -6,21 +6,21 @@ import TabBar from "@/components/layout/TabBar";
 import SkipLink from "./SkipLink";
 const AppLayout = () =>
   _jsxs("div", {
-    className: "style-6495140cf7 style-592263b167 style-0fe12ace9e",
+    className: "u-min-height-100dvh u-display-grid-2 u-grid-cols-15rem-minmax-0-1fr",
     children: [
       _jsx(SkipLink, {}),
       _jsx("div", {
-        className: "style-97e9901753",
+        className: "u-display-none-important",
         children: _jsx(Sidebar, {}),
       }),
       _jsxs("div", {
-        className: "style-184ddc11e5",
+        className: "u-min-width-0",
         children: [
           _jsx(Topbar, {}),
           _jsx("main", {
             id: "main",
             className:
-              "style-1752f11474 style-58d0413dd9 style-fe408d0f5c style-220ac1a984 style-82cb7bc16d style-2ab3099402 style-d48a005697 style-e04acf9b7f",
+              "u-margin-inline-auto u-width-100pct u-max-width-var-container-6xl u-padding-inline-space-5 u-padding-bottom-space-28 u-padding-top-space-8 u-padding-inline-space-8 u-padding-bottom-space-14",
             children: _jsx(Outlet, {}),
           }),
         ],

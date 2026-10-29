@@ -10,7 +10,7 @@ const WizardFrame = ({ step, title, description, children, backTo, next }) => {
   const toast = useToast();
   const n = STEPS.findIndex((s) => s.key === step) + 1;
   return _jsxs("div", {
-    className: "style-1752f11474 style-d428dcb8d4",
+    className: "u-margin-inline-auto u-max-width-var-container-3xl",
     children: [
       _jsxs("button", {
         type: "button",
@@ -19,7 +19,7 @@ const WizardFrame = ({ step, title, description, children, backTo, next }) => {
           navigate("/app/projects");
         },
         className:
-          "style-1e17cde831 style-123306850f style-71556df3b4 style-70007b8768 style-294e640e9b style-682659f553 style-eae178841c style-d82b3e060a",
+          "u-margin-bottom-space-8 u-display-inline-flex u-align-items-center-2 u-gap-space-1-5 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2 u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
         children: [
           _jsx(ArrowLeft, { size: 15, "aria-hidden": true }),
           "Save and exit",
@@ -27,18 +27,18 @@ const WizardFrame = ({ step, title, description, children, backTo, next }) => {
       }),
       _jsx(Stepper, { current: step }),
       _jsxs("header", {
-        className: "style-1e17cde831 style-b5dbca1754 style-05ab124483",
+        className: "u-margin-bottom-space-8 u-margin-top-space-12 u-text-align-center",
         children: [
           _jsxs("p", {
-            className: "style-294e640e9b style-87e86ce38e style-242347c218",
+            className: "u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2",
             children: ["Step ", n, " of ", STEPS.length],
           }),
           _jsx("h1", {
-            className: "style-8f91cbcb89 style-f28fea81a5",
+            className: "u-letter-spacing-0-032em-text-clamp-1-75rem-3-4vw-2-25rem u-margin-top-space-2",
             children: title,
           }),
           _jsx("p", {
-            className: "style-f28fea81a5 style-1b61761e1c style-682659f553",
+            className: "u-margin-top-space-2 u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-3-2",
             children: description,
           }),
         ],
@@ -46,17 +46,17 @@ const WizardFrame = ({ step, title, description, children, backTo, next }) => {
       children,
       _jsxs("div", {
         className:
-          "style-356df20822 style-222f930b87 style-71556df3b4 style-32c92bb1fd style-90fc3ec35a",
+          "u-margin-top-space-6 u-display-flex-3 u-align-items-center-2 u-justify-content-space-between u-gap-space-4",
         children: [
           _jsx(Link, {
             to: backTo,
             className:
-              "style-123306850f style-fdd2f85cad style-71556df3b4 style-a7ab7bd722 style-4f1a55de40 style-4769f958af style-ad04ce25f0 style-9513b39680 style-294e640e9b style-87e86ce38e style-a9765437e6 style-e5afbdee38 style-3d53df2cf7 style-501b3e6c9f style-03cc0a209d style-b6d1913570",
+              "u-display-inline-flex u-height-space-10 u-align-items-center-2 u-border-radius-0-625rem u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-bg-var-surface-2 u-padding-inline-space-4 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-ui-shadow-var-sh-lift-box-shadow-var-ui-inset-shadow-var-ui-inset-ring-shadow-var-ui-ring-offset-shadow-var-ui-ring-shadow-var-ui-shadow u-transition-property-transform-border-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-scale-0-97 u-border-color-var-line-strong-2",
             children: "Back",
           }),
           _jsxs("p", {
             className:
-              "style-e564b4081d style-71556df3b4 style-70007b8768 style-4010c02329 style-682659f553 style-19224e6cb4",
+              "u-display-none-3 u-align-items-center-2 u-gap-space-1-5 u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2 u-display-flex-2",
             children: [
               _jsx(ShieldCheck, { size: 14, "aria-hidden": true }),
               "Your source code is never stored.",

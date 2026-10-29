@@ -23,29 +23,29 @@ const PrivacyPage = () => {
   usePageTitle("Privacy");
   return _jsxs("article", {
     className:
-      "style-1752f11474 style-d428dcb8d4 style-220ac1a984 style-b7f39944bb style-d48a005697",
+      "u-margin-inline-auto u-max-width-var-container-3xl u-padding-inline-space-5 u-padding-block-space-16 u-padding-inline-space-8",
     children: [
       _jsx("h1", {
-        className: "style-8f91cbcb89",
+        className: "u-letter-spacing-0-032em-text-clamp-1-75rem-3-4vw-2-25rem",
         children: "Privacy and security",
       }),
       _jsx("p", {
-        className: "style-dc1d1f5a54 style-1b61761e1c style-9e676c7431",
+        className: "u-margin-top-space-4 u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-2",
         children:
           "Group projects involve people’s work. Credibute is designed to handle it carefully.",
       }),
       _jsx("dl", {
-        className: "style-f2bd784fd4 style-0f2a693e93 style-8c7e0067a9",
+        className: "u-margin-top-space-10 u-display-grid u-gap-space-6",
         children: ITEMS.map(([t, d]) =>
           _jsxs(
             "div",
             {
-              className: "style-894c3815a5 style-4769f958af style-08a31a346e",
+              className: "u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line u-padding-top-space-5",
               children: [
-                _jsx("dt", { className: "style-2ccfb296b9", children: t }),
+                _jsx("dt", { className: "u-letter-spacing-0-011em-text-1rem", children: t }),
                 _jsx("dd", {
                   className:
-                    "style-ff6e57b41c style-1b61761e1c style-682659f553",
+                    "u-margin-top-space u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-3-2",
                   children: d,
                 }),
               ],
@@ -57,7 +57,7 @@ const PrivacyPage = () => {
       _jsx(Alert, {
         tone: "info",
         title: "Early development",
-        className: "style-f2bd784fd4",
+        className: "u-margin-top-space-10",
         children:
           "This page describes the intended design. Exact retention periods and data flows will be documented here before public release. Never post credentials or tokens in issues, and report security problems privately.",
       }),

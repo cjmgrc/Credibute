@@ -27,29 +27,29 @@ const Topbar = () => {
   return (
     <header
       className={cn(
-        "style-40b30b4e8f style-964a9431ff style-98599e4ee2 style-4e8f0a87a0 style-bbe39cfb5c style-6957a0d1d3 style-10e9f177b8 style-97e9901753",
-        scrolled ? "style-4769f958af" : "style-e9c0d2f359",
+        "u-background-var-material-webkit-backdrop-filter-blur-20px-saturate-180pct u-position-sticky u-top-0 u-z-index-20 u-border-bottom-style-var-ui-border-style-border-bottom-width-1px-2 u-transition-property-border-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-2s-transition-duration-0-2s u-display-none-important",
+        scrolled ? "u-border-color-var-line" : "u-border-color-0000",
       )}
     >
-      <div className="style-222f930b87 style-3c2f6f8a3b style-71556df3b4 style-32c92bb1fd style-d7db3451d1 style-220ac1a984 style-d48a005697">
+      <div className="u-display-flex-3 u-height-space-16 u-align-items-center-2 u-justify-content-space-between u-gap-space-3 u-padding-inline-space-5 u-padding-inline-space-8">
         <nav
           aria-label="Breadcrumb"
-          className="style-222f930b87 style-71556df3b4 style-074569488c style-294e640e9b style-682659f553"
+          className="u-display-flex-3 u-align-items-center-2 u-gap-space-2 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2"
         >
-          <Link to="/app" className="style-eae178841c style-d82b3e060a">
+          <Link to="/app" className="u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2">
             {BRAND}
           </Link>
           <span aria-hidden="true">/</span>
-          <span className="style-87e86ce38e style-3c70d0a0c9">{crumb}</span>
+          <span className="u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-ink">{crumb}</span>
         </nav>
-        <div className="style-222f930b87 style-71556df3b4 style-074569488c">
+        <div className="u-display-flex-3 u-align-items-center-2 u-gap-space-2">
           <ThemeToggle />
           {!inWizard && (
             <Button to="/app/projects?newProject=1" icon={<Plus size={16} />}>
-              <span className="style-e564b4081d style-a0a9310340">
+              <span className="u-display-none-3 u-display-inline">
                 New project
               </span>
-              <span className="style-ee12d4f979">New</span>
+              <span className="u-display-none-4">New</span>
             </Button>
           )}
         </div>

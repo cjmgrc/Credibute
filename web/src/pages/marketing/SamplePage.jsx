@@ -11,12 +11,12 @@ const SamplePage = () => {
   const data = useMemo(getSampleResult, []);
   return _jsxs("div", {
     className:
-      "style-1752f11474 style-fe408d0f5c style-220ac1a984 style-f9ba32b459 style-d48a005697",
+      "u-margin-inline-auto u-max-width-var-container-6xl u-padding-inline-space-5 u-padding-block-space-10 u-padding-inline-space-8",
     children: [
       _jsx(Alert, {
         tone: "info",
         title: "This is a sample report",
-        className: "style-1e17cde831",
+        className: "u-margin-bottom-space-8",
         action: _jsx(Button, {
           to: "/signup",
           size: "sm",

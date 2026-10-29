@@ -21,13 +21,13 @@ const Section = ({ title, description, children }) =>
   _jsxs(Card, {
     as: "section",
     className:
-      "style-0f2a693e93 style-9f9763f399 style-c432836760 style-704351e0c2",
+      "u-display-grid u-gap-space-5 u-padding-space-6 u-grid-cols-14rem-1fr",
     children: [
       _jsxs("div", {
         children: [
-          _jsx("h2", { className: "style-2ccfb296b9", children: title }),
+          _jsx("h2", { className: "u-letter-spacing-0-011em-text-1rem", children: title }),
           _jsx("p", {
-            className: "style-ff6e57b41c style-294e640e9b style-682659f553",
+            className: "u-margin-top-space u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
             children: description,
           }),
         ],
@@ -61,23 +61,23 @@ const SettingsPage = () => {
         description: "Your account, appearance, and data.",
       }),
       _jsxs("div", {
-        className: "style-222f930b87 style-302c0d124a style-9f9763f399",
+        className: "u-display-flex-3 u-flex-direction-column u-gap-space-5",
         children: [
           _jsx(Section, {
             title: "Profile",
             description: "How you appear in reports.",
             children: _jsxs("dl", {
               className:
-                "style-0f2a693e93 style-90fc3ec35a style-e10c57afb4 style-294e640e9b",
+                "u-display-grid u-gap-space-4 u-grid-cols-repeat-2-minmax-0-1fr-2 u-letter-spacing-0-text-0-8125rem",
               children: [
                 _jsxs("div", {
                   children: [
                     _jsx("dt", {
-                      className: "style-4010c02329 style-682659f553",
+                      className: "u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                       children: "Name",
                     }),
                     _jsx("dd", {
-                      className: "style-87e86ce38e",
+                      className: "u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                       children: user?.name,
                     }),
                   ],
@@ -85,11 +85,11 @@ const SettingsPage = () => {
                 _jsxs("div", {
                   children: [
                     _jsx("dt", {
-                      className: "style-4010c02329 style-682659f553",
+                      className: "u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                       children: "Email",
                     }),
                     _jsx("dd", {
-                      className: "style-87e86ce38e",
+                      className: "u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                       children: user?.email,
                     }),
                   ],
@@ -104,7 +104,7 @@ const SettingsPage = () => {
               label: "Theme",
               value: pref,
               onChange: setPref,
-              className: "style-e332a01368",
+              className: "u-max-width-var-container-xs",
               options: [
                 { value: "system", label: "System" },
                 { value: "light", label: "Light" },
@@ -118,16 +118,16 @@ const SettingsPage = () => {
               "Credibute requests read-only access to the repositories you choose.",
             children: _jsxs("ul", {
               className:
-                "style-d1626f14b8 style-b682aa7242 style-f5470b0a5f style-4f1a55de40 style-4769f958af",
+                "u-ui-divide-y-reverse-0-border-bottom-style-var-ui-border-style u-border-color-var-line-2 u-border-radius-1rem u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line",
               children: [
                 _jsxs("li", {
                   className:
-                    "style-222f930b87 style-71556df3b4 style-d7db3451d1 style-9513b39680 style-f763c2225c",
+                    "u-display-flex-3 u-align-items-center-2 u-gap-space-3 u-padding-inline-space-4 u-padding-block-space-3-5",
                   children: [
                     _jsx(GithubMark, { size: 20 }),
                     _jsx("span", {
                       className:
-                        "style-7bd5bab6d7 style-294e640e9b style-87e86ce38e",
+                        "u-flex-1 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                       children: "GitHub",
                     }),
                     _jsx(Badge, {
@@ -145,12 +145,12 @@ const SettingsPage = () => {
                 }),
                 _jsxs("li", {
                   className:
-                    "style-222f930b87 style-71556df3b4 style-d7db3451d1 style-9513b39680 style-f763c2225c style-682659f553",
+                    "u-display-flex-3 u-align-items-center-2 u-gap-space-3 u-padding-inline-space-4 u-padding-block-space-3-5 u-color-var-ink-3-2",
                   children: [
                     _jsx(GitlabMark, { size: 20 }),
                     _jsx("span", {
                       className:
-                        "style-7bd5bab6d7 style-294e640e9b style-87e86ce38e",
+                        "u-flex-1 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                       children: "GitLab",
                     }),
                     _jsx(Badge, { children: "Coming soon" }),
@@ -165,7 +165,7 @@ const SettingsPage = () => {
               "Remove what Credibute has stored about your projects.",
             children: _jsx(Button, {
               variant: "secondary",
-              icon: _jsx(Trash2, { size: 16, className: "style-5640c57ccb" }),
+              icon: _jsx(Trash2, { size: 16, className: "u-color-var-bad-2" }),
               onClick: () => ask("delete"),
               children: "Delete all project data\u2026",
             }),

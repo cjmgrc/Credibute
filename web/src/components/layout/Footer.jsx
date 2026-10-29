@@ -5,15 +5,15 @@ import { BRAND, REPO_URL } from "@/domain/rubric";
 const Footer = () =>
   _jsxs("footer", {
     className:
-      "style-1752f11474 style-222f930b87 style-fe408d0f5c style-302c0d124a style-b9677bd1cb style-32c92bb1fd style-90fc3ec35a style-220ac1a984 style-f9ba32b459 style-d48a005697 style-56760b222d style-df5a7d0198",
+      "u-margin-inline-auto u-display-flex-3 u-max-width-var-container-6xl u-flex-direction-column u-align-items-flex-start-2 u-justify-content-space-between u-gap-space-4 u-padding-inline-space-5 u-padding-block-space-10 u-padding-inline-space-8 u-flex-direction-row u-align-items-center-3",
     children: [
       _jsxs("div", {
         className:
-          "style-222f930b87 style-faa8a23c68 style-71556df3b4 style-c109310615 style-814effd933",
+          "u-display-flex-3 u-flex-wrap-wrap u-align-items-center-2 u-column-gap-space-4 u-row-gap-space",
         children: [
           _jsx(Logo, {}),
           _jsx("p", {
-            className: "style-294e640e9b style-682659f553",
+            className: "u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
             children: "Clearer evidence for collaborative work.",
           }),
         ],
@@ -21,23 +21,23 @@ const Footer = () =>
       _jsxs("nav", {
         "aria-label": "Footer",
         className:
-          "style-222f930b87 style-faa8a23c68 style-71556df3b4 style-9ec71db48f style-814effd933 style-294e640e9b style-682659f553",
+          "u-display-flex-3 u-flex-wrap-wrap u-align-items-center-2 u-column-gap-space-5 u-row-gap-space u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
         children: [
           _jsx(Link, {
             to: "/privacy",
-            className: "style-eae178841c style-d82b3e060a",
+            className: "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
             children: "Privacy",
           }),
           _jsx(Link, {
             to: "/methodology",
-            className: "style-eae178841c style-d82b3e060a",
+            className: "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
             children: "Methodology",
           }),
           _jsx("a", {
             href: REPO_URL,
             target: "_blank",
             rel: "noreferrer noopener",
-            className: "style-eae178841c style-d82b3e060a",
+            className: "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
             children: "GitHub",
           }),
           _jsxs("span", {

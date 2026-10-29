@@ -73,15 +73,15 @@ const AuthForm = ({ mode }) => {
       children: [
         _jsx("span", {
           className:
-            "style-39b56ab257 style-0f2a693e93 style-31fee7f409 style-4446c26b62 style-b005d61d09 style-c0af61bc47 style-0e23fa0f9b",
+            "u-margin-bottom-space-5 u-display-grid u-width-space-11-height-space-11 u-place-items-center u-border-radius-3-40282e38px u-bg-var-ok-soft u-color-var-ok",
           children: _jsx(Check, { size: 20 }),
         }),
         _jsx("h1", {
-          className: "style-8f91cbcb89",
+          className: "u-letter-spacing-0-032em-text-clamp-1-75rem-3-4vw-2-25rem",
           children: "Check your email",
         }),
         _jsxs("p", {
-          className: "style-f28fea81a5 style-1b61761e1c style-682659f553",
+          className: "u-margin-top-space-2 u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-3-2",
           children: [
             "If an account exists for ",
             email,
@@ -91,23 +91,23 @@ const AuthForm = ({ mode }) => {
         _jsx(Button, {
           to: "/signin",
           variant: "secondary",
-          className: "style-c221af54a3 style-58d0413dd9",
+          className: "u-margin-top-space-8 u-width-100pct",
           children: "Back to sign in",
         }),
       ],
     });
   return _jsxs("div", {
     children: [
-      _jsx("h1", { className: "style-8f91cbcb89", children: copy.title }),
+      _jsx("h1", { className: "u-letter-spacing-0-032em-text-clamp-1-75rem-3-4vw-2-25rem", children: copy.title }),
       _jsx("p", {
-        className: "style-f28fea81a5 style-294e640e9b style-682659f553",
+        className: "u-margin-top-space-2 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
         children: copy.sub,
       }),
       mode !== "forgot" &&
         _jsxs(_Fragment, {
           children: [
             _jsxs("div", {
-              className: "style-a1b2ea1a73 style-0f2a693e93 style-08f0549eb6",
+              className: "u-margin-top-space-7 u-display-grid u-gap-space-2-5",
               children: [
                 _jsx(Button, {
                   variant: "secondary",
@@ -131,16 +131,16 @@ const AuthForm = ({ mode }) => {
             }),
             _jsxs("div", {
               className:
-                "style-5e36d9e2a6 style-222f930b87 style-71556df3b4 style-d7db3451d1 style-4010c02329 style-682659f553",
+                "u-margin-block-space-6 u-display-flex-3 u-align-items-center-2 u-gap-space-3 u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
               children: [
                 _jsx("span", {
                   className:
-                    "style-ae2c4b060b style-7bd5bab6d7 style-85dc4b6230",
+                    "u-height-1px u-flex-1 u-bg-var-line",
                 }),
                 "or use your student email",
                 _jsx("span", {
                   className:
-                    "style-ae2c4b060b style-7bd5bab6d7 style-85dc4b6230",
+                    "u-height-1px u-flex-1 u-bg-var-line",
                 }),
               ],
             }),
@@ -151,8 +151,8 @@ const AuthForm = ({ mode }) => {
         noValidate: true,
         className:
           mode === "forgot"
-            ? "style-a1b2ea1a73 style-0f2a693e93 style-90fc3ec35a"
-            : "style-0f2a693e93 style-90fc3ec35a",
+            ? "u-margin-top-space-7 u-display-grid u-gap-space-4"
+            : "u-display-grid u-gap-space-4",
         children: [
           mode === "signup" &&
             _jsx(TextField, {
@@ -185,7 +185,7 @@ const AuthForm = ({ mode }) => {
                   ? _jsx(Link, {
                       to: "/forgot-password",
                       className:
-                        "style-4010c02329 style-87e86ce38e style-242347c218",
+                        "u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2",
                       children: "Forgot password?",
                     })
                   : undefined,
@@ -194,7 +194,7 @@ const AuthForm = ({ mode }) => {
             type: "submit",
             size: "lg",
             disabled: busy,
-            className: "style-ff6e57b41c style-58d0413dd9",
+            className: "u-margin-top-space u-width-100pct",
             trailing: busy ? _jsx(Spinner, {}) : _jsx(ArrowRight, { size: 17 }),
             children: copy.cta,
           }),
@@ -202,7 +202,7 @@ const AuthForm = ({ mode }) => {
       }),
       _jsx("p", {
         className:
-          "style-356df20822 style-05ab124483 style-294e640e9b style-682659f553",
+          "u-margin-top-space-6 u-text-align-center u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
         children:
           mode === "signin"
             ? _jsxs(_Fragment, {
@@ -212,7 +212,7 @@ const AuthForm = ({ mode }) => {
                   "? ",
                   _jsx(Link, {
                     to: "/signup",
-                    className: "style-87e86ce38e style-242347c218",
+                    className: "u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2",
                     children: "Create an account",
                   }),
                 ],
@@ -222,7 +222,7 @@ const AuthForm = ({ mode }) => {
                   "Already have an account? ",
                   _jsx(Link, {
                     to: "/signin",
-                    className: "style-87e86ce38e style-242347c218",
+                    className: "u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2",
                     children: "Sign in",
                   }),
                 ],

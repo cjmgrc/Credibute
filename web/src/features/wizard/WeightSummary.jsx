@@ -8,7 +8,7 @@ const WeightSummary = ({ criteria }) => {
   const ok = issues.length === 0;
   return _jsxs("p", {
     "aria-live": "polite",
-    className: `style-222f930b87 style-71556df3b4 style-70007b8768 style-294e640e9b style-87e86ce38e style-60182fbf94 ${ok ? "style-0e23fa0f9b" : "style-7294770c9c"}`,
+    className: `u-display-flex-3 u-align-items-center-2 u-gap-space-1-5 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-font-variant-numeric-tabular-nums ${ok ? "u-color-var-ok" : "u-color-var-warn"}`,
     children: [
       ok
         ? _jsx(CheckCircle2, { size: 17, "aria-hidden": true })

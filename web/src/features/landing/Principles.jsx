@@ -9,21 +9,21 @@ import {
 import { Link } from "react-router-dom";
 import { REPO_URL } from "@/domain/rubric";
 const cardLink =
-  "style-356df20822 style-123306850f style-71556df3b4 style-70007b8768 style-294e640e9b style-87e86ce38e style-242347c218 style-ffca82abf4 style-3d53df2cf7 style-501b3e6c9f style-e1b35b4dbd";
+  "u-margin-top-space-6 u-display-inline-flex u-align-items-center-2 u-gap-space-1-5 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2 u-transition-property-gap-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-gap-space-2-5-2";
 const Principles = () =>
   _jsxs("section", {
     className:
-      "style-1752f11474 style-fe408d0f5c style-220ac1a984 style-cee1a230bc style-d48a005697",
+      "u-margin-inline-auto u-max-width-var-container-6xl u-padding-inline-space-5 u-padding-block-space-24 u-padding-inline-space-8",
     children: [
       _jsxs("div", {
-        className: "style-1752f11474 style-2cd561ad57 style-05ab124483",
+        className: "u-margin-inline-auto u-max-width-var-container-xl u-text-align-center",
         children: [
           _jsx("h2", {
-            className: "style-8f91cbcb89",
+            className: "u-letter-spacing-0-032em-text-clamp-1-75rem-3-4vw-2-25rem",
             children: "Evidence, not guesswork.",
           }),
           _jsx("p", {
-            className: "style-dc1d1f5a54 style-1b61761e1c style-682659f553",
+            className: "u-margin-top-space-4 u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-3-2",
             children:
               "Every number links back to measurable repository activity. Nothing hidden, nothing invented.",
           }),
@@ -31,7 +31,7 @@ const Principles = () =>
       }),
       _jsx("div", {
         className:
-          "style-b5dbca1754 style-0f2a693e93 style-90fc3ec35a style-561afbec7a",
+          "u-margin-top-space-12 u-display-grid u-gap-space-4 u-grid-cols-repeat-3-minmax-0-1fr-2",
         children: [
           {
             Icon: FileCheck2,
@@ -76,20 +76,20 @@ const Principles = () =>
             "article",
             {
               className:
-                "style-b646d08f7b style-4f1a55de40 style-4769f958af style-ad04ce25f0 style-a8a56438d7",
+                "u-border-radius-1-5rem u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-bg-var-surface-2 u-padding-space-7-2",
               children: [
                 _jsx("span", {
                   className:
-                    "style-0f2a693e93 style-d0a383a9c2 style-4446c26b62 style-6ad537f2bb style-95debef1e0 style-242347c218",
+                    "u-display-grid u-width-space-10-height-space-10 u-place-items-center u-border-radius-var-radius-xl u-bg-var-accent-soft-2 u-color-var-accent-text-2",
                   children: _jsx(Icon, { size: 19, "aria-hidden": true }),
                 }),
                 _jsx("h3", {
-                  className: "style-2ccfb296b9 style-356df20822",
+                  className: "u-letter-spacing-0-011em-text-1rem u-margin-top-space-6",
                   children: title,
                 }),
                 _jsx("p", {
                   className:
-                    "style-f28fea81a5 style-294e640e9b style-682659f553",
+                    "u-margin-top-space-2 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
                   children: body,
                 }),
                 link,

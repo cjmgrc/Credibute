@@ -17,7 +17,7 @@ const PRINCIPLES = [
     "Commit quantity alone isn’t a reliable measure of contribution.",
   ],
   [
-    "No style-e564b4081d scores",
+    "No u-display-none-3 scores",
     "You can follow every result back to the evidence behind it.",
   ],
   [
@@ -33,7 +33,7 @@ const H2 = ({ id, children }) =>
   _jsx("h2", {
     id: id,
     className:
-      "style-d138f623f0 style-f5e51c64e0 style-6fb2e29aaf style-e62f9415d4",
+      "u-letter-spacing-0-022em-text-1-375rem u-margin-bottom-space-4 u-margin-top-space-14 u-scroll-margin-top-space-24",
     children: children,
   });
 const MethodologyPage = () => {
@@ -42,21 +42,21 @@ const MethodologyPage = () => {
   const maya = sample.results[0];
   return _jsxs("article", {
     className:
-      "style-1752f11474 style-d428dcb8d4 style-220ac1a984 style-b7f39944bb style-d48a005697",
+      "u-margin-inline-auto u-max-width-var-container-3xl u-padding-inline-space-5 u-padding-block-space-16 u-padding-inline-space-8",
     children: [
       _jsx("h1", {
-        className: "style-8f91cbcb89",
+        className: "u-letter-spacing-0-032em-text-clamp-1-75rem-3-4vw-2-25rem",
         children: "How Credibute calculates a contribution estimate",
       }),
       _jsx("p", {
-        className: "style-dc1d1f5a54 style-1b61761e1c style-9e676c7431",
+        className: "u-margin-top-space-4 u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-2",
         children:
           "Credibute applies documented rules to a snapshot of repository activity. There’s no model making judgement calls, so every number can be traced and reproduced.",
       }),
-      _jsx(DisclaimerBanner, { className: "style-c221af54a3" }),
+      _jsx(DisclaimerBanner, { className: "u-margin-top-space-8" }),
       _jsx(H2, { id: "formula", children: "The formula" }),
       _jsxs("p", {
-        className: "style-1b61761e1c style-9e676c7431",
+        className: "u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-2",
         children: [
           "For each criterion in the rubric, a member’s ",
           _jsx("em", { children: "share" }),
@@ -65,20 +65,20 @@ const MethodologyPage = () => {
       }),
       _jsx("p", {
         className:
-          "style-dc1d1f5a54 style-f5470b0a5f style-2de8262ccb style-220ac1a984 style-f33d55d2db style-02ded92445 style-41d447f47e style-3c70d0a0c9",
+          "u-margin-top-space-4 u-border-radius-1rem u-bg-var-sunken-3 u-padding-inline-space-5 u-padding-block-space-4 u-font-family-ui-monospace-sf-mono-sfmono-regular-menlo-consolas-monospace u-text-0-8125rem u-color-var-ink",
         children:
           "estimate = \u03A3 ( criterion share \u00D7 criterion weight )",
       }),
       _jsxs(Card, {
-        className: "style-dc1d1f5a54 style-b40bd2e015 style-014b941a77",
+        className: "u-margin-top-space-4 u-overflow-x-auto u-padding-space-5",
         children: [
           _jsx("p", {
-            className: "style-7fc057c6b0 style-294e640e9b style-87e86ce38e",
+            className: "u-margin-bottom-space-3 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
             children: "Worked example: Maya Chen in the sample report",
           }),
-          _jsx("style-0d4fc4a78d", {
+          _jsx("u-display-table", {
             className:
-              "style-58d0413dd9 style-bebd5e1cb9 style-294e640e9b style-60182fbf94",
+              "u-width-100pct u-min-width-26rem u-letter-spacing-0-text-0-8125rem u-font-variant-numeric-tabular-nums",
             children: _jsxs("tbody", {
               children: [
                 maya.criteria.map((c) => {
@@ -89,19 +89,19 @@ const MethodologyPage = () => {
                     "tr",
                     {
                       className:
-                        "style-894c3815a5 style-4769f958af style-28c98e6919",
+                        "u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line u-border-style-var-ui-border-style-border-width-0",
                       children: [
                         _jsx("td", {
-                          className: "style-b5edc3ea7c",
+                          className: "u-padding-block-space-2",
                           children: w.name,
                         }),
                         _jsxs("td", {
-                          className: "style-b5edc3ea7c style-fe5b15276f",
+                          className: "u-padding-block-space-2 u-text-align-right",
                           children: [c.share, "% \u00D7 ", w.weight, "%"],
                         }),
                         _jsx("td", {
                           className:
-                            "style-b5edc3ea7c style-fe5b15276f style-87e86ce38e",
+                            "u-padding-block-space-2 u-text-align-right u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                           children: ((c.share * w.weight) / 100).toFixed(1),
                         }),
                       ],
@@ -110,16 +110,16 @@ const MethodologyPage = () => {
                   );
                 }),
                 _jsxs("tr", {
-                  className: "style-894c3815a5 style-4132d945d4",
+                  className: "u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line-strong",
                   children: [
                     _jsx("td", {
-                      className: "style-b5edc3ea7c style-87e86ce38e",
+                      className: "u-padding-block-space-2 u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                       colSpan: 2,
                       children: "Estimated share",
                     }),
                     _jsxs("td", {
                       className:
-                        "style-b5edc3ea7c style-fe5b15276f style-0670710393",
+                        "u-padding-block-space-2 u-text-align-right u-ui-weight-var-font-weight-bold-weight-var-font-weight-bold",
                       children: [maya.share.toFixed(1), "%"],
                     }),
                   ],
@@ -130,26 +130,26 @@ const MethodologyPage = () => {
         ],
       }),
       _jsx("p", {
-        className: "style-d21b86ea41 style-294e640e9b style-682659f553",
+        className: "u-margin-top-space-3 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
         children:
-          "Displayed percentages are style-01024deec7 with the largest-remainder method so a style-ad936fcbed always totals exactly 100%.",
+          "Displayed percentages are u-border-radius-0-25rem with the largest-remainder method so a team always totals exactly 100%.",
       }),
       _jsx(H2, { id: "signals", children: "What we measure" }),
       _jsx("div", {
-        className: "style-0f2a693e93 style-d7db3451d1",
+        className: "u-display-grid u-gap-space-3",
         children: SIGNALS.filter((s) => s.key !== "manual").map((s) =>
           _jsxs(
             Card,
             {
-              className: "style-014b941a77",
+              className: "u-padding-space-5",
               children: [
                 _jsx("h3", {
-                  className: "style-2ccfb296b9",
+                  className: "u-letter-spacing-0-011em-text-1rem",
                   children: s.label,
                 }),
                 _jsx("ul", {
                   className:
-                    "style-f28fea81a5 style-27e6c43219 style-294e640e9b style-9e676c7431",
+                    "u-margin-top-space-2 u-ui-space-y-reverse-0-margin-block-start-space-var-ui-space-y-reverse u-letter-spacing-0-text-0-8125rem u-color-var-ink-2",
                   children: SIGNAL_DETAIL[s.key].map((d) =>
                     _jsx("li", { children: d }, d),
                   ),
@@ -161,27 +161,27 @@ const MethodologyPage = () => {
         ),
       }),
       _jsx("p", {
-        className: "style-d21b86ea41 style-294e640e9b style-682659f553",
+        className: "u-margin-top-space-3 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
         children:
           "Not every signal is available for every repository. When one isn\u2019t, the report says so.",
       }),
       _jsx(H2, { id: "excluded", children: "What we leave out" }),
       _jsx("p", {
-        className: "style-1b61761e1c style-9e676c7431",
+        className: "u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-2",
         children:
           "Generated files, reverted changes, duplicate changes, and bot commits are excluded and listed in every report with the reason, so you can disagree with a decision you can see.",
       }),
       _jsx(H2, { id: "principles", children: "Principles" }),
       _jsx("dl", {
-        className: "style-0f2a693e93 style-90fc3ec35a",
+        className: "u-display-grid u-gap-space-4",
         children: PRINCIPLES.map(([t, d]) =>
           _jsxs(
             "div",
             {
               children: [
-                _jsx("dt", { className: "style-2ccfb296b9", children: t }),
+                _jsx("dt", { className: "u-letter-spacing-0-011em-text-1rem", children: t }),
                 _jsx("dd", {
-                  className: "style-294e640e9b style-682659f553",
+                  className: "u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
                   children: d,
                 }),
               ],
@@ -192,17 +192,17 @@ const MethodologyPage = () => {
       }),
       _jsx(H2, { id: "limits", children: "Limitations" }),
       _jsx("ul", {
-        className: "style-b5776161da style-1b61761e1c style-9e676c7431",
+        className: "u-ui-space-y-reverse-0-margin-block-start-space-2-5-var-ui-space-y-reverse u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-2",
         children: LIMITATIONS.map((l) =>
           _jsxs(
             "li",
             {
-              className: "style-222f930b87 style-d7db3451d1",
+              className: "u-display-flex-3 u-gap-space-3",
               children: [
                 _jsx("span", {
                   "aria-hidden": true,
                   className:
-                    "style-9bd5b3142d style-b82d83cf0c style-27ead27a81 style-b005d61d09 style-d8e6f3c399",
+                    "u-margin-top-space-2-5 u-width-space-height-space u-flex-shrink-0 u-border-radius-3-40282e38px u-bg-var-ink-3",
                 }),
                 l,
               ],
@@ -212,12 +212,12 @@ const MethodologyPage = () => {
         ),
       }),
       _jsxs("p", {
-        className: "style-f2bd784fd4 style-294e640e9b style-682659f553",
+        className: "u-margin-top-space-10 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
         children: [
           "Questions about a rule? ",
           _jsx(Link, {
             to: "/privacy",
-            className: "style-87e86ce38e style-242347c218",
+            className: "u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2",
             children: "Read how data is handled",
           }),
           ", or open an issue on GitHub.",

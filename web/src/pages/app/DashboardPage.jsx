@@ -38,16 +38,16 @@ const DashboardPage = () => {
         kicker: weekday(new Date()),
         title: `${greeting()}, ${user?.name.split(" ")[0]}.`,
         description:
-          "Here’s what’s happening across your style-ad936fcbed projects.",
+          "Here’s what’s happening across your team projects.",
       }),
       _jsx("div", {
         className:
-          "style-0f2a693e93 style-90fc3ec35a style-e10c57afb4 style-f3e0303085",
+          "u-display-grid u-gap-space-4 u-grid-cols-repeat-2-minmax-0-1fr-2 u-grid-cols-repeat-4-minmax-0-1fr-2",
         children: projects.loading
           ? Array.from({ length: 4 }, (_, i) =>
               _jsx(
                 Skeleton,
-                { className: "style-6378b9ea74 style-f5470b0a5f" },
+                { className: "u-height-7-5rem u-border-radius-1rem" },
                 i,
               ),
             )
@@ -84,25 +84,25 @@ const DashboardPage = () => {
       }),
       _jsxs("div", {
         className:
-          "style-356df20822 style-0f2a693e93 style-8c7e0067a9 style-075cdb32ad",
+          "u-margin-top-space-6 u-display-grid u-gap-space-6 u-grid-cols-1fr-20rem",
         children: [
           _jsxs(Card, {
             as: "section",
-            className: "style-d5111d0e9f",
+            className: "u-overflow-hidden",
             children: [
               _jsxs("div", {
                 className:
-                  "style-222f930b87 style-b9677bd1cb style-32c92bb1fd style-90fc3ec35a style-c432836760 style-b04e43b886",
+                  "u-display-flex-3 u-align-items-flex-start-2 u-justify-content-space-between u-gap-space-4 u-padding-space-6 u-padding-bottom-space-4",
                 children: [
                   _jsxs("div", {
                     children: [
                       _jsx("h2", {
-                        className: "style-d138f623f0",
+                        className: "u-letter-spacing-0-022em-text-1-375rem",
                         children: "Recent projects",
                       }),
                       _jsx("p", {
                         className:
-                          "style-7afae65258 style-294e640e9b style-682659f553",
+                          "u-margin-top-space-0-5 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
                         children:
                           "Continue an evaluation or review your results.",
                       }),
@@ -111,7 +111,7 @@ const DashboardPage = () => {
                   _jsxs(Link, {
                     to: "/app/projects",
                     className:
-                      "style-123306850f style-71556df3b4 style-19e97f3f40 style-294e640e9b style-87e86ce38e style-242347c218",
+                      "u-display-inline-flex u-align-items-center-2 u-gap-space u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2",
                     children: [
                       "View all ",
                       _jsx(ArrowRight, { size: 14, "aria-hidden": true }),
@@ -121,12 +121,12 @@ const DashboardPage = () => {
               }),
               _jsx("div", {
                 className:
-                  "style-d1626f14b8 style-b682aa7242 style-894c3815a5 style-4769f958af",
+                  "u-ui-divide-y-reverse-0-border-bottom-style-var-ui-border-style u-border-color-var-line-2 u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line",
                 children: projects.loading
                   ? Array.from({ length: 3 }, (_, i) =>
                       _jsx(
                         Skeleton,
-                        { className: "style-65c0a26039 style-fdd2f85cad" },
+                        { className: "u-margin-space-4 u-height-space-10" },
                         i,
                       ),
                     )
@@ -138,26 +138,26 @@ const DashboardPage = () => {
           }),
           _jsxs(Card, {
             as: "aside",
-            className: "style-c432836760",
+            className: "u-padding-space-6",
             children: [
               _jsx("span", {
                 className:
-                  "style-0f2a693e93 style-d0a383a9c2 style-4446c26b62 style-6ad537f2bb style-95debef1e0 style-242347c218",
+                  "u-display-grid u-width-space-10-height-space-10 u-place-items-center u-border-radius-var-radius-xl u-bg-var-accent-soft-2 u-color-var-accent-text-2",
                 children: _jsx(ShieldCheck, { size: 19, "aria-hidden": true }),
               }),
               _jsx("h2", {
-                className: "style-2ccfb296b9 style-a752cdc80a",
+                className: "u-letter-spacing-0-011em-text-1rem u-margin-top-space-5",
                 children: "Transparent by default",
               }),
               _jsx("p", {
-                className: "style-5a06344d31 style-294e640e9b style-682659f553",
+                className: "u-margin-top-space-1-5 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
                 children:
                   "Every estimate is traceable to repository evidence and your selected rubric.",
               }),
               _jsxs(Link, {
                 to: "/methodology",
                 className:
-                  "style-d21b86ea41 style-123306850f style-71556df3b4 style-19e97f3f40 style-294e640e9b style-87e86ce38e style-242347c218",
+                  "u-margin-top-space-3 u-display-inline-flex u-align-items-center-2 u-gap-space u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2",
                 children: [
                   "How scoring works ",
                   _jsx(ArrowRight, { size: 14, "aria-hidden": true }),
@@ -165,18 +165,18 @@ const DashboardPage = () => {
               }),
               _jsx("p", {
                 className:
-                  "style-02fd0ea53c style-356df20822 style-4010c02329 style-682659f553",
+                  "u-margin-bottom-space-2 u-margin-top-space-6 u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                 children: "Contribution share",
               }),
               _jsxs("p", {
                 className:
-                  "style-a7ab7bd722 style-2de8262ccb style-cf20b3b1c2 style-d3cea061f2 style-02ded92445 style-e7195fa694 style-0594284943 style-9e676c7431",
+                  "u-border-radius-0-625rem u-bg-var-sunken-3 u-padding-inline-space-3-5 u-padding-block-space-3 u-font-family-ui-monospace-sf-mono-sfmono-regular-menlo-consolas-monospace u-text-0-75rem u-ui-leading-var-leading-relaxed-line-height-var-leading-relaxed u-color-var-ink-2",
                 children: [
                   "\u03A3 ( criterion score \u00D7 weight )",
                   _jsx("br", {}),
                   _jsx("span", {
-                    className: "style-682659f553",
-                    children: "÷ style-ad936fcbed total",
+                    className: "u-color-var-ink-3-2",
+                    children: "÷ team total",
                   }),
                 ],
               }),
@@ -185,13 +185,13 @@ const DashboardPage = () => {
         ],
       }),
       _jsx("div", {
-        className: "style-356df20822",
+        className: "u-margin-top-space-6",
         children: activity.data
           ? _jsx(ActivityChart, {
               values: activity.data,
               latestName: latest?.name ?? "Campus Connect",
             })
-          : _jsx(Skeleton, { className: "style-f6607293f4 style-f5470b0a5f" }),
+          : _jsx(Skeleton, { className: "u-height-space-72 u-border-radius-1rem" }),
       }),
     ],
   });

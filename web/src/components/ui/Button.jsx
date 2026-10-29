@@ -6,23 +6,23 @@ import {
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/cn";
 const sizes = {
-  sm: "style-1fb07b38c6 style-0f9e667291 style-41d447f47e",
-  md: "style-fdd2f85cad style-9513b39680 style-e5aa42d83f",
-  lg: "style-2bf5d58a82 style-25e1240045 style-1f467b1929",
+  sm: "u-height-space-8 u-padding-inline-space-3 u-text-0-8125rem",
+  md: "u-height-space-10 u-padding-inline-space-4 u-text-0-875rem",
+  lg: "u-height-space-12 u-padding-inline-space-6-2 u-text-0-9375rem",
 };
 const variants = {
   primary:
-    "style-292affc1f7 style-5e9a40ae2b style-fefcfaed8f style-66b0a3ab8c",
+    "u-bg-var-accent u-color-var-color-white u-ui-shadow-inset-0-1px-0-var-ui-shadow-color-ffffff2e-0-1px-2px-var-ui-shadow-color-14143c33-box-shadow-var-ui-inset-shadow-var-ui-inset-ring-shadow-var-ui-ring-offset-shadow-var-ui-ring-shadow-var-ui-shadow u-bg-var-accent-hover",
   secondary:
-    "style-4f1a55de40 style-4769f958af style-ad04ce25f0 style-3c70d0a0c9 style-a9765437e6 style-b6d1913570",
-  ghost: "style-9e676c7431 style-0637e93d27 style-d82b3e060a",
-  danger: "style-fba8a08a00 style-5e9a40ae2b style-2c2c63d813",
+    "u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-bg-var-surface-2 u-color-var-ink u-ui-shadow-var-sh-lift-box-shadow-var-ui-inset-shadow-var-ui-inset-ring-shadow-var-ui-ring-offset-shadow-var-ui-ring-shadow-var-ui-shadow u-border-color-var-line-strong-2",
+  ghost: "u-color-var-ink-2 u-bg-var-sunken u-color-var-ink-2",
+  danger: "u-bg-var-bad u-color-var-color-white u-opacity-0-9",
 };
 export const buttonClass = (variant = "primary", size = "md", extra) =>
   cn(
-    "style-123306850f style-27ead27a81 style-78905c9e86 style-71556df3b4 style-a503dd374c style-074569488c style-963f6168b7 style-a7ab7bd722 style-87e86ce38e style-f66698ebd0",
-    "style-d3d381877a style-3d53df2cf7 style-501b3e6c9f",
-    "style-03cc0a209d style-4a563e1d99 style-8d3c1014b9 style-3027c7bda4",
+    "u-display-inline-flex u-flex-shrink-0 u-webkit-user-select-none-user-select-none u-align-items-center-2 u-justify-content-center u-gap-space-2 u-white-space-nowrap u-border-radius-0-625rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-ui-tracking-0-005em-letter-spacing-0-005em",
+    "u-transition-property-transform-background-color-border-color-box-shadow-color-opacity-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1",
+    "u-scale-0-97 u-pointer-events-none-2 u-pointer-events-none-3 u-opacity-0-45",
     sizes[size],
     variants[variant],
     extra,

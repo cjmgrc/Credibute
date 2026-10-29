@@ -35,12 +35,12 @@ const ReportsPage = () => {
         description: "Exportable summaries of your finished evaluations.",
       }),
       _jsx(Card, {
-        className: "style-d5111d0e9f",
+        className: "u-overflow-hidden",
         children: loading
           ? _jsx("div", {
-              className: "style-b8ceaab118 style-014b941a77",
+              className: "u-ui-space-y-reverse-0-margin-block-start-space-3-var-ui-space-y-reverse u-padding-space-5",
               children: [0, 1, 2].map((i) =>
-                _jsx(Skeleton, { className: "style-2bf5d58a82" }, i),
+                _jsx(Skeleton, { className: "u-height-space-12" }, i),
               ),
             })
           : rows.length === 0
@@ -51,14 +51,14 @@ const ReportsPage = () => {
                   "Finish an evaluation and its report will appear here.",
               })
             : _jsx("ul", {
-                className: "style-d1626f14b8 style-b682aa7242",
+                className: "u-ui-divide-y-reverse-0-border-bottom-style-var-ui-border-style u-border-color-var-line-2",
                 children: rows.map((p) => {
                   const r = buildResult(p.id, p.name, p.repoUrl);
                   return _jsxs(
                     "li",
                     {
                       className:
-                        "style-222f930b87 style-faa8a23c68 style-71556df3b4 style-90fc3ec35a style-220ac1a984 style-f33d55d2db",
+                        "u-display-flex-3 u-flex-wrap-wrap u-align-items-center-2 u-gap-space-4 u-padding-inline-space-5 u-padding-block-space-4",
                       children: [
                         _jsx(Avatar, {
                           name: p.name,
@@ -66,17 +66,17 @@ const ReportsPage = () => {
                           square: true,
                         }),
                         _jsxs("div", {
-                          className: "style-184ddc11e5 style-7bd5bab6d7",
+                          className: "u-min-width-0 u-flex-1",
                           children: [
                             _jsx(Link, {
                               to: `/app/projects/${p.id}/report`,
                               className:
-                                "style-496aca80e4 style-5a3a4ee420 style-294e640e9b style-87e86ce38e style-145ce729bc",
+                                "u-display-block u-text-overflow-ellipsis-white-space-nowrap u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text",
                               children: p.name,
                             }),
                             _jsxs("p", {
                               className:
-                                "style-5a3a4ee420 style-02ded92445 style-4010c02329 style-682659f553",
+                                "u-text-overflow-ellipsis-white-space-nowrap u-font-family-ui-monospace-sf-mono-sfmono-regular-menlo-consolas-monospace u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                               children: [
                                 r.reportId,
                                 " \u00B7 ",

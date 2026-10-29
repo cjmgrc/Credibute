@@ -26,37 +26,37 @@ const HowItWorks = () =>
   _jsxs("section", {
     id: "how-it-works",
     className:
-      "style-1752f11474 style-fe408d0f5c style-220ac1a984 style-d5919ac0f3 style-d48a005697",
+      "u-margin-inline-auto u-max-width-var-container-6xl u-padding-inline-space-5 u-padding-bottom-space-24 u-padding-inline-space-8",
     children: [
       _jsx("h2", {
         className:
-          "style-8f91cbcb89 style-1752f11474 style-98e808fcd6 style-05ab124483",
+          "u-letter-spacing-0-032em-text-clamp-1-75rem-3-4vw-2-25rem u-margin-inline-auto u-max-width-var-container-lg u-text-align-center",
         children: "From repository to report in four clear steps.",
       }),
       _jsx("ol", {
         className:
-          "style-b5dbca1754 style-0f2a693e93 style-d5111d0e9f style-b646d08f7b style-4f1a55de40 style-4769f958af style-ad04ce25f0 style-e10c57afb4 style-1ea0a79c33",
+          "u-margin-top-space-12 u-display-grid u-overflow-hidden u-border-radius-1-5rem u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-bg-var-surface-2 u-grid-cols-repeat-2-minmax-0-1fr-2 u-grid-cols-repeat-4-minmax-0-1fr",
         children: STEPS.map(({ Icon, title, body }, i) =>
           _jsxs(
             "li",
             {
               className:
-                "style-4769f958af style-a8a56438d7 style-8a1cfe1bf9 style-e57026f462 style-a9305d06df style-5344abb7cf style-a4808684d2 style-fafdf34c30",
+                "u-border-color-var-line u-padding-space-7-2 u-border-bottom-style-var-ui-border-style-border-bottom-width-1px u-border-right-style-var-ui-border-style-border-right-width-1px-3 u-border-right-style-var-ui-border-style-border-right-width-1px u-border-bottom-style-var-ui-border-style-border-bottom-width-0 u-border-right-style-var-ui-border-style-border-right-width-0 u-border-bottom-style-var-ui-border-style-border-bottom-width-1px-3",
               children: [
                 _jsx("span", {
                   className:
-                    "style-02ded92445 style-4010c02329 style-682659f553",
+                    "u-font-family-ui-monospace-sf-mono-sfmono-regular-menlo-consolas-monospace u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                   children: String(i + 1).padStart(2, "0"),
                 }),
                 _jsx("span", {
                   className:
-                    "style-39b56ab257 style-a752cdc80a style-0f2a693e93 style-31fee7f409 style-4446c26b62 style-b005d61d09 style-95debef1e0 style-242347c218",
+                    "u-margin-bottom-space-5 u-margin-top-space-5 u-display-grid u-width-space-11-height-space-11 u-place-items-center u-border-radius-3-40282e38px u-bg-var-accent-soft-2 u-color-var-accent-text-2",
                   children: _jsx(Icon, { size: 19, "aria-hidden": true }),
                 }),
-                _jsx("h3", { className: "style-2ccfb296b9", children: title }),
+                _jsx("h3", { className: "u-letter-spacing-0-011em-text-1rem", children: title }),
                 _jsx("p", {
                   className:
-                    "style-5a06344d31 style-294e640e9b style-682659f553",
+                    "u-margin-top-space-1-5 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
                   children: body,
                 }),
               ],

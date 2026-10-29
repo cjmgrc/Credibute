@@ -13,11 +13,11 @@ const ResultsPage = () => {
   usePageTitle(data?.projectName ?? "Results");
   if (loading)
     return _jsxs("div", {
-      className: "style-2f774404ae",
+      className: "u-ui-space-y-reverse-0-margin-block-start-space-6-var-ui-space-y-reverse",
       children: [
-        _jsx(Skeleton, { className: "style-50da7de9e1" }),
-        _jsx(Skeleton, { className: "style-16e0ed3a2c" }),
-        _jsx(Skeleton, { className: "style-04eabc5553" }),
+        _jsx(Skeleton, { className: "u-height-space-24" }),
+        _jsx(Skeleton, { className: "u-height-space-28" }),
+        _jsx(Skeleton, { className: "u-height-space-80" }),
       ],
     });
   if (!data)

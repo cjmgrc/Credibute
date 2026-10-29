@@ -11,7 +11,7 @@ const ShareBar = ({
   animate = true,
   delay = 0,
   opacity = 1,
-  height = "style-f5728694f6",
+  height = "u-height-space-2",
   className,
 }) => {
   const [on, setOn] = useState(!animate);
@@ -24,21 +24,19 @@ const ShareBar = ({
   return _jsx("div", {
     role: "presentation",
     className: cn(
-      "style-58d0413dd9 style-d5111d0e9f style-b005d61d09 style-2de8262ccb",
+      "u-width-100pct u-overflow-hidden u-border-radius-3-40282e38px u-bg-var-sunken-3",
       height,
       className,
     ),
     children: _jsx("div", {
+      "data-value": Math.min(100, Math.max(0, shown)),
+      "data-delay": animate ? delay : 0,
+      "data-opacity": opacity,
       className: cn(
-        "style-57c930dc1c style-58d0413dd9 style-b005d61d09 style-292affc1f7",
+        "share-bar-fill u-height-100pct u-width-100pct u-border-radius-3-40282e38px u-bg-var-accent",
         animate &&
-          "style-48a1d34f1a style-5b659951d8 style-501b3e6c9f style-b2ed949e45",
+          "u-transition-property-transform-translate-scale-rotate-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-7s-transition-duration-0-7s u-ease-out",
       ),
-      style: {
-        transform: `translateX(${Math.min(100, Math.max(0, shown)) - 100}%)`,
-        opacity,
-        transitionDelay: animate ? `${delay}ms` : undefined,
-      },
     }),
   });
 };

@@ -104,12 +104,12 @@ const RepositoryStep = () => {
     },
     children: _jsxs(Card, {
       className:
-        "style-0f2a693e93 style-8c7e0067a9 style-b646d08f7b style-c432836760 style-9a4447389f",
+        "u-display-grid u-gap-space-6 u-border-radius-1-5rem u-padding-space-6 u-padding-space-8",
       children: [
         _jsxs("div", {
           children: [
             _jsx("p", {
-              className: "style-02fd0ea53c style-294e640e9b style-87e86ce38e",
+              className: "u-margin-bottom-space-2 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
               children: "Repository provider",
             }),
             _jsx(ProviderPicker, {
@@ -134,30 +134,30 @@ const RepositoryStep = () => {
               error: status === "error" ? message : null,
               trailing:
                 status === "loading"
-                  ? _jsx(Spinner, { className: "style-682659f553" })
+                  ? _jsx(Spinner, { className: "u-color-var-ink-3-2" })
                   : status === "found"
                     ? _jsx(Check, {
                         size: 16,
                         strokeWidth: 3,
-                        className: "style-0e23fa0f9b",
+                        className: "u-color-var-ok",
                       })
                     : status === "error"
                       ? _jsx(AlertCircle, {
                           size: 16,
-                          className: "style-5640c57ccb",
+                          className: "u-color-var-bad-2",
                         })
                       : null,
             }),
             _jsx("p", {
               "aria-live": "polite",
               className:
-                "style-f28fea81a5 style-26d54363d9 style-4010c02329 style-daaac3fbf5 style-0e23fa0f9b",
+                "u-margin-top-space-2 u-min-height-space-5 u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-medium-weight-var-font-weight-medium u-color-var-ok",
               children:
                 status === "found" &&
                 info &&
                 _jsxs("span", {
                   className:
-                    "style-222f930b87 style-71556df3b4 style-70007b8768",
+                    "u-display-flex-3 u-align-items-center-2 u-gap-space-1-5",
                   children: [
                     _jsx(Check, {
                       size: 13,
@@ -175,7 +175,7 @@ const RepositoryStep = () => {
           ],
         }),
         _jsxs("div", {
-          className: "style-0f2a693e93 style-9f9763f399 style-e10c57afb4",
+          className: "u-display-grid u-gap-space-5 u-grid-cols-repeat-2-minmax-0-1fr-2",
           children: [
             _jsx(TextField, {
               label: "Project name",
@@ -199,7 +199,7 @@ const RepositoryStep = () => {
         _jsxs("div", {
           children: [
             _jsx("p", {
-              className: "style-02fd0ea53c style-294e640e9b style-87e86ce38e",
+              className: "u-margin-bottom-space-2 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
               children: "Analysis range",
             }),
             _jsx(Segmented, {
@@ -214,7 +214,7 @@ const RepositoryStep = () => {
             }),
             _jsxs("div", {
               className:
-                "style-d21b86ea41 style-0f2a693e93 style-90fc3ec35a style-e10c57afb4",
+                "u-margin-top-space-3 u-display-grid u-gap-space-4 u-grid-cols-repeat-2-minmax-0-1fr-2",
               children: [
                 _jsx(TextField, {
                   label: "From",

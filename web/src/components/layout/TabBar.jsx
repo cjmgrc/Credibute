@@ -12,10 +12,10 @@ const TabBar = () => {
   return _jsx("nav", {
     "aria-label": "Primary",
     className:
-      "style-40b30b4e8f style-992a93455c style-3ba24c062d style-30150dd033 style-fbb62f5cb6 style-894c3815a5 style-4769f958af style-5ff875233b style-97e9901753 style-7baf6374e9",
+      "u-background-var-material-webkit-backdrop-filter-blur-20px-saturate-180pct u-position-fixed-2 u-inset-inline-0 u-bottom-0 u-z-index-30 u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line u-padding-bottom-env-safe-area-inset-bottom u-display-none-important u-display-none-2",
     children: _jsx("ul", {
       className:
-        "style-1752f11474 style-0f2a693e93 style-98e808fcd6 style-310b99a6bc",
+        "u-margin-inline-auto u-display-grid u-max-width-var-container-lg u-grid-cols-repeat-5-minmax-0-1fr",
       children: items.map(({ to, label, icon: Icon, end }) =>
         _jsx(
           "li",
@@ -25,8 +25,8 @@ const TabBar = () => {
               end: end,
               className: ({ isActive }) =>
                 cn(
-                  "style-222f930b87 style-302c0d124a style-71556df3b4 style-11773e883e style-b5edc3ea7c style-4010c02329 style-daaac3fbf5 style-98ed9e2a39 style-3d53df2cf7 style-22220f24b7",
-                  isActive ? "style-242347c218" : "style-682659f553",
+                  "u-display-flex-3 u-flex-direction-column u-align-items-center-2 u-gap-space-0-5 u-padding-block-space-2 u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-medium-weight-var-font-weight-medium u-transition-property-color-transform-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-scale-x-95pct-ui-scale-y-95pct",
+                  isActive ? "u-color-var-accent-text-2" : "u-color-var-ink-3-2",
                 ),
               children: [_jsx(Icon, { size: 21, "aria-hidden": true }), label],
             }),

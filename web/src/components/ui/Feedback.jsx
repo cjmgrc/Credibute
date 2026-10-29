@@ -8,7 +8,7 @@ export const Spinner = ({ size = 16, className }) =>
     fill: "none",
     "aria-hidden": true,
     className: cn(
-      "style-2c14b55d77 style-df1d0e2f1e style-e841fbb68c",
+      "u-animation-var-animate-spin u-animation-duration-0-7s u-animation-duration-1-6s",
       className,
     ),
     children: [
@@ -32,36 +32,36 @@ export const Skeleton = ({ className }) =>
   _jsx("div", {
     "aria-hidden": true,
     className: cn(
-      "style-7b3cd77eb9 style-49abc543ea style-2de8262ccb style-237747164b",
+      "u-animation-var-animate-pulse u-border-radius-var-radius-lg u-bg-var-sunken-3 u-animation-none",
       className,
     ),
   });
 export const EmptyState = ({ icon, title, children, action }) =>
   _jsxs("div", {
     className:
-      "style-222f930b87 style-302c0d124a style-71556df3b4 style-25e1240045 style-c384fcff25 style-05ab124483",
+      "u-display-flex-3 u-flex-direction-column u-align-items-center-2 u-padding-inline-space-6-2 u-padding-block-space-14 u-text-align-center",
     children: [
       _jsx("span", {
         className:
-          "style-f5e51c64e0 style-0f2a693e93 style-2bf0090baa style-4446c26b62 style-b741b09519 style-95debef1e0 style-242347c218",
+          "u-margin-bottom-space-4 u-display-grid u-width-space-12-height-space-12 u-place-items-center u-border-radius-var-radius-2xl u-bg-var-accent-soft-2 u-color-var-accent-text-2",
         children: icon,
       }),
-      _jsx("h3", { className: "style-2ccfb296b9", children: title }),
+      _jsx("h3", { className: "u-letter-spacing-0-011em-text-1rem", children: title }),
       children &&
         _jsx("p", {
           className:
-            "style-ff6e57b41c style-6f067cb084 style-294e640e9b style-682659f553",
+            "u-margin-top-space u-max-width-var-container-sm u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
           children: children,
         }),
       action &&
-        _jsx("div", { className: "style-a752cdc80a", children: action }),
+        _jsx("div", { className: "u-margin-top-space-5", children: action }),
     ],
   });
 /** Surface used everywhere. Radius steps up with size: card (1rem) → panel (1.5rem). */
 export const Card = ({ children, className, as: Tag = "div" }) =>
   _jsx(Tag, {
     className: cn(
-      "style-f5470b0a5f style-4f1a55de40 style-4769f958af style-ad04ce25f0",
+      "u-border-radius-1rem u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-bg-var-surface-2",
       className,
     ),
     children: children,

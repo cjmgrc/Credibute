@@ -68,7 +68,7 @@ const MembersStep = () => {
   };
   return _jsxs(WizardFrame, {
     step: "members",
-    title: "Match style-ad936fcbed members",
+    title: "Match team members",
     description: "Confirm which Git identities belong to each student.",
     backTo: "/app/new/repository",
     next: {
@@ -78,12 +78,12 @@ const MembersStep = () => {
     },
     children: [
       _jsx(Card, {
-        className: "style-b646d08f7b style-014b941a77 style-11772a591e",
+        className: "u-border-radius-1-5rem u-padding-space-5 u-padding-space-7",
         children: loading
           ? _jsx("div", {
-              className: "style-3aa3383403",
+              className: "u-ui-space-y-reverse-0-margin-block-start-space-4-var-ui-space-y-reverse",
               children: [0, 1, 2, 3].map((i) =>
-                _jsx(Skeleton, { className: "style-2bf5d58a82" }, i),
+                _jsx(Skeleton, { className: "u-height-space-12" }, i),
               ),
             })
           : _jsxs(_Fragment, {
@@ -96,7 +96,7 @@ const MembersStep = () => {
                       "We matched commit identities using verified usernames and emails.",
                   }),
                 _jsx("ul", {
-                  className: "style-d1626f14b8 style-b682aa7242",
+                  className: "u-ui-divide-y-reverse-0-border-bottom-style-var-ui-border-style u-border-color-var-line-2",
                   children: draft.members.map((m) =>
                     _jsx(
                       MemberRow,
@@ -113,7 +113,7 @@ const MembersStep = () => {
                   _jsxs(Alert, {
                     tone: "warn",
                     title: `${draft.unmatched.length} unmatched ${draft.unmatched.length === 1 ? "identity" : "identities"}`,
-                    className: "style-f28fea81a5",
+                    className: "u-margin-top-space-2",
                     action: _jsx(Button, {
                       size: "sm",
                       variant: "secondary",
@@ -122,7 +122,7 @@ const MembersStep = () => {
                     }),
                     children: [
                       _jsx("span", {
-                        className: "style-02ded92445",
+                        className: "u-font-family-ui-monospace-sf-mono-sfmono-regular-menlo-consolas-monospace",
                         children: un.email,
                       }),
                       " appears on ",
@@ -134,10 +134,10 @@ const MembersStep = () => {
                   type: "button",
                   onClick: () => setAdding(true),
                   className:
-                    "style-dc1d1f5a54 style-222f930b87 style-58d0413dd9 style-71556df3b4 style-a503dd374c style-074569488c style-f5470b0a5f style-4f1a55de40 style-8450eb0f18 style-4132d945d4 style-f763c2225c style-294e640e9b style-87e86ce38e style-242347c218 style-787ac641dd style-3d53df2cf7 style-501b3e6c9f style-820d0849ff style-75d5df5a4b",
+                    "u-margin-top-space-4 u-display-flex-3 u-width-100pct u-align-items-center-2 u-justify-content-center u-gap-space-2 u-border-radius-1rem u-border-style-var-ui-border-style-border-width-1px u-ui-border-style-dashed-border-style-dashed u-border-color-var-line-strong u-padding-block-space-3-5 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2 u-transition-property-transform-background-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-scale-0-99 u-bg-var-accent-soft",
                   children: [
                     _jsx(Plus, { size: 16, "aria-hidden": true }),
-                    "Add style-ad936fcbed member manually",
+                    "Add team member manually",
                   ],
                 }),
               ],
@@ -169,7 +169,7 @@ const MembersStep = () => {
           children: _jsx("div", {
             role: "radiogroup",
             "aria-label": "Group member",
-            className: "style-0f2a693e93 style-074569488c",
+            className: "u-display-grid u-gap-space-2",
             children: draft.members.map((m) =>
               _jsxs(
                 "button",
@@ -179,15 +179,15 @@ const MembersStep = () => {
                   "aria-checked": pick === m.id,
                   onClick: () => setPick(m.id),
                   className: cn(
-                    "style-222f930b87 style-71556df3b4 style-d7db3451d1 style-f5470b0a5f style-4f1a55de40 style-094f533385 style-1a5d10977b style-3b388e5556 style-3d53df2cf7 style-501b3e6c9f style-144113eebd",
+                    "u-display-flex-3 u-align-items-center-2 u-gap-space-3 u-border-radius-1rem u-border-style-var-ui-border-style-border-width-1px u-padding-space-3 u-text-align-left u-transition-property-transform-border-color-background-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-scale-0-98",
                     pick === m.id
-                      ? "style-c64ab861a8 style-95debef1e0"
-                      : "style-4769f958af style-b6d1913570",
+                      ? "u-border-color-var-accent-2 u-bg-var-accent-soft-2"
+                      : "u-border-color-var-line u-border-color-var-line-strong-2",
                   ),
                   children: [
                     _jsx(Avatar, { name: m.name, tone: m.tone, size: "sm" }),
                     _jsx("span", {
-                      className: "style-294e640e9b style-87e86ce38e",
+                      className: "u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                       children: m.name,
                     }),
                   ],
@@ -201,9 +201,9 @@ const MembersStep = () => {
       _jsx(Dialog, {
         open: adding,
         onClose: () => setAdding(false),
-        label: "Add style-ad936fcbed member",
+        label: "Add team member",
         children: _jsx(ModalBody, {
-          title: "Add a style-ad936fcbed member",
+          title: "Add a team member",
           description: "You can match their Git identity afterwards.",
           footer: _jsxs(_Fragment, {
             children: [

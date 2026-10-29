@@ -2,21 +2,21 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 const PageHeader = ({ kicker, title, description, actions }) =>
   _jsxs("div", {
     className:
-      "style-1e17cde831 style-222f930b87 style-302c0d124a style-90fc3ec35a style-bd85140e6a style-a841f1be8a style-fc4cd15609",
+      "u-margin-bottom-space-8 u-display-flex-3 u-flex-direction-column u-gap-space-4 u-flex-direction-row-2 u-align-items-flex-end-2 u-justify-content-space-between-2",
     children: [
       _jsxs("div", {
-        className: "style-184ddc11e5",
+        className: "u-min-width-0",
         children: [
           kicker &&
             _jsx("p", {
               className:
-                "style-02fd0ea53c style-294e640e9b style-daaac3fbf5 style-682659f553",
+                "u-margin-bottom-space-2 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-medium-weight-var-font-weight-medium u-color-var-ink-3-2",
               children: kicker,
             }),
-          _jsx("h1", { className: "style-8f91cbcb89", children: title }),
+          _jsx("h1", { className: "u-letter-spacing-0-032em-text-clamp-1-75rem-3-4vw-2-25rem", children: title }),
           description &&
             _jsx("p", {
-              className: "style-5a06344d31 style-1b61761e1c style-682659f553",
+              className: "u-margin-top-space-1-5 u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-3-2",
               children: description,
             }),
         ],
@@ -24,7 +24,7 @@ const PageHeader = ({ kicker, title, description, actions }) =>
       actions &&
         _jsx("div", {
           className:
-            "style-222f930b87 style-27ead27a81 style-71556df3b4 style-074569488c",
+            "u-display-flex-3 u-flex-shrink-0 u-align-items-center-2 u-gap-space-2",
           children: actions,
         }),
     ],

@@ -12,53 +12,50 @@ const ActivityChart = ({ values, latestName, coverage = 98 }) => {
     children: [
       _jsxs("div", {
         className:
-          "style-222f930b87 style-b9677bd1cb style-32c92bb1fd style-90fc3ec35a style-c432836760 style-b04e43b886",
+          "u-display-flex-3 u-align-items-flex-start-2 u-justify-content-space-between u-gap-space-4 u-padding-space-6 u-padding-bottom-space-4",
         children: [
           _jsxs("div", {
             children: [
               _jsx("h2", {
-                className: "style-d138f623f0",
+                className: "u-letter-spacing-0-022em-text-1-375rem",
                 children: "Analysis activity",
               }),
               _jsx("p", {
-                className: "style-7afae65258 style-294e640e9b style-682659f553",
+                className: "u-margin-top-space-0-5 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
                 children: "Commits analyzed across your projects, by week.",
               }),
             ],
           }),
           _jsx("span", {
             className:
-              "style-49abc543ea style-4f1a55de40 style-4769f958af style-0f9e667291 style-a8c1dfb1d4 style-4010c02329 style-682659f553",
+              "u-border-radius-var-radius-lg u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-padding-inline-space-3 u-padding-block-space-1-5 u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
             children: "Last 12 weeks",
           }),
         ],
       }),
       _jsxs("div", {
         className:
-          "style-0f2a693e93 style-8c7e0067a9 style-894c3815a5 style-4769f958af style-c432836760 style-4130dab223",
+          "u-display-grid u-gap-space-6 u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line u-padding-space-6 u-grid-cols-1fr-14rem",
         children: [
           _jsx("div", {
             ref: ref,
             role: "img",
             "aria-label": `Commits analyzed per week for the last ${values.length} weeks, most recent ${values[values.length - 1]}`,
             className:
-              "style-222f930b87 style-d9d4e5d2e0 style-0ccd70f0f8 style-074569488c",
+              "u-display-flex-3 u-height-space-40 u-align-items-flex-end u-gap-space-2",
             children: values.map((v, i) =>
               _jsx(
                 "div",
                 {
                   title: `${v} commits`,
+                  "data-height": (v / max) * 100,
+                  "data-seen": seen ? "true" : "false",
                   className: cn(
-                    "style-7bd5bab6d7 style-cf404c5276 style-2d01024c78 style-48a1d34f1a style-23c9397106 style-501b3e6c9f style-b2ed949e45",
+                    "activity-bar u-flex-1 u-transform-origin-bottom u-border-top-left-radius-var-radius-lg-border-top-right-radius-var-radius-lg u-transition-property-transform-translate-scale-rotate-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-6s-transition-duration-0-6s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-transition-property-none",
                     i === values.length - 1
-                      ? "style-292affc1f7"
-                      : "style-83348b23c2",
+                      ? "u-bg-var-accent"
+                      : "u-bg-var-accent-2",
                   ),
-                  style: {
-                    height: `${(v / max) * 100}%`,
-                    transform: seen ? "none" : "scaleY(0.02)",
-                    transitionDelay: `${i * 30}ms`,
-                  },
                 },
                 i,
               ),
@@ -66,23 +63,23 @@ const ActivityChart = ({ values, latestName, coverage = 98 }) => {
           }),
           _jsxs("div", {
             className:
-              "style-894c3815a5 style-4769f958af style-08a31a346e style-ea6d82f24b style-c04b4e3f05 style-971fbc2960 style-06fe709d11",
+              "u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line u-padding-top-space-5 u-border-left-style-var-ui-border-style-border-left-width-1px u-border-top-style-var-ui-border-style-border-top-width-0 u-padding-left-space-6 u-padding-top-0",
             children: [
               _jsx("p", {
-                className: "style-4010c02329 style-682659f553",
+                className: "u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                 children: "Latest result",
               }),
               _jsx("p", {
-                className: "style-ff6e57b41c style-2ccfb296b9",
+                className: "u-margin-top-space u-letter-spacing-0-011em-text-1rem",
                 children: latestName,
               }),
               _jsxs("p", {
                 className:
-                  "style-5a06344d31 style-222f930b87 style-71556df3b4 style-70007b8768 style-4010c02329 style-682659f553",
+                  "u-margin-top-space-1-5 u-display-flex-3 u-align-items-center-2 u-gap-space-1-5 u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                 children: [
                   _jsx(CheckCircle2, {
                     size: 14,
-                    className: "style-0e23fa0f9b",
+                    className: "u-color-var-ok",
                     "aria-hidden": true,
                   }),
                   coverage,
@@ -92,7 +89,7 @@ const ActivityChart = ({ values, latestName, coverage = 98 }) => {
               _jsx(Button, {
                 to: "/app/projects/campus-connect/results",
                 variant: "secondary",
-                className: "style-dc1d1f5a54 style-58d0413dd9",
+                className: "u-margin-top-space-4 u-width-100pct",
                 trailing: _jsx("span", {
                   "aria-hidden": true,
                   children: "\u2192",

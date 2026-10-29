@@ -24,14 +24,14 @@ const Menu = ({ items, label = "More options", placement = "bottom" }) => {
   }, [open]);
 
   return (
-    <div ref={root} className="style-d2d9e1f134">
+    <div ref={root} className="u-position-relative">
       <button
         type="button"
         aria-label={label}
         aria-haspopup="menu"
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
-        className="style-0f2a693e93 style-ebd37e04d4 style-4446c26b62 style-49abc543ea style-682659f553 style-afcb01b331 style-3d53df2cf7 style-d64255261e style-0637e93d27 style-d82b3e060a"
+        className="u-display-grid u-width-space-8-height-space-8 u-place-items-center u-border-radius-var-radius-lg u-color-var-ink-3-2 u-transition-property-transform-background-color-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-scale-x-90pct-ui-scale-y-90pct u-bg-var-sunken u-color-var-ink-2"
       >
         <Ellipsis size={18} />
       </button>
@@ -39,10 +39,10 @@ const Menu = ({ items, label = "More options", placement = "bottom" }) => {
         <div
           role="menu"
           className={cn(
-            "style-95d8467434 style-747355bdc2 style-a74c447701 style-fbb62f5cb6 style-b76283ce01 style-6ad537f2bb style-4f1a55de40 style-4769f958af style-1dee6e3ec6 style-b743453ee3 style-76585be20a style-3d53df2cf7 style-501b3e6c9f style-7adacfe55a style-2c710eb96a style-d1181a2b59",
+            "u-background-var-surface u-position-absolute u-right-0 u-z-index-30 u-min-width-space-48 u-border-radius-var-radius-xl u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-padding-space u-ui-shadow-var-sh-float-box-shadow-var-ui-inset-shadow-var-ui-inset-ring-shadow-var-ui-ring-offset-shadow-var-ui-ring-shadow-var-ui-shadow u-transition-property-opacity-transform-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-ui-scale-x-95pct-ui-scale-y-95pct-2 u-opacity-0 u-transition-property-opacity-transition-timing-function-var-ui-ease-var-default-transition-timing-function-2",
             placement === "top"
-              ? "style-ada467758e style-a7b3741ba7 style-7eccd974ae"
-              : "style-b726f5a347 style-5a06344d31 style-70fc9df162",
+              ? "u-bottom-100pct u-margin-bottom-space-1-5 u-transform-origin-100pct-100pct"
+              : "u-top-100pct u-margin-top-space-1-5 u-transform-origin-100pct-0",
           )}
         >
           {items.map((item) => (
@@ -55,10 +55,10 @@ const Menu = ({ items, label = "More options", placement = "bottom" }) => {
                 item.onSelect();
               }}
               className={cn(
-                "style-222f930b87 style-58d0413dd9 style-71556df3b4 style-08f0549eb6 style-49abc543ea style-588daa1a98 style-b5edc3ea7c style-1a5d10977b style-294e640e9b style-daaac3fbf5 style-eae178841c style-aa96ad346e style-0637e93d27",
+                "u-display-flex-3 u-width-100pct u-align-items-center-2 u-gap-space-2-5 u-border-radius-var-radius-lg u-padding-inline-space-2-5 u-padding-block-space-2 u-text-align-left u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-medium-weight-var-font-weight-medium u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-1s-transition-duration-0-1s u-bg-var-sunken",
                 item.tone === "danger"
-                  ? "style-5640c57ccb"
-                  : "style-3c70d0a0c9",
+                  ? "u-color-var-bad-2"
+                  : "u-color-var-ink",
               )}
             >
               {item.icon}

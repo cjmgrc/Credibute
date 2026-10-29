@@ -11,33 +11,33 @@ const MemberRow = ({ m, onRemove }) => {
   const id = m.identities[0];
   return _jsxs("li", {
     className:
-      "style-222f930b87 style-faa8a23c68 style-71556df3b4 style-c109310615 style-92430aeebe style-f33d55d2db",
+      "u-display-flex-3 u-flex-wrap-wrap u-align-items-center-2 u-column-gap-space-4 u-row-gap-space-2 u-padding-block-space-4",
     children: [
       _jsx(Avatar, { name: m.name, tone: m.tone }),
       _jsxs("div", {
         className:
-          "style-e9ab1547c9 style-7bd5bab6d7 style-235f80a30e style-8c97e6ec00",
+          "u-min-width-8rem u-flex-1 u-flex-none u-flex-basis-space-36",
         children: [
           _jsx("p", {
-            className: "style-294e640e9b style-87e86ce38e",
+            className: "u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
             children: m.name,
           }),
           _jsx("p", {
-            className: "style-4010c02329 style-682659f553",
+            className: "u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
             children: m.label,
           }),
         ],
       }),
       _jsx("div", {
         className:
-          "style-922b168f4b style-222f930b87 style-184ddc11e5 style-fec0aea7f7 style-faa8a23c68 style-71556df3b4 style-9ec71db48f style-814effd933 style-4010c02329 style-9e676c7431 style-8ca24000f1 style-ad175cd241 style-badc5cc077",
+          "u-order-9999 u-display-flex-3 u-min-width-0 u-flex-basis-100pct u-flex-wrap-wrap u-align-items-center-2 u-column-gap-space-5 u-row-gap-space u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-2 u-order-0 u-flex-basis-auto u-flex-1-2",
         children: id
           ? _jsxs(_Fragment, {
               children: [
                 id.username &&
                   _jsxs("span", {
                     className:
-                      "style-222f930b87 style-71556df3b4 style-70007b8768",
+                      "u-display-flex-3 u-align-items-center-2 u-gap-space-1-5",
                     children: [
                       _jsx(GithubMark, { size: 14 }),
                       "@",
@@ -46,35 +46,35 @@ const MemberRow = ({ m, onRemove }) => {
                   }),
                 _jsxs("span", {
                   className:
-                    "style-222f930b87 style-184ddc11e5 style-71556df3b4 style-70007b8768",
+                    "u-display-flex-3 u-min-width-0 u-align-items-center-2 u-gap-space-1-5",
                   children: [
                     _jsx(AtSign, {
                       size: 13,
                       "aria-hidden": true,
-                      className: "style-27ead27a81 style-682659f553",
+                      className: "u-flex-shrink-0 u-color-var-ink-3-2",
                     }),
                     _jsx("span", {
-                      className: "style-5a3a4ee420",
+                      className: "u-text-overflow-ellipsis-white-space-nowrap",
                       children: id.email,
                     }),
                   ],
                 }),
                 m.identities.length > 1 &&
                   _jsxs("span", {
-                    className: "style-682659f553",
+                    className: "u-color-var-ink-3-2",
                     children: ["+", m.identities.length - 1, " more"],
                   }),
               ],
             })
           : _jsx("span", {
-              className: "style-682659f553",
+              className: "u-color-var-ink-3-2",
               children: "No Git identity yet",
             }),
       }),
       id
         ? _jsxs("span", {
             className:
-              "style-222f930b87 style-71556df3b4 style-19e97f3f40 style-4010c02329 style-87e86ce38e style-0e23fa0f9b",
+              "u-display-flex-3 u-align-items-center-2 u-gap-space u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-ok",
             children: [
               _jsx(Check, { size: 14, strokeWidth: 3, "aria-hidden": true }),
               "Matched",
@@ -82,7 +82,7 @@ const MemberRow = ({ m, onRemove }) => {
           })
         : _jsxs("span", {
             className:
-              "style-222f930b87 style-71556df3b4 style-19e97f3f40 style-4010c02329 style-87e86ce38e style-7294770c9c",
+              "u-display-flex-3 u-align-items-center-2 u-gap-space u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-warn",
             children: [
               _jsx(AlertTriangle, { size: 14, "aria-hidden": true }),
               "Unmatched",

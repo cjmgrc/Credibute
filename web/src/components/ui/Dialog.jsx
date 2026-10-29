@@ -44,10 +44,10 @@ const Dialog = ({ open, onClose, label, variant = "center", children }) => {
     "aria-label": label,
     "data-visible": visible,
     className: cn(
-      "style-b4b33d2441",
+      "u-color-inherit-background-0-0",
       variant === "center"
-        ? "style-13ab9c2eb2 centered-dialog"
-        : "style-2e4d601310",
+        ? "u-transform-scale-0-96 centered-dialog"
+        : "u-border-left-1px-solid-var-line-background-var-surface",
     ),
     onCancel: (e) => {
       e.preventDefault();
@@ -69,19 +69,19 @@ export const SheetHeader = ({ onClose, children }) => {
   return _jsxs("header", {
     ...drag,
     className:
-      "style-d2d9e1f134 style-f2e47d9c52 style-93ee4331ef style-78905c9e86 style-bbe39cfb5c style-4769f958af style-25e1240045 style-b04e43b886 style-0a702d97ed style-71998ea7a2",
+      "drag-dismiss-surface u-position-relative u-cursor-grab u-ui-pan-y-pan-y-touch-action-var-ui-pan-x-var-ui-pan-y-var-ui-pinch-zoom u-webkit-user-select-none-user-select-none u-border-bottom-style-var-ui-border-style-border-bottom-width-1px-2 u-border-color-var-line u-padding-inline-space-6-2 u-padding-bottom-space-4 u-padding-top-space-3 u-cursor-grabbing",
     children: [
       _jsx("span", {
         "aria-hidden": true,
         className:
-          "style-1752f11474 style-7fc057c6b0 style-496aca80e4 style-54f50aff0c style-6bb768bd22 style-b005d61d09 style-06b422cf95 style-ee12d4f979",
+          "u-margin-inline-auto u-margin-bottom-space-3 u-display-block u-height-space u-width-space-9 u-border-radius-3-40282e38px u-bg-var-line-strong u-display-none-4",
       }),
       _jsx("button", {
         type: "button",
         onClick: onClose,
         "aria-label": "Close",
         className:
-          "style-747355bdc2 style-830b1d2217 style-83ee6d9ede style-0f2a693e93 style-ebd37e04d4 style-4446c26b62 style-b005d61d09 style-2de8262ccb style-9e676c7431 style-41e07b9d1a style-3d53df2cf7 style-d64255261e style-d82b3e060a",
+          "u-position-absolute u-right-space-4 u-top-space-4 u-display-grid u-width-space-8-height-space-8 u-place-items-center u-border-radius-3-40282e38px u-bg-var-sunken-3 u-color-var-ink-2 u-transition-property-transform-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-scale-x-90pct-ui-scale-y-90pct u-color-var-ink-2",
         children: _jsx(X, { size: 16 }),
       }),
       children,
@@ -91,20 +91,20 @@ export const SheetHeader = ({ onClose, children }) => {
 /** Standard centered modal chrome. */
 export const ModalBody = ({ title, description, children, footer }) =>
   _jsxs("div", {
-    className: "style-c432836760",
+    className: "u-padding-space-6",
     children: [
-      _jsx("h2", { className: "style-d138f623f0", children: title }),
+      _jsx("h2", { className: "u-letter-spacing-0-022em-text-1-375rem", children: title }),
       description &&
         _jsx("p", {
-          className: "style-ff6e57b41c style-294e640e9b style-682659f553",
+          className: "u-margin-top-space u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
           children: description,
         }),
       children &&
-        _jsx("div", { className: "style-a752cdc80a", children: children }),
+        _jsx("div", { className: "u-margin-top-space-5", children: children }),
       footer &&
         _jsx("div", {
           className:
-            "style-356df20822 style-222f930b87 style-71556df3b4 style-307644c34d style-074569488c",
+            "u-margin-top-space-6 u-display-flex-3 u-align-items-center-2 u-justify-content-flex-end u-gap-space-2",
           children: footer,
         }),
     ],

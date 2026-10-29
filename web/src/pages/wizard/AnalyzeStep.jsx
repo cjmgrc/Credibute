@@ -16,7 +16,7 @@ const StageIcon = ({ s }) =>
   s === "done"
     ? _jsx("span", {
         className:
-          "style-0f2a693e93 style-2bd43fb579 style-4446c26b62 style-b005d61d09 style-c0af61bc47 style-0e23fa0f9b",
+          "u-display-grid u-width-space-5-height-space-5 u-place-items-center u-border-radius-3-40282e38px u-bg-var-ok-soft u-color-var-ok",
         children: _jsx(Check, {
           size: 12,
           strokeWidth: 3.5,
@@ -24,11 +24,11 @@ const StageIcon = ({ s }) =>
         }),
       })
     : s === "active"
-      ? _jsx(Spinner, { size: 18, className: "style-7cc50dcb0f" })
+      ? _jsx(Spinner, { size: 18, className: "u-color-var-accent" })
       : _jsx("span", {
           "aria-hidden": true,
           className:
-            "style-2bd43fb579 style-b005d61d09 style-17630fe25d style-4769f958af",
+            "u-width-space-5-height-space-5 u-border-radius-3-40282e38px u-border-style-var-ui-border-style-border-width-2px u-border-color-var-line",
         });
 const AnalyzeStep = () => {
   usePageTitle("Analyzing");
@@ -72,20 +72,20 @@ const AnalyzeStep = () => {
     navigate("/app/projects/campus-connect/results"); // mock: the backend will return the new project's id
   };
   return _jsxs("div", {
-    className: "style-1752f11474 style-8f220627e0 style-5ca89c874a",
+    className: "u-margin-inline-auto u-max-width-var-container-2xl u-padding-top-space-4",
     children: [
       _jsx(Stepper, { current: "analyze" }),
       _jsxs("div", {
         className:
-          "style-b5dbca1754 style-222f930b87 style-302c0d124a style-71556df3b4 style-05ab124483",
+          "u-margin-top-space-12 u-display-flex-3 u-flex-direction-column u-align-items-center-2 u-text-align-center",
         children: [
           _jsxs("div", {
             className:
-              "style-d2d9e1f134 style-0f2a693e93 style-36299891ac style-4446c26b62",
+              "u-position-relative u-display-grid u-width-space-36-height-space-36 u-place-items-center",
             children: [
               _jsxs("svg", {
                 viewBox: "0 0 120 120",
-                className: "style-747355bdc2 style-ce13093ad8 style-998afe1f49",
+                className: "u-position-absolute u-top-0-right-0 u-rotate-90deg",
                 "aria-hidden": true,
                 children: [
                   _jsx("circle", {
@@ -111,10 +111,10 @@ const AnalyzeStep = () => {
               }),
               _jsx("span", {
                 className: cn(
-                  "style-0f2a693e93 style-e34190d72b style-4446c26b62 style-b005d61d09 style-eae178841c style-f07df86364",
+                  "u-display-grid u-width-space-24-height-space-24 u-place-items-center u-border-radius-3-40282e38px u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-3s-transition-duration-0-3s",
                   done
-                    ? "style-c0af61bc47 style-0e23fa0f9b"
-                    : "style-95debef1e0 style-242347c218",
+                    ? "u-bg-var-ok-soft u-color-var-ok"
+                    : "u-bg-var-accent-soft-2 u-color-var-accent-text-2",
                 ),
                 children: done
                   ? _jsx(Check, {
@@ -131,17 +131,17 @@ const AnalyzeStep = () => {
           }),
           _jsx("p", {
             className:
-              "style-356df20822 style-294e640e9b style-87e86ce38e style-242347c218",
+              "u-margin-top-space-6 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2",
             children: done ? "Ready" : "Analysis in progress",
           }),
           _jsx("h1", {
-            className: "style-8f91cbcb89 style-f28fea81a5",
+            className: "u-letter-spacing-0-032em-text-clamp-1-75rem-3-4vw-2-25rem u-margin-top-space-2",
             children: done
               ? "Your report is ready"
               : "Reading repository activity",
           }),
           _jsxs("p", {
-            className: "style-f28fea81a5 style-1b61761e1c style-682659f553",
+            className: "u-margin-top-space-2 u-letter-spacing-0-005em-text-0-9375rem u-color-var-ink-3-2",
             children: [
               "We’re applying your rubric to ",
               span,
@@ -151,15 +151,15 @@ const AnalyzeStep = () => {
         ],
       }),
       _jsxs(Card, {
-        className: "style-c221af54a3 style-b646d08f7b style-c432836760",
+        className: "u-margin-top-space-8 u-border-radius-1-5rem u-padding-space-6",
         children: [
           _jsxs("div", {
             className:
-              "style-222f930b87 style-71556df3b4 style-32c92bb1fd style-294e640e9b style-87e86ce38e",
+              "u-display-flex-3 u-align-items-center-2 u-justify-content-space-between u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
             children: [
               _jsx("span", { "aria-live": "polite", children: headline }),
               _jsxs("span", {
-                className: "style-60182fbf94",
+                className: "u-font-variant-numeric-tabular-nums",
                 children: [Math.round(progress * 100), "%"],
               }),
             ],
@@ -170,33 +170,33 @@ const AnalyzeStep = () => {
             "aria-valuemax": 100,
             "aria-valuenow": Math.round(progress * 100),
             className:
-              "style-d21b86ea41 style-f5728694f6 style-d5111d0e9f style-b005d61d09 style-2de8262ccb",
+              "u-margin-top-space-3 u-height-space-2 u-overflow-hidden u-border-radius-3-40282e38px u-bg-var-sunken-3",
             children: _jsx("div", {
               className:
-                "style-57c930dc1c style-58d0413dd9 style-b005d61d09 style-292affc1f7",
-              style: { transform: `translateX(${progress * 100 - 100}%)` },
+                "progress-fill u-height-100pct u-width-100pct u-border-radius-3-40282e38px u-bg-var-accent",
+              "data-progress": progress,
             }),
           }),
           _jsx("ul", {
-            className: "style-a752cdc80a style-d7c2d8ecc7",
+            className: "u-margin-top-space-5 u-ui-space-y-reverse-0-margin-block-start-space-3-5-var-ui-space-y-reverse",
             children: labels.map((l, i) =>
               _jsxs(
                 "li",
                 {
                   className: cn(
-                    "style-222f930b87 style-71556df3b4 style-d7db3451d1 style-294e640e9b",
+                    "u-display-flex-3 u-align-items-center-2 u-gap-space-3 u-letter-spacing-0-text-0-8125rem",
                     stages[i] === "todo"
-                      ? "style-682659f553"
-                      : "style-3c70d0a0c9",
+                      ? "u-color-var-ink-3-2"
+                      : "u-color-var-ink",
                   ),
                   children: [
                     _jsx(StageIcon, { s: stages[i] }),
                     _jsx("span", {
-                      className: "style-7bd5bab6d7",
+                      className: "u-flex-1",
                       children: l,
                     }),
                     _jsx("span", {
-                      className: "style-4010c02329 style-682659f553",
+                      className: "u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                       children: right[i],
                     }),
                   ],
@@ -209,14 +209,14 @@ const AnalyzeStep = () => {
       }),
       _jsxs("p", {
         className:
-          "style-a752cdc80a style-222f930b87 style-71556df3b4 style-a503dd374c style-074569488c style-4010c02329 style-682659f553",
+          "u-margin-top-space-5 u-display-flex-3 u-align-items-center-2 u-justify-content-center u-gap-space-2 u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
         children: [
           _jsx(Lock, { size: 14, "aria-hidden": true }),
           "Analysis happens securely. Your source code is not stored.",
         ],
       }),
       _jsx("div", {
-        className: "style-356df20822 style-222f930b87 style-a503dd374c",
+        className: "u-margin-top-space-6 u-display-flex-3 u-justify-content-center",
         children: done
           ? _jsx(Button, {
               size: "lg",

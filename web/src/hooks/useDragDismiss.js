@@ -59,6 +59,6 @@ export function useDragDismiss(ref, onDismiss) {
         onPointerMove: move,
         onPointerUp: (e) => end(e, false),
         onPointerCancel: (e) => end(e, true),
-        style: { touchAction: 'pan-y' },
+        className: 'drag-dismiss-surface',
     };
 }

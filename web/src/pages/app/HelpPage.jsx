@@ -36,7 +36,7 @@ const HelpPage = () => {
         description: "How Credibute works, and where to get unstuck.",
       }),
       _jsxs("div", {
-        className: "style-0f2a693e93 style-90fc3ec35a style-1c5c10d2a4",
+        className: "u-display-grid u-gap-space-4 u-grid-cols-repeat-3-minmax-0-1fr",
         children: [
           [
             [
@@ -51,12 +51,12 @@ const HelpPage = () => {
               {
                 to: to,
                 className:
-                  "style-f5470b0a5f style-4f1a55de40 style-4769f958af style-ad04ce25f0 style-014b941a77 style-e5afbdee38 style-3d53df2cf7 style-501b3e6c9f style-144113eebd style-b6d1913570",
+                  "u-border-radius-1rem u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-bg-var-surface-2 u-padding-space-5 u-transition-property-transform-border-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-scale-0-98 u-border-color-var-line-strong-2",
                 children: [
-                  _jsx("h2", { className: "style-2ccfb296b9", children: t }),
+                  _jsx("h2", { className: "u-letter-spacing-0-011em-text-1rem", children: t }),
                   _jsx("p", {
                     className:
-                      "style-ff6e57b41c style-294e640e9b style-682659f553",
+                      "u-margin-top-space u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
                     children: d,
                   }),
                 ],
@@ -69,18 +69,18 @@ const HelpPage = () => {
             target: "_blank",
             rel: "noreferrer noopener",
             className:
-              "style-f5470b0a5f style-4f1a55de40 style-4769f958af style-ad04ce25f0 style-014b941a77 style-e5afbdee38 style-3d53df2cf7 style-501b3e6c9f style-144113eebd style-b6d1913570",
+              "u-border-radius-1rem u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-bg-var-surface-2 u-padding-space-5 u-transition-property-transform-border-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-scale-0-98 u-border-color-var-line-strong-2",
             children: [
               _jsxs("h2", {
                 className:
-                  "style-2ccfb296b9 style-222f930b87 style-71556df3b4 style-70007b8768",
+                  "u-letter-spacing-0-011em-text-1rem u-display-flex-3 u-align-items-center-2 u-gap-space-1-5",
                 children: [
                   "Report an issue ",
                   _jsx(ExternalLink, { size: 14, "aria-hidden": true }),
                 ],
               }),
               _jsx("p", {
-                className: "style-ff6e57b41c style-294e640e9b style-682659f553",
+                className: "u-margin-top-space u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
                 children: "Bugs and ideas on GitHub.",
               }),
             ],
@@ -88,21 +88,21 @@ const HelpPage = () => {
         ],
       }),
       _jsx(Card, {
-        className: "style-356df20822 style-d1626f14b8 style-b682aa7242",
+        className: "u-margin-top-space-6 u-ui-divide-y-reverse-0-border-bottom-style-var-ui-border-style u-border-color-var-line-2",
         children: FAQ.map(([q, a]) =>
           _jsxs(
             "details",
             {
-              className: "style-ad936fcbed style-25e1240045 style-f33d55d2db",
+              className: "team u-padding-inline-space-6-2 u-padding-block-space-4",
               children: [
                 _jsx("summary", {
                   className:
-                    "style-d2fa884896 style-bae566d754 style-294e640e9b style-87e86ce38e style-2366f0afa4",
+                    "u-cursor-pointer u-list-utility-none u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-display-none",
                   children: q,
                 }),
                 _jsx("p", {
                   className:
-                    "style-f28fea81a5 style-294e640e9b style-682659f553",
+                    "u-margin-top-space-2 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
                   children: a,
                 }),
               ],

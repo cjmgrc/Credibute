@@ -12,7 +12,7 @@ import { inputClass } from "@/components/ui/Input";
 import { SIGNALS, SIGNAL_DETAIL, newCriterion } from "@/domain/rubric";
 import { balanceWeights, rubricIssues } from "@/domain/scoring";
 import { cn } from "@/lib/cn";
-const small = inputClass.replace("style-22189506c2 ", "style-539ae144f0 ");
+const small = inputClass.replace("u-height-space-11 ", "u-height-space-9 ");
 /** Read-only rows for the default rubric. */
 export const DefaultRows = ({ criteria }) => {
   const [open, setOpen] = useState(null);
@@ -25,36 +25,36 @@ export const DefaultRows = ({ criteria }) => {
     children: [
       _jsx("ol", {
         className:
-          "style-d1626f14b8 style-b682aa7242 style-582305bd50 style-4769f958af",
+          "u-ui-divide-y-reverse-0-border-bottom-style-var-ui-border-style u-border-color-var-line-2 u-border-block-style-var-ui-border-style-border-block-width-1px u-border-color-var-line",
         children: criteria.map((c, i) =>
           _jsxs(
             "li",
             {
               className:
-                "style-222f930b87 style-71556df3b4 style-90fc3ec35a style-f33d55d2db",
+                "u-display-flex-3 u-align-items-center-2 u-gap-space-4 u-padding-block-space-4",
               children: [
                 _jsx("span", {
                   "aria-hidden": true,
                   className:
-                    "style-0f2a693e93 style-ebd37e04d4 style-27ead27a81 style-4446c26b62 style-49abc543ea style-2de8262ccb style-4010c02329 style-87e86ce38e style-682659f553",
+                    "u-display-grid u-width-space-8-height-space-8 u-flex-shrink-0 u-place-items-center u-border-radius-var-radius-lg u-bg-var-sunken-3 u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-ink-3-2",
                   children: i + 1,
                 }),
                 _jsxs("div", {
-                  className: "style-184ddc11e5 style-7bd5bab6d7",
+                  className: "u-min-width-0 u-flex-1",
                   children: [
                     _jsx("p", {
-                      className: "style-294e640e9b style-87e86ce38e",
+                      className: "u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                       children: c.name,
                     }),
                     _jsx("p", {
-                      className: "style-4010c02329 style-682659f553",
+                      className: "u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                       children: c.description,
                     }),
                   ],
                 }),
                 _jsxs("span", {
                   className:
-                    "style-49abc543ea style-4f1a55de40 style-4769f958af style-0f9e667291 style-a8c1dfb1d4 style-294e640e9b style-87e86ce38e style-60182fbf94",
+                    "u-border-radius-var-radius-lg u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-padding-inline-space-3 u-padding-block-space-1-5 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-font-variant-numeric-tabular-nums",
                   children: [c.weight, "%"],
                 }),
                 _jsx(Menu, {
@@ -87,17 +87,17 @@ export const DefaultRows = ({ criteria }) => {
               children: "Done",
             }),
             children: _jsx("ul", {
-              className: "style-b5776161da style-294e640e9b style-9e676c7431",
+              className: "u-ui-space-y-reverse-0-margin-block-start-space-2-5-var-ui-space-y-reverse u-letter-spacing-0-text-0-8125rem u-color-var-ink-2",
               children: SIGNAL_DETAIL[last.signal].map((d) =>
                 _jsxs(
                   "li",
                   {
-                    className: "style-222f930b87 style-d7db3451d1",
+                    className: "u-display-flex-3 u-gap-space-3",
                     children: [
                       _jsx("span", {
                         "aria-hidden": true,
                         className:
-                          "style-f28fea81a5 style-b82d83cf0c style-27ead27a81 style-b005d61d09 style-d8e6f3c399",
+                          "u-margin-top-space-2 u-width-space-height-space u-flex-shrink-0 u-border-radius-3-40282e38px u-bg-var-ink-3",
                       }),
                       d,
                     ],
@@ -120,23 +120,23 @@ export const EditableRows = ({ criteria, onChange }) => {
     children: [
       _jsx("ol", {
         className:
-          "style-d1626f14b8 style-b682aa7242 style-582305bd50 style-4769f958af",
+          "u-ui-divide-y-reverse-0-border-bottom-style-var-ui-border-style u-border-color-var-line-2 u-border-block-style-var-ui-border-style-border-block-width-1px u-border-color-var-line",
         children: criteria.map((c, i) => {
           const manual = c.signal === "manual";
           return _jsxs(
             "li",
             {
               className:
-                "style-0f2a693e93 style-d7db3451d1 style-f33d55d2db style-315e8d22ff style-16a631cbd5",
+                "u-display-grid u-gap-space-3 u-padding-block-space-4 u-grid-cols-2rem-1fr-12rem-5-5rem-2rem u-align-items-flex-start",
               children: [
                 _jsx("span", {
                   "aria-hidden": true,
                   className:
-                    "style-e564b4081d style-ebd37e04d4 style-4446c26b62 style-49abc543ea style-2de8262ccb style-4010c02329 style-87e86ce38e style-682659f553 style-94148d35b0",
+                    "u-display-none-3 u-width-space-8-height-space-8 u-place-items-center u-border-radius-var-radius-lg u-bg-var-sunken-3 u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-ink-3-2 u-display-grid-3",
                   children: i + 1,
                 }),
                 _jsxs("div", {
-                  className: "style-0f2a693e93 style-074569488c",
+                  className: "u-display-grid u-gap-space-2",
                   children: [
                     _jsx("input", {
                       "aria-label": `Criterion ${i + 1} name`,
@@ -147,7 +147,7 @@ export const EditableRows = ({ criteria, onChange }) => {
                     }),
                     _jsx("input", {
                       "aria-label": `Criterion ${i + 1} description`,
-                      className: cn(small, "style-4010c02329"),
+                      className: cn(small, "u-letter-spacing-0-01em-text-0-75rem"),
                       placeholder: "What does it reward? (optional)",
                       value: c.description,
                       onChange: (e) =>
@@ -157,7 +157,7 @@ export const EditableRows = ({ criteria, onChange }) => {
                 }),
                 _jsx("select", {
                   "aria-label": `Criterion ${i + 1} signal`,
-                  className: cn(small, "style-395428ec59"),
+                  className: cn(small, "u-webkit-appearance-none-moz-appearance-none"),
                   value: c.signal,
                   onChange: (e) => patch(c.id, { signal: e.target.value }),
                   children: SIGNALS.map((s) =>
@@ -167,11 +167,11 @@ export const EditableRows = ({ criteria, onChange }) => {
                 manual
                   ? _jsx("span", {
                       className:
-                        "style-222f930b87 style-539ae144f0 style-71556df3b4 style-4010c02329 style-682659f553",
+                        "u-display-flex-3 u-height-space-9 u-align-items-center-2 u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                       children: "Not scored",
                     })
                   : _jsxs("div", {
-                      className: "style-d2d9e1f134",
+                      className: "u-position-relative",
                       children: [
                         _jsx("input", {
                           "aria-label": `Criterion ${i + 1} weight`,
@@ -181,7 +181,7 @@ export const EditableRows = ({ criteria, onChange }) => {
                           max: 100,
                           className: cn(
                             small,
-                            "style-c1cec5c4a6 style-fe5b15276f style-60182fbf94",
+                            "u-padding-right-space-7 u-text-align-right u-font-variant-numeric-tabular-nums",
                           ),
                           value: c.weight,
                           onChange: (e) =>
@@ -198,7 +198,7 @@ export const EditableRows = ({ criteria, onChange }) => {
                         _jsx("span", {
                           "aria-hidden": true,
                           className:
-                            "style-33228ff7d5 style-747355bdc2 style-8b66d98296 style-4e45f4841a style-5dde0fd996 style-4010c02329 style-682659f553",
+                            "u-pointer-events-none u-position-absolute u-right-space-3 u-top-50pct u-ui-translate-y-50pct-translate-var-ui-translate-x-var-ui-translate-y u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                           children: "%",
                         }),
                       ],
@@ -209,7 +209,7 @@ export const EditableRows = ({ criteria, onChange }) => {
                   onClick: () =>
                     onChange(criteria.filter((x) => x.id !== c.id)),
                   className:
-                    "style-0f2a693e93 style-3ee10ef4c0 style-4446c26b62 style-49abc543ea style-682659f553 style-6a238a29da style-3d53df2cf7 style-d64255261e style-5cc85fc4e5 style-07239c3bb9",
+                    "u-display-grid u-width-space-9-height-space-9 u-place-items-center u-border-radius-var-radius-lg u-color-var-ink-3-2 u-transition-property-transform-color-background-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-scale-x-90pct-ui-scale-y-90pct u-bg-var-bad-soft u-color-var-bad",
                   children: _jsx(Trash2, { size: 16 }),
                 }),
               ],
@@ -220,7 +220,7 @@ export const EditableRows = ({ criteria, onChange }) => {
       }),
       _jsxs("div", {
         className:
-          "style-d21b86ea41 style-222f930b87 style-faa8a23c68 style-71556df3b4 style-074569488c",
+          "u-margin-top-space-3 u-display-flex-3 u-flex-wrap-wrap u-align-items-center-2 u-gap-space-2",
         children: [
           _jsx(Button, {
             variant: "secondary",
@@ -241,7 +241,7 @@ export const EditableRows = ({ criteria, onChange }) => {
       issues.length > 0 &&
         _jsx("ul", {
           className:
-            "style-d21b86ea41 style-27e6c43219 style-294e640e9b style-7294770c9c",
+            "u-margin-top-space-3 u-ui-space-y-reverse-0-margin-block-start-space-var-ui-space-y-reverse u-letter-spacing-0-text-0-8125rem u-color-var-warn",
           children: issues.map((x) =>
             _jsx("li", { children: x.message }, x.code),
           ),

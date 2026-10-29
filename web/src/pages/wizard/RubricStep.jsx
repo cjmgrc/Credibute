@@ -38,23 +38,23 @@ const RubricStep = () => {
       }),
       _jsxs(Card, {
         className:
-          "style-dc1d1f5a54 style-b646d08f7b style-014b941a77 style-11772a591e",
+          "u-margin-top-space-4 u-border-radius-1-5rem u-padding-space-5 u-padding-space-7",
         children: [
           _jsxs("div", {
             className:
-              "style-f5e51c64e0 style-222f930b87 style-b9677bd1cb style-32c92bb1fd style-90fc3ec35a",
+              "u-margin-bottom-space-4 u-display-flex-3 u-align-items-flex-start-2 u-justify-content-space-between u-gap-space-4",
             children: [
               _jsxs("div", {
                 children: [
                   _jsx("h2", {
-                    className: "style-2ccfb296b9",
+                    className: "u-letter-spacing-0-011em-text-1rem",
                     children: custom
                       ? "Instructor rubric"
                       : `${BRAND} default rubric`,
                   }),
                   _jsx("p", {
                     className:
-                      "style-7afae65258 style-294e640e9b style-682659f553",
+                      "u-margin-top-space-0-5 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
                     children:
                       "Weights determine each signal\u2019s influence on the estimate.",
                   }),
@@ -71,22 +71,22 @@ const RubricStep = () => {
             : _jsx(DefaultRows, { criteria: DEFAULT_CRITERIA }),
           _jsxs("div", {
             className:
-              "style-a752cdc80a style-222f930b87 style-b9677bd1cb style-d7db3451d1 style-f5470b0a5f style-95debef1e0 style-9513b39680 style-f763c2225c",
+              "u-margin-top-space-5 u-display-flex-3 u-align-items-flex-start-2 u-gap-space-3 u-border-radius-1rem u-bg-var-accent-soft-2 u-padding-inline-space-4 u-padding-block-space-3-5",
             children: [
               _jsx(Info, {
                 size: 18,
                 "aria-hidden": true,
-                className: "style-7afae65258 style-27ead27a81 style-242347c218",
+                className: "u-margin-top-space-0-5 u-flex-shrink-0 u-color-var-accent-text-2",
               }),
               _jsxs("div", {
                 children: [
                   _jsx("p", {
                     className:
-                      "style-294e640e9b style-87e86ce38e style-242347c218",
+                      "u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-accent-text-2",
                     children: "Not measurable from Git?",
                   }),
                   _jsx("p", {
-                    className: "style-294e640e9b style-9e676c7431",
+                    className: "u-letter-spacing-0-text-0-8125rem u-color-var-ink-2",
                     children:
                       "Presentation quality and teamwork sentiment can be added as manually reviewed criteria. They appear in the report but never affect repository estimates.",
                   }),

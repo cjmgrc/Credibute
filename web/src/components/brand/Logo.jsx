@@ -42,7 +42,7 @@ export const LogoMark = ({ size = 32, className }) => {
       height={size}
       viewBox="230 245 790 790"
       aria-hidden
-      className={cn("style-7cc50dcb0f", className)}
+      className={cn("u-color-var-accent", className)}
     >
       <defs>
         <radialGradient
@@ -414,13 +414,13 @@ const Logo = ({ to = "/", light, className }) => (
     to={to}
     aria-label={`${BRAND} home`}
     className={cn(
-      "style-123306850f style-71556df3b4 style-074569488c style-49abc543ea style-48a1d34f1a style-3d53df2cf7 style-501b3e6c9f style-03cc0a209d",
-      light ? "style-5e9a40ae2b" : "style-3c70d0a0c9",
+      "u-display-inline-flex u-align-items-center-2 u-gap-space-2 u-border-radius-var-radius-lg u-transition-property-transform-translate-scale-rotate-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-scale-0-97",
+      light ? "u-color-var-color-white" : "u-color-var-ink",
       className,
     )}
   >
     <LogoMark />
-    <span className="style-0c6a41fdd5 style-0670710393 style-f57f7ce15c">
+    <span className="u-text-1-0625rem u-ui-weight-var-font-weight-bold-weight-var-font-weight-bold u-ui-tracking-0-03em-letter-spacing-0-03em">
       {BRAND}
     </span>
   </Link>

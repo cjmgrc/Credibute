@@ -6,13 +6,13 @@ const ThemeToggle = ({ className }) => {
   const { resolved, toggle } = useTheme();
   const dark = resolved === "dark";
   const icon =
-    "style-747355bdc2 style-76585be20a style-10e9f177b8 style-501b3e6c9f style-d1181a2b59";
+    "u-position-absolute u-transition-property-opacity-transform-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-2s-transition-duration-0-2s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-transition-property-opacity-transition-timing-function-var-ui-ease-var-default-transition-timing-function-2";
   return _jsxs("button", {
     type: "button",
     onClick: toggle,
     "aria-label": dark ? "Switch to light mode" : "Switch to dark mode",
     className: cn(
-      "style-d2d9e1f134 style-0f2a693e93 style-d0a383a9c2 style-4446c26b62 style-a7ab7bd722 style-4f1a55de40 style-4769f958af style-ad04ce25f0 style-9e676c7431 style-a9765437e6 style-41e07b9d1a style-3d53df2cf7 style-22220f24b7 style-d82b3e060a",
+      "u-position-relative u-display-grid u-width-space-10-height-space-10 u-place-items-center u-border-radius-0-625rem u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-bg-var-surface-2 u-color-var-ink-2 u-ui-shadow-var-sh-lift-box-shadow-var-ui-inset-shadow-var-ui-inset-ring-shadow-var-ui-ring-offset-shadow-var-ui-ring-shadow-var-ui-shadow u-transition-property-transform-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-scale-x-95pct-ui-scale-y-95pct u-color-var-ink-2",
       className,
     ),
     children: [
@@ -21,8 +21,8 @@ const ThemeToggle = ({ className }) => {
         className: cn(
           icon,
           dark
-            ? "style-41a0b0dfde style-65694092f0"
-            : "style-c7e4112ba1 style-4e3f085883 style-94f91922a1",
+            ? "u-ui-scale-x-100pct-ui-scale-y-100pct u-opacity-1-3"
+            : "u-ui-scale-x-50pct-ui-scale-y-50pct u-rotate-45deg u-opacity-0-2",
         ),
       }),
       _jsx(Moon, {
@@ -30,8 +30,8 @@ const ThemeToggle = ({ className }) => {
         className: cn(
           icon,
           dark
-            ? "style-c7e4112ba1 style-c80411b759 style-94f91922a1"
-            : "style-41a0b0dfde style-65694092f0",
+            ? "u-ui-scale-x-50pct-ui-scale-y-50pct u-rotate-45deg-2 u-opacity-0-2"
+            : "u-ui-scale-x-100pct-ui-scale-y-100pct u-opacity-1-3",
         ),
       }),
     ],

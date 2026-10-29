@@ -221,7 +221,7 @@ function evidenceFor(repoUrl, memberId, c, count) {
     const isReview = isCollab && title.startsWith("Review");
     const prNumber = 30 + Math.floor(r() * 30);
     return {
-      id: `${memberId}style-3973e022e9${c.id}style-3973e022e9${i}`,
+      id: `${memberId}${c.id}${i}`,
       kind: isCollab
         ? isReview
           ? "review"

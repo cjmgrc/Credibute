@@ -1,0 +1,120 @@
+.hero-entrance {
+  animation: rise 0.36s var(--ease-out-strong) both;
+}
+
+.hero-entrance-1 {
+  animation-delay: 0ms;
+}
+
+.hero-entrance-2 {
+  animation-delay: 50ms;
+}
+
+.hero-entrance-3 {
+  animation-delay: 100ms;
+}
+
+.hero-entrance-4 {
+  animation-delay: 150ms;
+}
+
+.hero-entrance-5 {
+  animation-delay: 200ms;
+}
+
+.hero-entrance-6 {
+  animation-delay: 250ms;
+}
+
+.share-bar-fill {
+  transform: translateX(calc(attr(data-value type(<number>)) * 1% - 100%));
+  opacity: attr(data-opacity type(<number>));
+  transition-delay: calc(attr(data-delay type(<number>)) * 1ms);
+}
+
+.segmented-thumb {
+  position: absolute;
+  inset-block: var(--spacing);
+  left: var(--spacing);
+  width: calc((100% - 0.5rem) / attr(data-count type(<number>)));
+  transform: translateX(calc(attr(data-index type(<number>)) * 100%));
+  border-radius: 0.45rem;
+  background: var(--surface);
+  box-shadow: var(--sh-lift);
+  transition: transform 0.26s var(--ease-drawer);
+}
+
+.activity-bar {
+  height: calc(attr(data-height type(<number>)) * 1%);
+  transition-delay: calc(sibling-index() * 30ms);
+}
+
+.activity-bar[data-seen="false"] {
+  transform: scaleY(0.02);
+}
+
+.progress-fill {
+  transform: translateX(calc(attr(data-progress type(<number>)) * 100% - 100%));
+}
+
+.heat-cell {
+  background-color: color-mix(
+    in oklab,
+    var(--accent) calc(attr(data-share type(<number>)) * 1%),
+    transparent
+  );
+}
+
+.heat-level-0 {
+  background-color: color-mix(in oklab, var(--accent) 0%, transparent);
+}
+
+.heat-level-1 {
+  background-color: color-mix(in oklab, var(--accent) 5%, transparent);
+}
+
+.heat-level-2 {
+  background-color: color-mix(in oklab, var(--accent) 10%, transparent);
+}
+
+.heat-level-3 {
+  background-color: color-mix(in oklab, var(--accent) 15%, transparent);
+}
+
+.heat-level-4 {
+  background-color: color-mix(in oklab, var(--accent) 20%, transparent);
+}
+
+.heat-level-5 {
+  background-color: color-mix(in oklab, var(--accent) 25%, transparent);
+}
+
+.heat-level-6 {
+  background-color: color-mix(in oklab, var(--accent) 30%, transparent);
+}
+
+.heat-level-7 {
+  background-color: color-mix(in oklab, var(--accent) 35%, transparent);
+}
+
+.heat-level-8 {
+  background-color: color-mix(in oklab, var(--accent) 40%, transparent);
+}
+
+.heat-level-9 {
+  background-color: color-mix(in oklab, var(--accent) 45%, transparent);
+}
+
+.heat-level-10 {
+  background-color: color-mix(in oklab, var(--accent) 55%, transparent);
+}
+
+.drag-dismiss-surface {
+  touch-action: pan-y;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-entrance {
+    animation: none;
+  }
+}

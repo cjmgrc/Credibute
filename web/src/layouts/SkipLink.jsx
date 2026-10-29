@@ -3,7 +3,7 @@ const SkipLink = () =>
   _jsx("a", {
     href: "#main",
     className:
-      "style-32fb090591 style-105e47fa0c style-a7ab7bd722 style-ad04ce25f0 style-9513b39680 style-b5edc3ea7c style-294e640e9b style-87e86ce38e style-3c70d0a0c9 style-b743453ee3 style-3e84dfcee1 style-6a032200ac style-cc5bae20a4 style-ae253491f3",
+      "u-clip-path-inset-50pct-white-space-nowrap u-z-index-200 u-border-radius-0-625rem u-bg-var-surface-2 u-padding-inline-space-4 u-padding-block-space-2 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-ink u-ui-shadow-var-sh-float-box-shadow-var-ui-inset-shadow-var-ui-inset-ring-shadow-var-ui-ring-offset-shadow-var-ui-ring-shadow-var-ui-shadow u-clip-path-none-white-space-normal u-position-fixed u-left-space-4 u-top-space-4-2",
     children: "Skip to content",
   });
 export default SkipLink;

@@ -7,7 +7,7 @@ const NotFoundPage = () => {
   usePageTitle("Page not found");
   return _jsx("main", {
     className:
-      "style-0f2a693e93 style-6495140cf7 style-4446c26b62 style-25e1240045",
+      "u-display-grid u-min-height-100dvh u-place-items-center u-padding-inline-space-6-2",
     children: _jsx(EmptyState, {
       icon: _jsx(Compass, { size: 22 }),
       title: "We can\u2019t find that page",

@@ -5,25 +5,25 @@ import Logo from "@/components/brand/Logo";
 import SkipLink from "./SkipLink";
 const AuthLayout = ({ children }) =>
   _jsxs("div", {
-    className: "style-0f2a693e93 style-6495140cf7 style-d3a3897bcf",
+    className: "u-display-grid u-min-height-100dvh u-grid-cols-repeat-2-minmax-0-1fr",
     children: [
       _jsx(SkipLink, {}),
       _jsxs("aside", {
         className:
-          "style-d2d9e1f134 style-e564b4081d style-302c0d124a style-32c92bb1fd style-d5111d0e9f style-a1b1f57a9b style-6adc4de867 style-5e9a40ae2b style-521a4cf819",
+          "u-position-relative u-display-none-3 u-flex-direction-column u-justify-content-space-between u-overflow-hidden u-bg-var-night u-padding-space-12 u-color-var-color-white u-display-flex-4",
         children: [
           _jsx("div", {
             "aria-hidden": true,
             className:
-              "style-33228ff7d5 style-747355bdc2 style-fa58147d1d style-bf91f3d5c6 style-a0c89d2b18 style-b005d61d09 style-cee4d4ea36 style-550295df07",
+              "u-pointer-events-none u-position-absolute u-bottom-space-40 u-left-space-40 u-width-34rem-height-34rem u-border-radius-3-40282e38px u-bg-var-accent-4 u-ui-blur-blur-110px-filter-var-ui-blur-var-ui-brightness-var-ui-contrast-var-ui-grayscale-var-ui-hue-rotate-var-ui-invert-var-ui-saturate-var-ui-sepia-var-ui-drop-shadow",
           }),
           _jsx(Logo, { light: true }),
           _jsxs("div", {
-            className: "style-d2d9e1f134",
+            className: "u-position-relative",
             children: [
               _jsxs("span", {
                 className:
-                  "style-33e782a0e6 style-123306850f style-71556df3b4 style-074569488c style-b005d61d09 style-d9f2e4ee8d style-cf20b3b1c2 style-a8c1dfb1d4 style-294e640e9b style-87e86ce38e style-f55d8f30dc style-7ff0330e1f style-cc23cbd96e",
+                  "u-margin-bottom-space-6 u-display-inline-flex u-align-items-center-2 u-gap-space-2 u-border-radius-3-40282e38px u-bg-ffffff1a u-padding-inline-space-3-5 u-padding-block-space-1-5 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-ffffffe6 u-ui-ring-shadow-var-ui-ring-inset-0-0-0-1px-var-ui-ring-offset-width-var-ui-ring-color-currentcolor-box-shadow-var-ui-inset-shadow-var-ui-inset-ring-shadow-var-ui-ring-offset-shadow-var-ui-ring-shadow-var-ui-shadow u-ui-ring-color-ffffff1a",
                 children: [
                   _jsx(ShieldCheck, { size: 15, "aria-hidden": true }),
                   "AI-free contribution analysis",
@@ -31,18 +31,18 @@ const AuthLayout = ({ children }) =>
               }),
               _jsx("h2", {
                 className:
-                  "style-7b7574448a style-167fee8796 style-87e86ce38e style-03bb8cff2f style-2a1a375d8a",
+                  "u-max-width-var-container-md u-text-3-25rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-ui-leading-1-02-line-height-1-02 u-ui-tracking-0-04em-letter-spacing-0-04em",
                 children: "Make every contribution visible.",
               }),
               _jsx("p", {
                 className:
-                  "style-a752cdc80a style-6f067cb084 style-1b61761e1c style-c2ac48cea6",
+                  "u-margin-top-space-5 u-max-width-var-container-sm u-letter-spacing-0-005em-text-0-9375rem u-color-fff9",
                 children: "Clear, explainable Git evidence for student teams.",
               }),
             ],
           }),
           _jsx("p", {
-            className: "style-d2d9e1f134 style-294e640e9b style-296a279772",
+            className: "u-position-relative u-letter-spacing-0-text-0-8125rem u-color-ffffff73",
             children: "Open source, and private by default.",
           }),
         ],
@@ -50,20 +50,20 @@ const AuthLayout = ({ children }) =>
       _jsxs("main", {
         id: "main",
         className:
-          "style-d2d9e1f134 style-222f930b87 style-71556df3b4 style-a503dd374c style-25e1240045 style-b7f39944bb",
+          "u-position-relative u-display-flex-3 u-align-items-center-2 u-justify-content-center u-padding-inline-space-6-2 u-padding-block-space-16",
         children: [
           _jsx(Link, {
             to: "/",
             "aria-label": "Close and return home",
             className:
-              "style-747355bdc2 style-76acf3c4d0 style-beb4cf8385 style-0f2a693e93 style-d0a383a9c2 style-4446c26b62 style-b005d61d09 style-682659f553 style-afcb01b331 style-3d53df2cf7 style-d64255261e style-0637e93d27 style-d82b3e060a",
+              "u-position-absolute u-right-space-5 u-top-space-5 u-display-grid u-width-space-10-height-space-10 u-place-items-center u-border-radius-3-40282e38px u-color-var-ink-3-2 u-transition-property-transform-background-color-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-scale-x-90pct-ui-scale-y-90pct u-bg-var-sunken u-color-var-ink-2",
             children: _jsx(X, { size: 20 }),
           }),
           _jsxs("div", {
-            className: "style-58d0413dd9 style-b555ca5854",
+            className: "u-width-100pct u-max-width-22-5rem",
             children: [
               _jsx("div", {
-                className: "style-ddd816d245 style-7baf6374e9",
+                className: "u-margin-bottom-space-10 u-display-none-2",
                 children: _jsx(Logo, {}),
               }),
               children,

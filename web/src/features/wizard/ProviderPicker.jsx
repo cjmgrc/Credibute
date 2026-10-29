@@ -21,7 +21,7 @@ const ProviderPicker = ({ value, onChange }) =>
   _jsx("div", {
     role: "radiogroup",
     "aria-label": "Repository provider",
-    className: "style-0f2a693e93 style-d7db3451d1 style-e10c57afb4",
+    className: "u-display-grid u-gap-space-3 u-grid-cols-repeat-2-minmax-0-1fr-2",
     children: OPTIONS.map(({ value: v, label, sub, Icon, soon }) => {
       const on = value === v;
       return _jsxs(
@@ -33,24 +33,24 @@ const ProviderPicker = ({ value, onChange }) =>
           disabled: soon,
           onClick: () => onChange(v),
           className: cn(
-            "style-222f930b87 style-71556df3b4 style-3ac8d72d12 style-f5470b0a5f style-4f1a55de40 style-99df86594a style-1a5d10977b style-ef83761d83 style-3d53df2cf7 style-501b3e6c9f style-144113eebd style-b83dd77242 style-d93ffd1d00",
+            "u-display-flex-3 u-align-items-center-2 u-gap-space-3-5 u-border-radius-1rem u-border-style-var-ui-border-style-border-width-1px u-padding-space-4 u-text-align-left u-transition-property-transform-border-color-box-shadow-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-scale-0-98 u-opacity-0-55 u-ui-scale-x-100pct-ui-scale-y-100pct-2",
             on
-              ? "style-c64ab861a8 style-00a601700a"
-              : "style-4769f958af style-b6d1913570",
+              ? "u-border-color-var-accent-2 u-ui-shadow-0-0-0-3px-var-ui-shadow-color-var-accent"
+              : "u-border-color-var-line u-border-color-var-line-strong-2",
           ),
           children: [
             _jsx(Icon, { size: 22 }),
             _jsxs("span", {
-              className: "style-7bd5bab6d7",
+              className: "u-flex-1",
               children: [
                 _jsx("span", {
                   className:
-                    "style-496aca80e4 style-294e640e9b style-87e86ce38e",
+                    "u-display-block u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                   children: label,
                 }),
                 _jsx("span", {
                   className:
-                    "style-496aca80e4 style-4010c02329 style-682659f553",
+                    "u-display-block u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                   children: sub,
                 }),
               ],
@@ -60,13 +60,13 @@ const ProviderPicker = ({ value, onChange }) =>
               : _jsx("span", {
                   "aria-hidden": true,
                   className: cn(
-                    "style-0f2a693e93 style-2bd43fb579 style-4446c26b62 style-b005d61d09 style-17630fe25d style-eae178841c",
-                    on ? "style-c64ab861a8" : "style-4132d945d4",
+                    "u-display-grid u-width-space-5-height-space-5 u-place-items-center u-border-radius-3-40282e38px u-border-style-var-ui-border-style-border-width-2px u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function",
+                    on ? "u-border-color-var-accent-2" : "u-border-color-var-line-strong",
                   ),
                   children: _jsx("span", {
                     className: cn(
-                      "style-fe04aff4af style-b005d61d09 style-292affc1f7 style-48a1d34f1a style-3d53df2cf7 style-501b3e6c9f",
-                      on ? "style-41a0b0dfde" : "style-820613eb3b",
+                      "u-width-space-2-5-height-space-2-5 u-border-radius-3-40282e38px u-bg-var-accent u-transition-property-transform-translate-scale-rotate-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1",
+                      on ? "u-ui-scale-x-100pct-ui-scale-y-100pct" : "u-ui-scale-x-0pct-ui-scale-y-0pct",
                     ),
                   }),
                 }),

@@ -15,7 +15,7 @@ export const SECTIONS = [
 const H = ({ children }) =>
   _jsx("h2", {
     className:
-      "style-7fc057c6b0 style-20a7bd2e09 style-0c6a41fdd5 style-87e86ce38e style-aaf14f407d",
+      "u-margin-bottom-space-3 u-margin-top-space-9 u-text-1-0625rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-ui-tracking-0-02em-letter-spacing-0-02em",
     children: children,
   });
 /** What instructors and teammates receive. Always rendered as light "paper", and it's the only thing printed to PDF. */
@@ -26,30 +26,30 @@ const ReportDocument = ({ data, include }) => {
   const name = (id) => data.members.find((m) => m.id === id).name;
   return _jsxs("article", {
     className:
-      "style-382635c932 style-1752f11474 style-58d0413dd9 style-c0a4425799 style-3fa8c57294 style-a8a56438d7 style-b743453ee3 style-ec8d1af0df",
+      "u-surface-fff-sunken-f4f4f1 u-margin-inline-auto u-width-100pct u-max-width-52rem u-border-radius-var-radius-md u-padding-space-7-2 u-ui-shadow-var-sh-float-box-shadow-var-ui-inset-shadow-var-ui-inset-ring-shadow-var-ui-ring-offset-shadow-var-ui-ring-shadow-var-ui-shadow u-padding-space-14",
     children: [
       _jsxs("header", {
-        className: "style-222f930b87 style-71556df3b4 style-32c92bb1fd",
+        className: "u-display-flex-3 u-align-items-center-2 u-justify-content-space-between",
         children: [
           _jsxs("span", {
             className:
-              "style-222f930b87 style-71556df3b4 style-074569488c style-41d447f47e style-0670710393 style-aaf14f407d",
+              "u-display-flex-3 u-align-items-center-2 u-gap-space-2 u-text-0-8125rem u-ui-weight-var-font-weight-bold-weight-var-font-weight-bold u-ui-tracking-0-02em-letter-spacing-0-02em",
             children: [_jsx(LogoMark, { size: 20 }), BRAND],
           }),
           _jsx("span", {
             className:
-              "style-81e78039bb style-0888fa3508 style-682659f553 style-d2cf63c704",
+              "u-text-0-6875rem u-ui-tracking-0-12em-letter-spacing-0-12em u-color-var-ink-3-2 u-text-transform-uppercase",
             children: "Contribution report",
           }),
         ],
       }),
       _jsx("h1", {
         className:
-          "style-6fb2e29aaf style-076c4069c3 style-bd41d85960 style-52101fc7d8 style-23857f4aef",
+          "u-margin-top-space-14 u-text-2-25rem u-ui-leading-var-leading-tight-line-height-var-leading-tight u-ui-weight-var-font-weight-normal-weight-var-font-weight-normal u-ui-tracking-0-035em-letter-spacing-0-035em",
         children: data.projectName,
       }),
       _jsxs("p", {
-        className: "style-f28fea81a5 style-41d447f47e style-682659f553",
+        className: "u-margin-top-space-2 u-text-0-8125rem u-color-var-ink-3-2",
         children: [
           "Repository activity evaluation \u00B7 ",
           dateLong(data.rangeFrom),
@@ -59,15 +59,15 @@ const ReportDocument = ({ data, include }) => {
       }),
       _jsxs("div", {
         className:
-          "style-c221af54a3 style-ccc737b959 style-c64ab861a8 style-95debef1e0 style-220ac1a984 style-f33d55d2db",
+          "u-margin-top-space-8 u-border-left-style-var-ui-border-style-border-left-width-3px u-border-color-var-accent-2 u-bg-var-accent-soft-2 u-padding-inline-space-5 u-padding-block-space-4",
         children: [
           _jsx("p", {
-            className: "style-41d447f47e style-87e86ce38e",
+            className: "u-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
             children: "Important context",
           }),
           _jsx("p", {
             className:
-              "style-ff6e57b41c style-e7195fa694 style-0594284943 style-9e676c7431",
+              "u-margin-top-space u-text-0-75rem u-ui-leading-var-leading-relaxed-line-height-var-leading-relaxed u-color-var-ink-2",
             children:
               "This report presents estimated repository contribution shares based on measurable Git evidence. It is not a definitive academic grade.",
           }),
@@ -75,7 +75,7 @@ const ReportDocument = ({ data, include }) => {
       }),
       include.summary &&
         _jsxs("section", {
-          className: "style-c4c9b33e1a",
+          className: "u-break-inside-avoid",
           children: [
             _jsx(H, { children: "Group summary" }),
             _jsx(ShareList, {
@@ -90,28 +90,28 @@ const ReportDocument = ({ data, include }) => {
           children: [
             _jsx(H, { children: "Individual breakdowns" }),
             _jsx("div", {
-              className: "style-3d231851b1",
+              className: "u-ui-space-y-reverse-0-margin-block-start-space-5-var-ui-space-y-reverse",
               children: ranked.map((r) =>
                 _jsxs(
                   "div",
                   {
                     className:
-                      "style-c4c9b33e1a style-49abc543ea style-4f1a55de40 style-4769f958af style-99df86594a",
+                      "u-break-inside-avoid u-border-radius-var-radius-lg u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-padding-space-4",
                     children: [
                       _jsxs("p", {
                         className:
-                          "style-222f930b87 style-c92fa885dc style-32c92bb1fd style-e5aa42d83f style-87e86ce38e",
+                          "u-display-flex-3 u-align-items-baseline u-justify-content-space-between u-text-0-875rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                         children: [
                           _jsx("span", { children: name(r.memberId) }),
                           _jsxs("span", {
-                            className: "style-60182fbf94",
+                            className: "u-font-variant-numeric-tabular-nums",
                             children: [shown[r.memberId], "%"],
                           }),
                         ],
                       }),
-                      _jsx("style-0d4fc4a78d", {
+                      _jsx("u-display-table", {
                         className:
-                          "style-f28fea81a5 style-58d0413dd9 style-e7195fa694 style-60182fbf94",
+                          "u-margin-top-space-2 u-width-100pct u-text-0-75rem u-font-variant-numeric-tabular-nums",
                         children: _jsx("tbody", {
                           children: crit.map((c) => {
                             const x = r.criteria.find(
@@ -120,20 +120,20 @@ const ReportDocument = ({ data, include }) => {
                             return _jsxs(
                               "tr",
                               {
-                                className: "style-894c3815a5 style-4769f958af",
+                                className: "u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line",
                                 children: [
                                   _jsx("td", {
-                                    className: "style-a8c1dfb1d4",
+                                    className: "u-padding-block-space-1-5",
                                     children: c.name,
                                   }),
                                   _jsx("td", {
                                     className:
-                                      "style-a8c1dfb1d4 style-682659f553",
+                                      "u-padding-block-space-1-5 u-color-var-ink-3-2",
                                     children: x.summary,
                                   }),
                                   _jsxs("td", {
                                     className:
-                                      "style-a8c1dfb1d4 style-fe5b15276f",
+                                      "u-padding-block-space-1-5 u-text-align-right",
                                     children: [
                                       x.share,
                                       "% \u00D7 ",
@@ -161,7 +161,7 @@ const ReportDocument = ({ data, include }) => {
           children: [
             _jsx(H, { children: "Activity evidence" }),
             _jsx("p", {
-              className: "style-7fc057c6b0 style-e7195fa694 style-682659f553",
+              className: "u-margin-bottom-space-3 u-text-0-75rem u-color-var-ink-3-2",
               children:
                 "The most recent evidence behind each member’s highest-weighted criterion. Full evidence is available in the app.",
             }),
@@ -173,39 +173,39 @@ const ReportDocument = ({ data, include }) => {
               return _jsxs(
                 "div",
                 {
-                  className: "style-f5e51c64e0 style-c4c9b33e1a",
+                  className: "u-margin-bottom-space-4 u-break-inside-avoid",
                   children: [
                     _jsxs("p", {
-                      className: "style-41d447f47e style-87e86ce38e",
+                      className: "u-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                       children: [
                         name(r.memberId),
                         " ",
                         _jsxs("span", {
-                          className: "style-52101fc7d8 style-682659f553",
+                          className: "u-ui-weight-var-font-weight-normal-weight-var-font-weight-normal u-color-var-ink-3-2",
                           children: ["\u00B7 ", top.name],
                         }),
                       ],
                     }),
                     _jsx("ul", {
-                      className: "style-ff6e57b41c style-e7195fa694",
+                      className: "u-margin-top-space u-text-0-75rem",
                       children: ev.map((e) =>
                         _jsxs(
                           "li",
                           {
                             className:
-                              "style-222f930b87 style-d7db3451d1 style-894c3815a5 style-4769f958af style-a8c1dfb1d4",
+                              "u-display-flex-3 u-gap-space-3 u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line u-padding-block-space-1-5",
                             children: [
                               _jsx("span", {
                                 className:
-                                  "style-56f0d35099 style-27ead27a81 style-02ded92445 style-682659f553",
+                                  "u-width-space-16 u-flex-shrink-0 u-font-family-ui-monospace-sf-mono-sfmono-regular-menlo-consolas-monospace u-color-var-ink-3-2",
                                 children: e.ref,
                               }),
                               _jsx("span", {
-                                className: "style-7bd5bab6d7",
+                                className: "u-flex-1",
                                 children: e.title,
                               }),
                               _jsx("span", {
-                                className: "style-682659f553",
+                                className: "u-color-var-ink-3-2",
                                 children: dateShort(e.date),
                               }),
                             ],
@@ -223,11 +223,11 @@ const ReportDocument = ({ data, include }) => {
         }),
       include.method &&
         _jsxs("section", {
-          className: "style-c4c9b33e1a",
+          className: "u-break-inside-avoid",
           children: [
             _jsx(H, { children: "Methodology" }),
             _jsxs("p", {
-              className: "style-e7195fa694 style-0594284943 style-9e676c7431",
+              className: "u-text-0-75rem u-ui-leading-var-leading-relaxed-line-height-var-leading-relaxed u-color-var-ink-2",
               children: [
                 "Results use ",
                 data.rubric.name,
@@ -256,16 +256,16 @@ const ReportDocument = ({ data, include }) => {
           children: [
             _jsx(H, { children: "Limitations & exclusions" }),
             _jsxs("ul", {
-              className: "style-4cdfb16f56 style-e7195fa694 style-9e676c7431",
+              className: "u-ui-space-y-reverse-0-margin-block-start-space-1-5-var-ui-space-y-reverse u-text-0-75rem u-color-var-ink-2",
               children: [
                 data.exclusions.map((x) =>
                   _jsxs(
                     "li",
                     {
-                      className: "style-c4c9b33e1a",
+                      className: "u-break-inside-avoid",
                       children: [
                         _jsxs("strong", {
-                          className: "style-87e86ce38e style-3c70d0a0c9",
+                          className: "u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-ink",
                           children: [x.title, " (", x.count, " ", x.unit, ")."],
                         }),
                         " ",
@@ -283,7 +283,7 @@ const ReportDocument = ({ data, include }) => {
                       {
                         children: [
                           _jsxs("strong", {
-                            className: "style-87e86ce38e style-3c70d0a0c9",
+                            className: "u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-ink",
                             children: [n.title, "."],
                           }),
                           " ",
@@ -300,7 +300,7 @@ const ReportDocument = ({ data, include }) => {
         }),
       _jsxs("footer", {
         className:
-          "style-6fb2e29aaf style-894c3815a5 style-4769f958af style-5ca89c874a style-81e78039bb style-682659f553",
+          "u-margin-top-space-14 u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line u-padding-top-space-4 u-text-0-6875rem u-color-var-ink-3-2",
         children: [
           "Generated by ",
           BRAND,

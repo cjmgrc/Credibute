@@ -28,7 +28,7 @@ const ReportPage = () => {
     limits: true,
   });
   usePageTitle("Report & export");
-  if (loading) return _jsx(Skeleton, { className: "style-726b875f17" });
+  if (loading) return _jsx(Skeleton, { className: "u-height-40rem" });
   if (!data)
     return _jsx(EmptyState, {
       icon: _jsx(Hourglass, { size: 22 }),
@@ -44,14 +44,14 @@ const ReportPage = () => {
       _jsxs(Link, {
         to: `/app/projects/${projectId}/results`,
         className:
-          "style-39b56ab257 style-123306850f style-71556df3b4 style-70007b8768 style-294e640e9b style-682659f553 style-97e9901753 style-eae178841c style-d82b3e060a",
+          "u-margin-bottom-space-5 u-display-inline-flex u-align-items-center-2 u-gap-space-1-5 u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2 u-display-none-important u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
         children: [
           _jsx(ArrowLeft, { size: 15, "aria-hidden": true }),
           "Results",
         ],
       }),
       _jsx("div", {
-        className: "style-97e9901753",
+        className: "u-display-none-important",
         children: _jsx(PageHeader, {
           title: "Report & export",
           description:
@@ -78,33 +78,33 @@ const ReportPage = () => {
       }),
       _jsxs("div", {
         className:
-          "style-0f2a693e93 style-8c7e0067a9 style-ee024d31e7 style-ecd81216a2",
+          "u-display-grid u-gap-space-6 u-grid-cols-16rem-minmax-0-1fr u-align-items-flex-start-3",
         children: [
           _jsxs("div", {
             className:
-              "style-97e9901753 style-222f930b87 style-302c0d124a style-90fc3ec35a style-ec51cf2d36 style-a1a23c87ee",
+              "u-display-none-important u-display-flex-3 u-flex-direction-column u-gap-space-4 u-position-sticky-2 u-top-space-24",
             children: [
               _jsxs(Card, {
                 as: "section",
-                className: "style-014b941a77",
+                className: "u-padding-space-5",
                 children: [
                   _jsx("h2", {
-                    className: "style-294e640e9b style-87e86ce38e",
-                    children: "Report style-d1b2a59fbe",
+                    className: "u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
+                    children: "Report u-display-contents",
                   }),
                   _jsx("ul", {
-                    className: "style-d21b86ea41 style-b5776161da",
+                    className: "u-margin-top-space-3 u-ui-space-y-reverse-0-margin-block-start-space-2-5-var-ui-space-y-reverse",
                     children: SECTIONS.map((s) =>
                       _jsx(
                         "li",
                         {
                           children: _jsxs("label", {
                             className:
-                              "style-222f930b87 style-d2fa884896 style-71556df3b4 style-08f0549eb6 style-294e640e9b",
+                              "u-display-flex-3 u-cursor-pointer u-align-items-center-2 u-gap-space-2-5 u-letter-spacing-0-text-0-8125rem",
                             children: [
                               _jsx("input", {
                                 type: "checkbox",
-                                className: "style-100c22d577 style-185ecc2668",
+                                className: "u-width-space-4-height-space-4 u-accent-color-var-accent",
                                 checked: include[s.key],
                                 onChange: (e) =>
                                   setInclude((v) => ({
@@ -124,15 +124,15 @@ const ReportPage = () => {
               }),
               _jsxs(Card, {
                 as: "section",
-                className: "style-014b941a77",
+                className: "u-padding-space-5",
                 children: [
                   _jsx("h2", {
-                    className: "style-294e640e9b style-87e86ce38e",
+                    className: "u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                     children: "Export details",
                   }),
                   _jsx("dl", {
                     className:
-                      "style-d21b86ea41 style-b8ceaab118 style-294e640e9b",
+                      "u-margin-top-space-3 u-ui-space-y-reverse-0-margin-block-start-space-3-var-ui-space-y-reverse u-letter-spacing-0-text-0-8125rem",
                     children: [
                       [
                         "Rubric version",
@@ -146,11 +146,11 @@ const ReportPage = () => {
                         {
                           children: [
                             _jsx("dt", {
-                              className: "style-4010c02329 style-682659f553",
+                              className: "u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                               children: k,
                             }),
                             _jsx("dd", {
-                              className: "style-87e86ce38e",
+                              className: "u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                               children: v,
                             }),
                           ],

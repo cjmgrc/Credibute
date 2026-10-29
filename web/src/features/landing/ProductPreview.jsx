@@ -15,49 +15,49 @@ const ProductPreview = () => {
     ref: ref,
     "aria-hidden": true,
     className:
-      "style-d2d9e1f134 style-1752f11474 style-0b7e63b919 style-1a5d10977b",
+      "u-position-relative u-margin-inline-auto u-max-width-var-container-4xl u-text-align-left",
     inert: true,
     children: _jsxs("div", {
       className:
-        "style-d5111d0e9f style-b646d08f7b style-4f1a55de40 style-4769f958af style-ad04ce25f0 style-b743453ee3 style-ac7722233e",
+        "u-overflow-hidden u-border-radius-1-5rem u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-bg-var-surface-2 u-ui-shadow-var-sh-float-box-shadow-var-ui-inset-shadow-var-ui-inset-ring-shadow-var-ui-ring-offset-shadow-var-ui-ring-shadow-var-ui-shadow u-webkit-mask-image-linear-gradient-000-72pct-0000-mask-image-linear-gradient-000-72pct-0000",
       children: [
         _jsxs("div", {
           className:
-            "style-222f930b87 style-71556df3b4 style-32c92bb1fd style-bbe39cfb5c style-4769f958af style-2de8262ccb style-9513b39680 style-d3cea061f2",
+            "u-display-flex-3 u-align-items-center-2 u-justify-content-space-between u-border-bottom-style-var-ui-border-style-border-bottom-width-1px-2 u-border-color-var-line u-bg-var-sunken-3 u-padding-inline-space-4 u-padding-block-space-3",
           children: [
             _jsx("div", {
-              className: "style-222f930b87 style-70007b8768",
+              className: "u-display-flex-3 u-gap-space-1-5",
               children: [0, 1, 2].map((i) =>
                 _jsx(
                   "span",
                   {
                     className:
-                      "style-fe04aff4af style-b005d61d09 style-06b422cf95",
+                      "u-width-space-2-5-height-space-2-5 u-border-radius-3-40282e38px u-bg-var-line-strong",
                   },
                   i,
                 ),
               ),
             }),
             _jsxs("p", {
-              className: "style-4010c02329 style-682659f553",
+              className: "u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
               children: [BRAND, " / ", data.projectName],
             }),
-            _jsx("span", { className: "style-387a48bd02" }),
+            _jsx("span", { className: "u-width-space-12" }),
           ],
         }),
         _jsxs("div", {
-          className: "style-222f930b87",
+          className: "u-display-flex-3",
           children: [
             _jsxs("div", {
               className:
-                "style-e564b4081d style-b1eb4437f0 style-27ead27a81 style-302c0d124a style-71556df3b4 style-d7db3451d1 style-baf794b99c style-4769f958af style-96b92a971c style-19224e6cb4",
+                "u-display-none-3 u-width-space-14 u-flex-shrink-0 u-flex-direction-column u-align-items-center-2 u-gap-space-3 u-border-right-style-var-ui-border-style-border-right-width-1px-2 u-border-color-var-line u-padding-block-space-5 u-display-flex-2",
               children: [
                 _jsx(LogoMark, { size: 22 }),
                 rail.map((Icon, i) =>
                   _jsx(
                     "span",
                     {
-                      className: `style-0f2a693e93 style-3ee10ef4c0 style-4446c26b62 style-49abc543ea ${i === 0 ? "style-95debef1e0 style-242347c218" : "style-682659f553"}`,
+                      className: `u-display-grid u-width-space-9-height-space-9 u-place-items-center u-border-radius-var-radius-lg ${i === 0 ? "u-bg-var-accent-soft-2 u-color-var-accent-text-2" : "u-color-var-ink-3-2"}`,
                       children: _jsx(Icon, { size: 17 }),
                     },
                     i,
@@ -67,36 +67,36 @@ const ProductPreview = () => {
             }),
             _jsxs("div", {
               className:
-                "style-184ddc11e5 style-7bd5bab6d7 style-014b941a77 style-11772a591e",
+                "u-min-width-0 u-flex-1 u-padding-space-5 u-padding-space-7",
               children: [
                 _jsxs("div", {
                   className:
-                    "style-222f930b87 style-b9677bd1cb style-32c92bb1fd style-d7db3451d1",
+                    "u-display-flex-3 u-align-items-flex-start-2 u-justify-content-space-between u-gap-space-3",
                   children: [
                     _jsxs("div", {
                       children: [
                         _jsx("p", {
                           className:
-                            "style-4010c02329 style-87e86ce38e style-0e23fa0f9b",
+                            "u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-ok",
                           children: "Evaluation complete",
                         }),
                         _jsx("p", {
                           className:
-                            "style-ff6e57b41c style-863f868cc6 style-bd41d85960 style-f57f7ce15c",
+                            "u-margin-top-space u-text-1-5rem u-ui-leading-var-leading-tight-line-height-var-leading-tight u-ui-tracking-0-03em-letter-spacing-0-03em",
                           children: data.projectName,
                         }),
                       ],
                     }),
                     _jsx("span", {
                       className:
-                        "style-49abc543ea style-292affc1f7 style-0f9e667291 style-a8c1dfb1d4 style-4010c02329 style-87e86ce38e style-5e9a40ae2b",
+                        "u-border-radius-var-radius-lg u-bg-var-accent u-padding-inline-space-3 u-padding-block-space-1-5 u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-color-var-color-white",
                       children: "Export report",
                     }),
                   ],
                 }),
                 _jsx("div", {
                   className:
-                    "style-a752cdc80a style-0f2a693e93 style-f3db1d0200 style-d7db3451d1",
+                    "u-margin-top-space-5 u-display-grid u-grid-cols-repeat-3-minmax-0-1fr-3 u-gap-space-3",
                   children: [
                     ["Team activity", "251", "commits analyzed"],
                     ["Contributors", "4", "every identity matched"],
@@ -106,20 +106,20 @@ const ProductPreview = () => {
                       "div",
                       {
                         className:
-                          "style-6ad537f2bb style-4f1a55de40 style-4769f958af style-8ed484e6db",
+                          "u-border-radius-var-radius-xl u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-padding-space-3-5",
                         children: [
                           _jsx("p", {
-                            className: "style-4010c02329 style-682659f553",
+                            className: "u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                             children: l,
                           }),
                           _jsx("p", {
                             className:
-                              "style-5a06344d31 style-cdc8f37912 style-87e86ce38e style-761cdb81bd style-f57f7ce15c",
+                              "u-margin-top-space-1-5 u-text-1-375rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold u-ui-leading-1-line-height-1 u-ui-tracking-0-03em-letter-spacing-0-03em",
                             children: v,
                           }),
                           _jsx("p", {
                             className:
-                              "style-5a06344d31 style-e564b4081d style-4010c02329 style-682659f553 style-da79c5d3f7",
+                              "u-margin-top-space-1-5 u-display-none-3 u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2 u-display-block-3",
                             children: h,
                           }),
                         ],
@@ -130,15 +130,15 @@ const ProductPreview = () => {
                 }),
                 _jsxs("div", {
                   className:
-                    "style-dc1d1f5a54 style-6ad537f2bb style-4f1a55de40 style-4769f958af style-99df86594a",
+                    "u-margin-top-space-4 u-border-radius-var-radius-xl u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-padding-space-4",
                   children: [
                     _jsx("p", {
-                      className: "style-294e640e9b style-87e86ce38e",
+                      className: "u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold",
                       children: "Estimated contribution share",
                     }),
                     _jsx("p", {
                       className:
-                        "style-02fd0ea53c style-4010c02329 style-682659f553",
+                        "u-margin-bottom-space-2 u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2",
                       children: "Based on the selected rubric",
                     }),
                     _jsx(ShareList, {

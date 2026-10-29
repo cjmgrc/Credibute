@@ -37,16 +37,16 @@ const ToastProvider = ({ children }) => {
         "aria-live": "polite",
         role: "status",
         className:
-          "style-33228ff7d5 style-992a93455c style-3ba24c062d style-f29b421329 style-01361395d0 style-222f930b87 style-302c0d124a style-71556df3b4 style-074569488c style-9513b39680 style-97e9901753",
+          "u-pointer-events-none u-position-fixed-2 u-inset-inline-0 u-bottom-max-1-25rem-env-safe-area-inset-bottom u-z-index-100 u-display-flex-3 u-flex-direction-column u-align-items-center-2 u-gap-space-2 u-padding-inline-space-4 u-display-none-important",
         children: items.map((t) =>
           _jsxs(
             "div",
             {
-              className: `style-95d8467434 style-cb20bd5193 style-222f930b87 style-71556df3b4 style-074569488c style-b005d61d09 style-4f1a55de40 style-4769f958af style-9513b39680 style-ee09e8f0b7 style-294e640e9b style-daaac3fbf5 style-3c70d0a0c9 style-b743453ee3 style-76585be20a style-501b3e6c9f style-39266294a5 style-2c710eb96a style-d1181a2b59 ${t.leaving ? "style-6731403ac5 style-94f91922a1 style-10e9f177b8" : "style-f07df86364"}`,
+              className: `u-background-var-surface u-pointer-events-auto u-display-flex-3 u-align-items-center-2 u-gap-space-2 u-border-radius-3-40282e38px u-border-style-var-ui-border-style-border-width-1px u-border-color-var-line u-padding-inline-space-4 u-padding-block-space-2-5 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-medium-weight-var-font-weight-medium u-color-var-ink u-ui-shadow-var-sh-float-box-shadow-var-ui-inset-shadow-var-ui-inset-ring-shadow-var-ui-ring-offset-shadow-var-ui-ring-shadow-var-ui-shadow u-transition-property-opacity-transform-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-ui-translate-y-space-3-translate-var-ui-translate-x-var-ui-translate-y u-opacity-0 u-transition-property-opacity-transition-timing-function-var-ui-ease-var-default-transition-timing-function-2 ${t.leaving ? "u-ui-translate-y-space-2-translate-var-ui-translate-x-var-ui-translate-y u-opacity-0-2 u-ui-duration-0-2s-transition-duration-0-2s" : "u-ui-duration-0-3s-transition-duration-0-3s"}`,
               children: [
                 _jsx(Check, {
                   size: 15,
-                  className: "style-0e23fa0f9b",
+                  className: "u-color-var-ok",
                   strokeWidth: 2.5,
                   "aria-hidden": true,
                 }),

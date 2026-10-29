@@ -23,10 +23,10 @@ export const WORKSPACE_NAV = [
 
 const item = ({ isActive }) =>
   cn(
-    "style-222f930b87 style-71556df3b4 style-d7db3451d1 style-a7ab7bd722 style-0f9e667291 style-ee09e8f0b7 style-294e640e9b style-daaac3fbf5 style-d84d3212f4 style-3d53df2cf7 style-501b3e6c9f style-144113eebd",
+    "u-display-flex-3 u-align-items-center-2 u-gap-space-3 u-border-radius-0-625rem u-padding-inline-space-3 u-padding-block-space-2-5 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-medium-weight-var-font-weight-medium u-transition-property-background-color-color-transform-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-scale-0-98",
     isActive
-      ? "style-95debef1e0 style-242347c218"
-      : "style-9e676c7431 style-0637e93d27 style-d82b3e060a",
+      ? "u-bg-var-accent-soft-2 u-color-var-accent-text-2"
+      : "u-color-var-ink-2 u-bg-var-sunken u-color-var-ink-2",
   );
 
 const Sidebar = () => {
@@ -34,16 +34,16 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   return (
-    <aside className="style-964a9431ff style-98599e4ee2 style-e564b4081d style-917c16a13a style-302c0d124a style-baf794b99c style-4769f958af style-ad04ce25f0 style-0f9e667291 style-17b03732cf style-08a31a346e style-521a4cf819">
-      <div className="style-0f9e667291">
+    <aside className="u-position-sticky u-top-0 u-display-none-3 u-height-100dvh u-flex-direction-column u-border-right-style-var-ui-border-style-border-right-width-1px-2 u-border-color-var-line u-bg-var-surface-2 u-padding-inline-space-3 u-padding-bottom-space-3 u-padding-top-space-5 u-display-flex-4">
+      <div className="u-padding-inline-space-3">
         <Logo to="/app" />
       </div>
-      <p className="style-02fd0ea53c style-c221af54a3 style-0f9e667291 style-4010c02329 style-daaac3fbf5 style-682659f553">
+      <p className="u-margin-bottom-space-2 u-margin-top-space-8 u-padding-inline-space-3 u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-medium-weight-var-font-weight-medium u-color-var-ink-3-2">
         Workspace
       </p>
       <nav
         aria-label="Workspace"
-        className="style-222f930b87 style-302c0d124a style-11773e883e"
+        className="u-display-flex-3 u-flex-direction-column u-gap-space-0-5"
       >
         {WORKSPACE_NAV.map(({ to, label, icon: Icon, end }) => (
           <NavLink key={to} to={to} end={end} className={item}>
@@ -52,26 +52,26 @@ const Sidebar = () => {
           </NavLink>
         ))}
       </nav>
-      <div className="style-930e37ac8b">
-        <p className="style-02fd0ea53c style-0f9e667291 style-4010c02329 style-daaac3fbf5 style-682659f553">
+      <div className="u-margin-top-auto">
+        <p className="u-margin-bottom-space-2 u-padding-inline-space-3 u-letter-spacing-0-01em-text-0-75rem u-ui-weight-var-font-weight-medium-weight-var-font-weight-medium u-color-var-ink-3-2">
           Account
         </p>
         <nav
           aria-label="Account"
-          className="style-222f930b87 style-302c0d124a style-11773e883e"
+          className="u-display-flex-3 u-flex-direction-column u-gap-space-0-5"
         >
           <NavLink to="/app/help" className={item}>
             <HelpCircle size={18} aria-hidden="true" />
             Help &amp; docs
           </NavLink>
         </nav>
-        <div className="style-d21b86ea41 style-222f930b87 style-71556df3b4 style-d7db3451d1 style-894c3815a5 style-4769f958af style-e7e01cc7f4 style-0a702d97ed">
+        <div className="u-margin-top-space-3 u-display-flex-3 u-align-items-center-2 u-gap-space-3 u-border-top-style-var-ui-border-style-border-top-width-1px u-border-color-var-line u-padding-inline-space-2 u-padding-top-space-3">
           <Avatar name={user?.name ?? "You"} />
-          <div className="style-184ddc11e5 style-7bd5bab6d7">
-            <p className="style-5a3a4ee420 style-294e640e9b style-87e86ce38e">
+          <div className="u-min-width-0 u-flex-1">
+            <p className="u-text-overflow-ellipsis-white-space-nowrap u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-semibold-weight-var-font-weight-semibold">
               {user?.name}
             </p>
-            <p className="style-5a3a4ee420 style-4010c02329 style-682659f553">
+            <p className="u-text-overflow-ellipsis-white-space-nowrap u-letter-spacing-0-01em-text-0-75rem u-color-var-ink-3-2">
               {user?.email}
             </p>
           </div>

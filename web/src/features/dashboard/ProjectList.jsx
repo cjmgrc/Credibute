@@ -10,11 +10,11 @@ const ProjectList = ({ filter, showRubric, onNewProject }) => {
   const rows = (data ?? []).filter(filter ?? (() => true));
 
   return (
-    <Card className="style-d5111d0e9f">
+    <Card className="u-overflow-hidden">
       {loading ? (
-        <div className="style-b8ceaab118 style-014b941a77">
+        <div className="u-ui-space-y-reverse-0-margin-block-start-space-3-var-ui-space-y-reverse u-padding-space-5">
           {Array.from({ length: 4 }, (_, i) => (
-            <Skeleton key={i} className="style-2bf5d58a82" />
+            <Skeleton key={i} className="u-height-space-12" />
           ))}
         </div>
       ) : rows.length === 0 ? (
@@ -36,7 +36,7 @@ const ProjectList = ({ filter, showRubric, onNewProject }) => {
           Connect a repository to create your first evaluation.
         </EmptyState>
       ) : (
-        <div className="style-d1626f14b8 style-b682aa7242">
+        <div className="u-ui-divide-y-reverse-0-border-bottom-style-var-ui-border-style u-border-color-var-line-2">
           {rows.map((project) => (
             <ProjectRow key={project.id} p={project} showRubric={showRubric} />
           ))}
