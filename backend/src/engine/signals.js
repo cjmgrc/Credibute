@@ -252,8 +252,15 @@ export function computeContributions({
       c.authoredRaw += merged ? p.mergedPullRequest : p.otherPullRequest;
       if (merged) c.merged += 1;
     }
-    const seenReviews = new Set();
-    for (const review of collaboration.reviews) {
+
+    const reviewsInOrder = [...collaboration.reviews].sort(
+      (a, b) =>
+        compareStrings(a.submittedAt ?? '', b.submittedAt ?? '') ||
+        a.pullRequestNumber - b.pullRequestNumber ||
+        compareStrings(a.reviewer?.login ?? '', b.reviewer?.login ?? ''),
+    )
+    const seenReviews = new Set()
+    for (const review of reviewsInOrder) {
       const owner = ownerOf(keyForLogin(review.reviewer?.login));
       if (!owner) continue;
       const pr = pullsByNumber.get(review.pullRequestNumber);

@@ -370,6 +370,16 @@ describe("attribution and coverage", () => {
 });
 
 describe("collaboration signal", () => {
+  it('keeps the earliest of several reviews by one person on a pull request, whatever order they arrive in', () => {
+    const reviews = [review(1, 'jonb-dev', { submittedAt: '2026-09-02T16:00:00Z' }), review(1, 'jonb-dev', { submittedAt: '2026-09-02T09:00:00Z' })]
+    const dates = [reviews, [...reviews].reverse()].map((order) => {
+      const w = world()
+      const result = w.run({ rubric: rubricOf({ collaboration: 100 }), collaboration: { pullRequests: [pull(1, 'mayacodes')], reviews: order } })
+      return criterion(result, 'm2', 'collaboration').evidence[0].date
+  })
+
+    expect(dates).toEqual(['2026-09-02T09:00:00Z', '2026-09-02T09:00:00Z'])
+  })
   const pull = (number, login, over = {}) => ({
     number,
     title: `PR ${number}`,
