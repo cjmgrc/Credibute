@@ -1,0 +1,986 @@
+{
+  "projectId": "campus-connect",
+  "projectName": "Campus Connect",
+  "repoUrl": "https://github.com/team/campus-connect",
+  "reportId": "CR-CC-261023-B241EF",
+  "snapshotAt": "2026-10-24T10:00:00.000Z",
+  "rangeFrom": "2026-08-03",
+  "rangeTo": "2026-10-23",
+  "rubric": {
+    "kind": "default",
+    "name": "Credibute rubric",
+    "version": "1.0",
+    "criteria": [
+      {
+        "id": "commits",
+        "name": "Meaningful commits",
+        "description": "Commit frequency adjusted for change substance",
+        "signal": "commits",
+        "weight": 30
+      },
+      {
+        "id": "code",
+        "name": "Code contribution",
+        "description": "Non-generated additions, deletions, and files changed",
+        "signal": "code",
+        "weight": 30
+      },
+      {
+        "id": "collaboration",
+        "name": "Collaboration",
+        "description": "Reviews, pull requests, and merged changes",
+        "signal": "collaboration",
+        "weight": 25
+      },
+      {
+        "id": "tests",
+        "name": "Test contribution",
+        "description": "Test files created and meaningfully modified",
+        "signal": "tests",
+        "weight": 15
+      }
+    ]
+  },
+  "commitsAnalyzed": 42,
+  "commitsAttributed": 36,
+  "coverage": {
+    "included": 36,
+    "attributed": 36,
+    "unmapped": 0
+  },
+  "members": [
+    {
+      "id": "m_mayacodes",
+      "name": "Maya Chen",
+      "label": "Student 1",
+      "identities": [
+        {
+          "id": "login:mayacodes",
+          "username": "mayacodes",
+          "email": "1+mayacodes@users.noreply.github.com",
+          "name": "Maya Chen",
+          "commits": 13
+        },
+        {
+          "id": "email:mchen@localhost",
+          "email": "mchen@localhost",
+          "name": "Maya Chen",
+          "commits": 2
+        }
+      ]
+    },
+    {
+      "id": "m_jonb-dev",
+      "name": "Jon Bell",
+      "label": "Student 2",
+      "identities": [
+        {
+          "id": "login:jonb-dev",
+          "username": "jonb-dev",
+          "email": "1+jonb-dev@users.noreply.github.com",
+          "name": "Jon Bell",
+          "commits": 12
+        }
+      ]
+    },
+    {
+      "id": "m_priyashah",
+      "name": "Priya Shah",
+      "label": "Student 3",
+      "identities": [
+        {
+          "id": "login:priyashah",
+          "username": "priyashah",
+          "email": "1+priyashah@users.noreply.github.com",
+          "name": "Priya Shah",
+          "commits": 7
+        }
+      ]
+    },
+    {
+      "id": "m_arivera",
+      "name": "Alex Rivera",
+      "label": "Student 4",
+      "identities": [
+        {
+          "id": "login:arivera",
+          "username": "arivera",
+          "email": "1+arivera@users.noreply.github.com",
+          "name": "Alex Rivera",
+          "commits": 6
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "memberId": "m_mayacodes",
+      "share": 38.80495807884562,
+      "missing": [],
+      "usedWeight": 100,
+      "criteria": [
+        {
+          "criterionId": "commits",
+          "status": "measured",
+          "share": 39.21568627450981,
+          "summary": "14 meaningful of 14 commits",
+          "evidenceTotal": 14,
+          "evidence": [
+            {
+              "id": "m_mayacodes-commits-0",
+              "kind": "commit",
+              "title": "Change 12",
+              "ref": "9e8adf5",
+              "date": "2026-09-12T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/9e8adf58ef5b87814490a4fe0cfaacd8f96effc2",
+              "additions": 58,
+              "deletions": 2,
+              "files": 2
+            },
+            {
+              "id": "m_mayacodes-commits-1",
+              "kind": "commit",
+              "title": "Change 11",
+              "ref": "48c7489",
+              "date": "2026-09-11T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/48c7489aa2e8309a658e9b785074e360a5eff369",
+              "additions": 25,
+              "deletions": 2,
+              "files": 1
+            },
+            {
+              "id": "m_mayacodes-commits-2",
+              "kind": "commit",
+              "title": "Change 36",
+              "ref": "5cb9f53",
+              "date": "2026-09-11T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/5cb9f532f09b3645cbfd085e2bff1293a5592e4a",
+              "additions": 25,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_mayacodes-commits-3",
+              "kind": "commit",
+              "title": "Change 10",
+              "ref": "68ee74f",
+              "date": "2026-09-10T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/68ee74f7d6afe0164fe0f1197aa9177c946d8834",
+              "additions": 24,
+              "deletions": 2,
+              "files": 1
+            },
+            {
+              "id": "m_mayacodes-commits-4",
+              "kind": "commit",
+              "title": "Change 9",
+              "ref": "9f84ad6",
+              "date": "2026-09-09T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/9f84ad6b89dc26670c0d6e7a3f81093b41c04438",
+              "additions": 52,
+              "deletions": 2,
+              "files": 2
+            }
+          ],
+          "displayShare": 39
+        },
+        {
+          "criterionId": "code",
+          "status": "measured",
+          "share": 43.627956825716765,
+          "summary": "+326 / −24 lines across 15 files",
+          "evidenceTotal": 14,
+          "evidence": [
+            {
+              "id": "m_mayacodes-code-0",
+              "kind": "commit",
+              "title": "Change 12",
+              "ref": "9e8adf5",
+              "date": "2026-09-12T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/9e8adf58ef5b87814490a4fe0cfaacd8f96effc2",
+              "additions": 26,
+              "deletions": 2,
+              "files": 1
+            },
+            {
+              "id": "m_mayacodes-code-1",
+              "kind": "commit",
+              "title": "Change 11",
+              "ref": "48c7489",
+              "date": "2026-09-11T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/48c7489aa2e8309a658e9b785074e360a5eff369",
+              "additions": 25,
+              "deletions": 2,
+              "files": 1
+            },
+            {
+              "id": "m_mayacodes-code-2",
+              "kind": "commit",
+              "title": "Change 36",
+              "ref": "5cb9f53",
+              "date": "2026-09-11T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/5cb9f532f09b3645cbfd085e2bff1293a5592e4a",
+              "additions": 25,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_mayacodes-code-3",
+              "kind": "commit",
+              "title": "Change 10",
+              "ref": "68ee74f",
+              "date": "2026-09-10T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/68ee74f7d6afe0164fe0f1197aa9177c946d8834",
+              "additions": 24,
+              "deletions": 2,
+              "files": 1
+            },
+            {
+              "id": "m_mayacodes-code-4",
+              "kind": "commit",
+              "title": "Change 9",
+              "ref": "9f84ad6",
+              "date": "2026-09-09T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/9f84ad6b89dc26670c0d6e7a3f81093b41c04438",
+              "additions": 23,
+              "deletions": 2,
+              "files": 1
+            }
+          ],
+          "displayShare": 44
+        },
+        {
+          "criterionId": "collaboration",
+          "status": "measured",
+          "share": 34.61538461538461,
+          "summary": "2 pull requests · 2 reviews · 1 merged",
+          "evidenceTotal": 4,
+          "evidence": [
+            {
+              "id": "m_mayacodes-collaboration-0",
+              "kind": "pull_request",
+              "title": "Pull request 4",
+              "ref": "#4",
+              "date": "2026-09-10T10:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/4"
+            },
+            {
+              "id": "m_mayacodes-collaboration-1",
+              "kind": "review",
+              "title": "Review on #3: Pull request 3",
+              "ref": "#3",
+              "date": "2026-09-07T12:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/3"
+            },
+            {
+              "id": "m_mayacodes-collaboration-2",
+              "kind": "review",
+              "title": "Review on #2: Pull request 2",
+              "ref": "#2",
+              "date": "2026-09-05T15:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/2"
+            },
+            {
+              "id": "m_mayacodes-collaboration-3",
+              "kind": "pull_request",
+              "title": "Pull request 1",
+              "ref": "#1",
+              "date": "2026-09-03T10:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/1"
+            }
+          ],
+          "displayShare": 35
+        },
+        {
+          "criterionId": "tests",
+          "status": "measured",
+          "share": 35.32012663287665,
+          "summary": "1 test file created or changed",
+          "evidenceTotal": 4,
+          "evidence": [
+            {
+              "id": "m_mayacodes-tests-0",
+              "kind": "test",
+              "title": "Change 12",
+              "ref": "9e8adf5",
+              "date": "2026-09-12T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/9e8adf58ef5b87814490a4fe0cfaacd8f96effc2",
+              "additions": 32,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_mayacodes-tests-1",
+              "kind": "test",
+              "title": "Change 9",
+              "ref": "9f84ad6",
+              "date": "2026-09-09T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/9f84ad6b89dc26670c0d6e7a3f81093b41c04438",
+              "additions": 29,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_mayacodes-tests-2",
+              "kind": "test",
+              "title": "Change 6",
+              "ref": "8dc29fc",
+              "date": "2026-09-06T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/8dc29fc58c0bd99068c2e5c752aa61521d4f11ce",
+              "additions": 26,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_mayacodes-tests-3",
+              "kind": "test",
+              "title": "Change 3",
+              "ref": "6b1f533",
+              "date": "2026-09-03T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/6b1f53303a732ccc8c6aae6640399827c15250e3",
+              "additions": 23,
+              "deletions": 0,
+              "files": 1
+            }
+          ],
+          "displayShare": 35
+        }
+      ],
+      "displayShare": 39
+    },
+    {
+      "memberId": "m_jonb-dev",
+      "share": 23.7596114799531,
+      "missing": [],
+      "usedWeight": 100,
+      "criteria": [
+        {
+          "criterionId": "commits",
+          "status": "measured",
+          "share": 28.011204481792717,
+          "summary": "10 meaningful of 10 commits",
+          "evidenceTotal": 10,
+          "evidence": [
+            {
+              "id": "m_jonb-dev-commits-0",
+              "kind": "commit",
+              "title": "Change 21",
+              "ref": "50859d5",
+              "date": "2026-09-10T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/50859d550da732fd31929f889ff65ac8cac67ad7",
+              "additions": 22,
+              "deletions": 3,
+              "files": 1
+            },
+            {
+              "id": "m_jonb-dev-commits-1",
+              "kind": "commit",
+              "title": "Change 20",
+              "ref": "011c096",
+              "date": "2026-09-09T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/011c09672a24032642e98b57ff208420aa36c6ec",
+              "additions": 22,
+              "deletions": 3,
+              "files": 1
+            },
+            {
+              "id": "m_jonb-dev-commits-2",
+              "kind": "commit",
+              "title": "Change 19",
+              "ref": "3b8d4b9",
+              "date": "2026-09-08T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/3b8d4b984d9ffaba414764f49f3e88c661d8d82b",
+              "additions": 22,
+              "deletions": 3,
+              "files": 1
+            },
+            {
+              "id": "m_jonb-dev-commits-3",
+              "kind": "commit",
+              "title": "Change 18",
+              "ref": "80db357",
+              "date": "2026-09-07T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/80db3577882af5eb37c0a9a61e8e027f61997b92",
+              "additions": 22,
+              "deletions": 3,
+              "files": 1
+            },
+            {
+              "id": "m_jonb-dev-commits-4",
+              "kind": "commit",
+              "title": "Change 22",
+              "ref": "08ea3f2",
+              "date": "2026-09-06T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/08ea3f2e3c6519ffe8dffbf83c2a93b36caaf65c",
+              "additions": 18,
+              "deletions": 0,
+              "files": 1
+            }
+          ],
+          "displayShare": 28
+        },
+        {
+          "criterionId": "code",
+          "status": "measured",
+          "share": 31.956731220615058,
+          "summary": "+216 / −27 lines across 10 files",
+          "evidenceTotal": 10,
+          "evidence": [
+            {
+              "id": "m_jonb-dev-code-0",
+              "kind": "commit",
+              "title": "Change 21",
+              "ref": "50859d5",
+              "date": "2026-09-10T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/50859d550da732fd31929f889ff65ac8cac67ad7",
+              "additions": 22,
+              "deletions": 3,
+              "files": 1
+            },
+            {
+              "id": "m_jonb-dev-code-1",
+              "kind": "commit",
+              "title": "Change 20",
+              "ref": "011c096",
+              "date": "2026-09-09T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/011c09672a24032642e98b57ff208420aa36c6ec",
+              "additions": 22,
+              "deletions": 3,
+              "files": 1
+            },
+            {
+              "id": "m_jonb-dev-code-2",
+              "kind": "commit",
+              "title": "Change 19",
+              "ref": "3b8d4b9",
+              "date": "2026-09-08T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/3b8d4b984d9ffaba414764f49f3e88c661d8d82b",
+              "additions": 22,
+              "deletions": 3,
+              "files": 1
+            },
+            {
+              "id": "m_jonb-dev-code-3",
+              "kind": "commit",
+              "title": "Change 18",
+              "ref": "80db357",
+              "date": "2026-09-07T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/80db3577882af5eb37c0a9a61e8e027f61997b92",
+              "additions": 22,
+              "deletions": 3,
+              "files": 1
+            },
+            {
+              "id": "m_jonb-dev-code-4",
+              "kind": "commit",
+              "title": "Change 22",
+              "ref": "08ea3f2",
+              "date": "2026-09-06T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/08ea3f2e3c6519ffe8dffbf83c2a93b36caaf65c",
+              "additions": 18,
+              "deletions": 0,
+              "files": 1
+            }
+          ],
+          "displayShare": 32
+        },
+        {
+          "criterionId": "collaboration",
+          "status": "measured",
+          "share": 23.076923076923077,
+          "summary": "1 pull request · 1 review · 1 merged",
+          "evidenceTotal": 2,
+          "evidence": [
+            {
+              "id": "m_jonb-dev-collaboration-0",
+              "kind": "pull_request",
+              "title": "Pull request 2",
+              "ref": "#2",
+              "date": "2026-09-06T10:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/2"
+            },
+            {
+              "id": "m_jonb-dev-collaboration-1",
+              "kind": "review",
+              "title": "Review on #1: Pull request 1",
+              "ref": "#1",
+              "date": "2026-09-02T12:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/1"
+            }
+          ],
+          "displayShare": 23
+        },
+        {
+          "criterionId": "tests",
+          "status": "measured",
+          "share": 0,
+          "summary": "0 test files created or changed",
+          "evidenceTotal": 0,
+          "evidence": [],
+          "displayShare": 0
+        }
+      ],
+      "displayShare": 24
+    },
+    {
+      "memberId": "m_priyashah",
+      "share": 27.353612051055165,
+      "missing": [],
+      "usedWeight": 100,
+      "criteria": [
+        {
+          "criterionId": "commits",
+          "status": "measured",
+          "share": 19.607843137254903,
+          "summary": "7 meaningful of 7 commits",
+          "evidenceTotal": 7,
+          "evidence": [
+            {
+              "id": "m_priyashah-commits-0",
+              "kind": "commit",
+              "title": "Change 29",
+              "ref": "2fdcfac",
+              "date": "2026-09-09T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/2fdcfacf982f28dd2e467ba73263a0034ab1f373",
+              "additions": 38,
+              "deletions": 0,
+              "files": 2
+            },
+            {
+              "id": "m_priyashah-commits-1",
+              "kind": "commit",
+              "title": "Change 28",
+              "ref": "b088b55",
+              "date": "2026-09-08T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/b088b559fa67c5f22d2db7f35a5d6193bbe66cae",
+              "additions": 38,
+              "deletions": 0,
+              "files": 2
+            },
+            {
+              "id": "m_priyashah-commits-2",
+              "kind": "commit",
+              "title": "Change 27",
+              "ref": "ecbd1c7",
+              "date": "2026-09-07T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/ecbd1c75b67267718d2f571ffc85d0f3484da036",
+              "additions": 38,
+              "deletions": 0,
+              "files": 2
+            },
+            {
+              "id": "m_priyashah-commits-3",
+              "kind": "commit",
+              "title": "Change 26",
+              "ref": "b4b0a96",
+              "date": "2026-09-06T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/b4b0a96c4238b4f2638bb64d78f79343cf781fdb",
+              "additions": 38,
+              "deletions": 0,
+              "files": 2
+            },
+            {
+              "id": "m_priyashah-commits-4",
+              "kind": "commit",
+              "title": "Change 25",
+              "ref": "4f2e99c",
+              "date": "2026-09-05T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/4f2e99c1ac0364e73e62c766130ffc65a8907653",
+              "additions": 38,
+              "deletions": 0,
+              "files": 2
+            }
+          ],
+          "displayShare": 20
+        },
+        {
+          "criterionId": "code",
+          "status": "measured",
+          "share": 13.589901375008331,
+          "summary": "+56 / −0 lines across 7 files",
+          "evidenceTotal": 7,
+          "evidence": [
+            {
+              "id": "m_priyashah-code-0",
+              "kind": "commit",
+              "title": "Change 29",
+              "ref": "2fdcfac",
+              "date": "2026-09-09T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/2fdcfacf982f28dd2e467ba73263a0034ab1f373",
+              "additions": 8,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_priyashah-code-1",
+              "kind": "commit",
+              "title": "Change 28",
+              "ref": "b088b55",
+              "date": "2026-09-08T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/b088b559fa67c5f22d2db7f35a5d6193bbe66cae",
+              "additions": 8,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_priyashah-code-2",
+              "kind": "commit",
+              "title": "Change 27",
+              "ref": "ecbd1c7",
+              "date": "2026-09-07T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/ecbd1c75b67267718d2f571ffc85d0f3484da036",
+              "additions": 8,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_priyashah-code-3",
+              "kind": "commit",
+              "title": "Change 26",
+              "ref": "b4b0a96",
+              "date": "2026-09-06T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/b4b0a96c4238b4f2638bb64d78f79343cf781fdb",
+              "additions": 8,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_priyashah-code-4",
+              "kind": "commit",
+              "title": "Change 25",
+              "ref": "4f2e99c",
+              "date": "2026-09-05T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/4f2e99c1ac0364e73e62c766130ffc65a8907653",
+              "additions": 8,
+              "deletions": 0,
+              "files": 1
+            }
+          ],
+          "displayShare": 13
+        },
+        {
+          "criterionId": "collaboration",
+          "status": "measured",
+          "share": 30.76923076923077,
+          "summary": "1 pull request · 2 reviews · 1 merged",
+          "evidenceTotal": 3,
+          "evidence": [
+            {
+              "id": "m_priyashah-collaboration-0",
+              "kind": "pull_request",
+              "title": "Pull request 3",
+              "ref": "#3",
+              "date": "2026-09-08T10:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/3"
+            },
+            {
+              "id": "m_priyashah-collaboration-1",
+              "kind": "review",
+              "title": "Review on #2: Pull request 2",
+              "ref": "#2",
+              "date": "2026-09-05T12:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/2"
+            },
+            {
+              "id": "m_priyashah-collaboration-2",
+              "kind": "review",
+              "title": "Review on #1: Pull request 1",
+              "ref": "#1",
+              "date": "2026-09-02T13:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/1"
+            }
+          ],
+          "displayShare": 31
+        },
+        {
+          "criterionId": "tests",
+          "status": "measured",
+          "share": 64.67987336712335,
+          "summary": "7 test files created or changed",
+          "evidenceTotal": 7,
+          "evidence": [
+            {
+              "id": "m_priyashah-tests-0",
+              "kind": "test",
+              "title": "Change 29",
+              "ref": "2fdcfac",
+              "date": "2026-09-09T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/2fdcfacf982f28dd2e467ba73263a0034ab1f373",
+              "additions": 30,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_priyashah-tests-1",
+              "kind": "test",
+              "title": "Change 28",
+              "ref": "b088b55",
+              "date": "2026-09-08T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/b088b559fa67c5f22d2db7f35a5d6193bbe66cae",
+              "additions": 30,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_priyashah-tests-2",
+              "kind": "test",
+              "title": "Change 27",
+              "ref": "ecbd1c7",
+              "date": "2026-09-07T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/ecbd1c75b67267718d2f571ffc85d0f3484da036",
+              "additions": 30,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_priyashah-tests-3",
+              "kind": "test",
+              "title": "Change 26",
+              "ref": "b4b0a96",
+              "date": "2026-09-06T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/b4b0a96c4238b4f2638bb64d78f79343cf781fdb",
+              "additions": 30,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_priyashah-tests-4",
+              "kind": "test",
+              "title": "Change 25",
+              "ref": "4f2e99c",
+              "date": "2026-09-05T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/4f2e99c1ac0364e73e62c766130ffc65a8907653",
+              "additions": 30,
+              "deletions": 0,
+              "files": 1
+            }
+          ],
+          "displayShare": 65
+        }
+      ],
+      "displayShare": 27
+    },
+    {
+      "memberId": "m_arivera",
+      "share": 10.081818390146115,
+      "missing": [],
+      "usedWeight": 100,
+      "criteria": [
+        {
+          "criterionId": "commits",
+          "status": "measured",
+          "share": 13.165266106442578,
+          "summary": "3 meaningful of 5 commits",
+          "evidenceTotal": 3,
+          "evidence": [
+            {
+              "id": "m_arivera-commits-0",
+              "kind": "commit",
+              "title": "Change 34",
+              "ref": "c38660e",
+              "date": "2026-09-09T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/c38660e0f59533fccf3aac0d4902d01305a41df8",
+              "additions": 12,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_arivera-commits-1",
+              "kind": "commit",
+              "title": "Change 33",
+              "ref": "5c87bb3",
+              "date": "2026-09-08T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/5c87bb30988aeddde73acc547013b15109404be5",
+              "additions": 11,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_arivera-commits-2",
+              "kind": "commit",
+              "title": "Change 32",
+              "ref": "328c254",
+              "date": "2026-09-07T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/328c2541463004005816bbf909f1854a4195cf63",
+              "additions": 10,
+              "deletions": 0,
+              "files": 1
+            }
+          ],
+          "displayShare": 13
+        },
+        {
+          "criterionId": "code",
+          "status": "measured",
+          "share": 10.825410578659854,
+          "summary": "+50 / −0 lines across 5 files",
+          "evidenceTotal": 5,
+          "evidence": [
+            {
+              "id": "m_arivera-code-0",
+              "kind": "commit",
+              "title": "Change 34",
+              "ref": "c38660e",
+              "date": "2026-09-09T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/c38660e0f59533fccf3aac0d4902d01305a41df8",
+              "additions": 12,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_arivera-code-1",
+              "kind": "commit",
+              "title": "Change 33",
+              "ref": "5c87bb3",
+              "date": "2026-09-08T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/5c87bb30988aeddde73acc547013b15109404be5",
+              "additions": 11,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_arivera-code-2",
+              "kind": "commit",
+              "title": "Change 32",
+              "ref": "328c254",
+              "date": "2026-09-07T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/328c2541463004005816bbf909f1854a4195cf63",
+              "additions": 10,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_arivera-code-3",
+              "kind": "commit",
+              "title": "Change 31",
+              "ref": "f3eb639",
+              "date": "2026-09-06T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/f3eb639a0033548a1075e49851a1f2e6048af193",
+              "additions": 9,
+              "deletions": 0,
+              "files": 1
+            },
+            {
+              "id": "m_arivera-code-4",
+              "kind": "commit",
+              "title": "Change 30",
+              "ref": "1282d06",
+              "date": "2026-09-05T12:00:00.000Z",
+              "url": "https://github.com/team/campus-connect/commit/1282d069d35299150836c2174c6b932bd23b41bf",
+              "additions": 8,
+              "deletions": 0,
+              "files": 1
+            }
+          ],
+          "displayShare": 11
+        },
+        {
+          "criterionId": "collaboration",
+          "status": "measured",
+          "share": 11.538461538461538,
+          "summary": "1 pull request · 1 review · 0 merged",
+          "evidenceTotal": 2,
+          "evidence": [
+            {
+              "id": "m_arivera-collaboration-0",
+              "kind": "pull_request",
+              "title": "Pull request 5",
+              "ref": "#5",
+              "date": "2026-09-09T10:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/5"
+            },
+            {
+              "id": "m_arivera-collaboration-1",
+              "kind": "review",
+              "title": "Review on #2: Pull request 2",
+              "ref": "#2",
+              "date": "2026-09-06T08:00:00Z",
+              "url": "https://github.com/team/campus-connect/pull/2"
+            }
+          ],
+          "displayShare": 11
+        },
+        {
+          "criterionId": "tests",
+          "status": "measured",
+          "share": 0,
+          "summary": "0 test files created or changed",
+          "evidenceTotal": 0,
+          "evidence": [],
+          "displayShare": 0
+        }
+      ],
+      "displayShare": 10
+    }
+  ],
+  "exclusions": [
+    {
+      "id": "x_generated",
+      "reason": "generated",
+      "title": "Generated files",
+      "unit": "files",
+      "count": 1,
+      "detail": "920 changed lines in lockfiles and build output were left out of code contribution.",
+      "examples": ["package-lock.json"]
+    },
+    {
+      "id": "x_revert",
+      "reason": "revert",
+      "title": "Reverted changes",
+      "detail": "A revert is not new work, and a commit that was really undone cancels out, so neither is counted.",
+      "count": 2,
+      "unit": "commits",
+      "examples": ["Add map clustering", "Revert \"Add map clustering\""]
+    },
+    {
+      "id": "x_bot",
+      "reason": "bot",
+      "title": "Bot commits",
+      "detail": "Commits made by automation, such as dependency updates, are not attributed to a student.",
+      "count": 2,
+      "unit": "commits",
+      "examples": ["Change 37", "Change 38"]
+    },
+    {
+      "id": "x_duplicate",
+      "reason": "duplicate",
+      "title": "Duplicate changes",
+      "detail": "The same change appeared in more than one commit (for example a cherry-pick), so it was counted once.",
+      "count": 1,
+      "unit": "commits",
+      "examples": ["Cherry-pick tests"]
+    },
+    {
+      "id": "x_merge",
+      "reason": "merge",
+      "title": "Merge commits",
+      "detail": "A merge only combines commits that are already counted, so the merge itself is not.",
+      "count": 1,
+      "unit": "commits",
+      "examples": ["Merge branch develop"]
+    }
+  ],
+  "notices": [
+    {
+      "id": "n_note_0",
+      "level": "warning",
+      "title": "Some review comments couldn’t be loaded",
+      "detail": "GitHub rate-limited 3 requests, so a few review comments are missing."
+    }
+  ],
+  "engine": {
+    "scoringVersion": "1.0",
+    "params": {
+      "meaningfulLines": 10,
+      "dailyCommitCap": 5,
+      "mergedPullRequest": 2,
+      "otherPullRequest": 0.5,
+      "reviewedPullRequest": 1,
+      "evidenceLimit": 5
+    },
+    "hashes": {
+      "snapshot": "c045f8f5eebfb0d970965c9792215e909d642607bb8bc9c32512e70d8bac64b1",
+      "config": "8b6e26ccf470527bfe3fff7435817fbbdaffafc6a128bea751608a5df911e940"
+    }
+  }
+}
