@@ -346,3 +346,110 @@
     display: none !important;
   }
 }
+
+/* ── Library pages (Projects · Evaluations · Reports) ───────── */
+@media (min-width: 48rem) {
+  .lib-toolbar-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .lib-toolbar-row > .lib-search:not(:first-child) {
+    margin-left: auto;
+  }
+  .lib-toolbar-row > .lib-search + .lib-sort {
+    margin-left: 0;
+  }
+}
+@container (min-width: 40rem) {
+  .tl-meta {
+    margin-left: auto;
+  }
+}
+@container (min-width: 52rem) {
+  .rep-head,
+  .rep-row {
+    grid-template-columns: minmax(0, 1fr) 11rem 10rem auto 2.5rem;
+    grid-template-areas: "doc snap commits actions pin";
+    align-items: center;
+  }
+  .rep-head {
+    display: grid;
+    gap: 1rem;
+    padding: 0.625rem 0.75rem 0.625rem 1rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--sunken);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--ink-3);
+  }
+  .rep-row {
+    gap: 1rem;
+  }
+  .rep-row:first-child {
+    border-top: 0;
+  }
+  .rep-row .rep-actions {
+    margin-top: 0;
+  }
+}
+@media (hover: hover) {
+  .lib-card:hover {
+    border-color: var(--line-strong);
+    box-shadow: var(--sh-lift);
+  }
+  .lib-card:hover .lib-title,
+  .rep-row:hover .lib-title {
+    color: var(--accent-text);
+  }
+  .chip:hover {
+    border-color: var(--line-strong);
+    color: var(--ink);
+  }
+  .chip[aria-pressed="true"]:hover {
+    color: var(--accent-text);
+  }
+  .pin-btn:hover {
+    background: var(--sunken);
+    color: var(--ink);
+  }
+  .pin-btn[aria-pressed="true"]:hover {
+    background: var(--accent-soft);
+    color: var(--accent-text);
+  }
+  .rep-row:hover {
+    background: var(--sunken);
+  }
+}
+@media (pointer: coarse) {
+  .pin-btn {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .chip {
+    height: 2.75rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pin-btn,
+  .pin-btn svg,
+  .chip,
+  .lib-card,
+  .lib-title,
+  .rep-row {
+    transition: none;
+  }
+  .pin-btn:active,
+  .chip:active {
+    transform: none;
+  }
+}
+@media (prefers-contrast: more) {
+  .lib-card,
+  .doc-tile,
+  .rep-list,
+  .chip {
+    border-color: var(--line-strong);
+  }
+}

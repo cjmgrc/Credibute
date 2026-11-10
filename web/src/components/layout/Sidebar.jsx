@@ -43,7 +43,8 @@ const Sidebar = () => {
       </p>
       <nav
         aria-label="Workspace"
-        className="u-display-flex-3 u-flex-direction-column u-gap-space-0-5">
+        className="u-display-flex-3 u-flex-direction-column u-gap-space-0-5"
+      >
         {WORKSPACE_NAV.map(({ to, label, icon: Icon, end }) => (
           <NavLink key={to} to={to} end={end} className={item}>
             <Icon size={18} aria-hidden="true" />
@@ -57,7 +58,8 @@ const Sidebar = () => {
         </p>
         <nav
           aria-label="Account"
-          className="u-display-flex-3 u-flex-direction-column u-gap-space-0-5">
+          className="u-display-flex-3 u-flex-direction-column u-gap-space-0-5"
+        >
           <NavLink to="/app/help" className={item}>
             <HelpCircle size={18} aria-hidden="true" />
             Help &amp; docs

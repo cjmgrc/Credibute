@@ -43,3 +43,13 @@ The **evidence sheet** (`features/results/EvidenceSheet.jsx`): every number open
 - "An estimate, not a grade" appears wherever shares appear (`DisclaimerBanner`).
 - Manual criteria are visible but never scored.
 - Displayed percentages always total exactly 100 (largest-remainder rounding).
+
+## Library pages and pins
+
+Projects, Evaluations and Reports share one toolbar (search, filter chips, sort) and one pin pattern, but each has its own layout so they read as different tools:
+
+- **Project history:** a recency timeline (Today / This week / Last 30 days / Earlier). The rail dot carries status.
+- **Evaluations:** result cards with an estimated-split bar. The bar uses a single accent hue stepped by rank, never red/amber, and the legend repeats every number so colour is never the only signal.
+- **Reports:** a document library. Pinned reports sit on a shelf as paper tiles; the rest are a table-like list that collapses to stacked rows in narrow containers.
+
+Pins (`context/PinContext.jsx`, `components/ui/PinButton.jsx`) are kept per page (`project`, `evaluation`, `report`) in `localStorage` under `credibute.pins`. The button is always visible, exposes `aria-pressed` with a constant label, and has a 44px target on coarse pointers. Cards use a stretched title link so the pin button is never nested inside a link.

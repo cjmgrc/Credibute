@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 import Dialog, { ModalBody } from "@/components/ui/Dialog";
 import { TextField } from "@/components/ui/Input";
 import PageHeader from "@/components/ui/PageHeader";
-import ProjectList from "@/features/dashboard/ProjectList";
+import ProjectHistory from "@/features/library/ProjectHistory";
 import { useDraft } from "@/context/DraftContext";
 import { firstError, repoUrlSchema } from "@/domain/validation";
 import { usePageTitle } from "@/hooks/usePageTitle";
@@ -56,6 +56,7 @@ const ProjectsPage = () => {
   return (
     <>
       <PageHeader
+        kicker="History"
         title="Project history"
         description="Review, compare, and reopen past evaluations."
         actions={
@@ -64,7 +65,7 @@ const ProjectsPage = () => {
           </Button>
         }
       />
-      <ProjectList showRubric onNewProject={openDialog} />
+      <ProjectHistory onNewProject={openDialog} />
       <Dialog open={open} onClose={closeDialog} label="Add a project">
         <ModalBody
           title="Add a project"

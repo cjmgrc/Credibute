@@ -1,0 +1,607 @@
+/* Library pages: Project history · Evaluations · Reports.
+   Shared pieces (toolbar, chips, section heads, pin button) first, then one
+   distinct layout per page. Tokens only. Media/container/hover rules live in responsive.css. */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.lib-mono {
+  font-family: var(--default-mono-font-family);
+  letter-spacing: 0.01em;
+}
+.lib-text {
+  min-width: 0;
+  flex: 1;
+}
+.lib-title {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  transition: color 0.15s var(--ease-out-strong);
+}
+.lib-sub {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+/* Whole card is the click target; the pin button sits above it. */
+.stretch {
+  outline: none;
+}
+.stretch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.lib-card {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--surface);
+  transition:
+    border-color 0.2s var(--ease-out-strong),
+    box-shadow 0.2s var(--ease-out-strong);
+}
+.lib-card:has(.stretch:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Toolbar ─────────────────────────────────────────────── */
+.lib-toolbar {
+  margin-bottom: 1.5rem;
+}
+.lib-toolbar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.lib-search {
+  position: relative;
+  flex: 1 1 14rem;
+  max-width: 22rem;
+}
+.lib-search svg {
+  position: absolute;
+  top: 50%;
+  left: 0.875rem;
+  translate: 0 -50%;
+  color: var(--ink-3);
+  pointer-events: none;
+}
+.lib-search input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 0.875rem 0 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.875rem;
+  transition:
+    border-color 0.15s var(--ease-out-strong),
+    box-shadow 0.15s var(--ease-out-strong);
+}
+.lib-search input::placeholder {
+  color: var(--ink-3);
+}
+.lib-search input:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+.lib-sort {
+  min-width: 11rem;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.25rem;
+  padding: 0 0.875rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-2);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.15s var(--ease-out-strong),
+    border-color 0.15s var(--ease-out-strong),
+    color 0.15s var(--ease-out-strong),
+    transform 0.15s var(--ease-out-strong);
+}
+.chip:active {
+  transform: scale(0.97);
+}
+.chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.chip-count {
+  min-width: 1.25rem;
+  padding: 0.0625rem 0.4rem;
+  border-radius: 999px;
+  background: var(--sunken);
+  color: var(--ink-3);
+  font-size: 0.6875rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+.chip[aria-pressed="true"] {
+  border-color: transparent;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+.chip[aria-pressed="true"] .chip-count {
+  background: var(--surface);
+  color: var(--accent-text);
+}
+
+/* ── Section heads ───────────────────────────────────────── */
+.lib-section + .lib-section {
+  margin-top: 2.25rem;
+}
+.lib-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.875rem;
+}
+.lib-head h2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--ink-2);
+}
+.lib-section[data-tone="pinned"] .lib-head h2 {
+  color: var(--accent-text);
+}
+.lib-section[data-tone="pinned"] .lib-head svg {
+  fill: currentColor;
+}
+.lib-count {
+  padding: 0.0625rem 0.45rem;
+  border-radius: 999px;
+  background: var(--sunken);
+  color: var(--ink-3);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Pin button ──────────────────────────────────────────── */
+.pin-btn {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-control);
+  color: var(--ink-3);
+  cursor: pointer;
+  transition:
+    background-color 0.15s var(--ease-out-strong),
+    color 0.15s var(--ease-out-strong),
+    transform 0.15s var(--ease-out-strong);
+}
+.pin-btn svg {
+  transition: fill 0.2s var(--ease-out-strong);
+}
+.pin-btn[aria-pressed="true"] {
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+.pin-btn[aria-pressed="true"] svg {
+  fill: currentColor;
+}
+.pin-btn:active {
+  transform: scale(0.92);
+}
+.pin-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Loading ─────────────────────────────────────────────── */
+.lib-skeletons {
+  display: grid;
+  gap: 0.75rem;
+}
+.sk-row {
+  height: 4.5rem;
+  border-radius: 1rem;
+}
+.sk-card {
+  height: 15rem;
+  border-radius: 1rem;
+}
+
+/* ═══ Projects: recency timeline ═══════════════════════════ */
+.tl {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.tl-label {
+  margin: 0 0 0.625rem 1.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+.tl-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding-left: 1.75rem;
+  container-type: inline-size;
+}
+.tl-list::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: calc(0.5rem - 1px);
+  width: 2px;
+  border-radius: 2px;
+  background: var(--line);
+}
+.tl-item {
+  position: relative;
+}
+.tl-dot {
+  position: absolute;
+  top: 1.5rem;
+  left: -1.75rem;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid var(--canvas);
+  border-radius: 50%;
+  background: var(--ink-3);
+}
+.tl-item[data-status="complete"] .tl-dot {
+  background: var(--ok);
+}
+.tl-item[data-status="needs_review"] .tl-dot {
+  background: var(--warn);
+}
+.tl-item[data-status="in_progress"] .tl-dot {
+  background: var(--accent);
+}
+.tl-card {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 0.5rem 0.75rem 1rem;
+}
+.tl-body {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.625rem 1rem;
+  min-width: 0;
+}
+.tl-id {
+  display: flex;
+  flex: 1 1 12rem;
+  align-items: center;
+  gap: 0.875rem;
+  min-width: 0;
+}
+.tl-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem 0.875rem;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+.tl-fact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.tl-rubric {
+  max-width: 10rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Pinned projects: compact tinted cards */
+.pin-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.pin-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.875rem 0.75rem 1rem 1rem;
+  background: linear-gradient(180deg, var(--accent-soft), var(--surface) 75%);
+}
+.pin-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.pin-card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-right: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+
+/* ═══ Evaluations: result cards ════════════════════════════ */
+.eval-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+}
+.eval-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  padding: 1.125rem 0.875rem 1rem 1.125rem;
+  overflow: hidden;
+}
+.eval-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--line-strong);
+}
+.eval-card[data-status="complete"]::before {
+  background: var(--ok);
+}
+.eval-card[data-status="needs_review"]::before {
+  background: var(--warn);
+}
+.eval-card[data-pinned] {
+  background: linear-gradient(180deg, var(--accent-soft), var(--surface) 55%);
+}
+.eval-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.eval-top .lib-text {
+  padding-top: 0.25rem;
+}
+.eval-split-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding-right: 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
+}
+.split-bar {
+  display: flex;
+  gap: 2px;
+  height: 0.625rem;
+  margin-right: 0.25rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--sunken);
+}
+.split-seg {
+  min-width: 3px;
+}
+.split-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.375rem 1rem;
+  margin-top: 0.75rem;
+  padding-right: 0.25rem;
+  font-size: 0.75rem;
+}
+.split-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+}
+.split-dot {
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+}
+.split-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink-2);
+}
+.split-pct {
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.eval-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.875rem;
+  margin: auto 0.25rem 0 0;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+.eval-rubric {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.eval-foot time {
+  margin-left: auto;
+}
+
+/* ═══ Reports: document library ════════════════════════════ */
+.doc-icon {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: var(--sunken);
+  color: var(--ink-2);
+}
+.doc-shelf {
+  display: grid;
+  gap: 0.875rem;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+}
+.doc-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem 1rem 1rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem 0.5rem 1rem 1rem;
+  background: var(--surface);
+  box-shadow: var(--sh-lift);
+}
+/* Folded corner */
+.doc-tile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  background: linear-gradient(225deg, var(--canvas) 50%, var(--line-strong) 50%);
+  pointer-events: none;
+}
+.doc-tile-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.doc-lines {
+  display: grid;
+  gap: 0.375rem;
+  padding: 0.25rem 0;
+}
+.doc-lines span {
+  display: block;
+  height: 0.375rem;
+  border-radius: 999px;
+  background: var(--sunken);
+}
+.doc-date {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+.rep-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.rep-list {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--surface);
+  container-type: inline-size;
+}
+.rep-head {
+  display: none;
+}
+.rep-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "doc pin"
+    "snap snap"
+    "commits commits"
+    "actions actions";
+  gap: 0.5rem 1rem;
+  padding: 0.875rem 0.75rem 0.875rem 1rem;
+  border-top: 1px solid var(--line);
+  transition: background-color 0.15s var(--ease-out-strong);
+}
+.rep-row:first-child {
+  border-top: 0;
+}
+.rep-doc {
+  grid-area: doc;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  min-width: 0;
+}
+.rep-flag {
+  margin-left: 0.5rem;
+}
+.rep-snap,
+.rep-commits {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--ink-3);
+}
+.rep-snap {
+  grid-area: snap;
+}
+.rep-commits {
+  grid-area: commits;
+}
+.rep-row .rep-actions {
+  grid-area: actions;
+  margin-top: 0.25rem;
+}
+.rep-pin {
+  grid-area: pin;
+}

@@ -25,22 +25,19 @@ const Footer = () =>
         children: [
           _jsx(Link, {
             to: "/privacy",
-            className:
-              "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
+            className: "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
             children: "Privacy",
           }),
           _jsx(Link, {
             to: "/methodology",
-            className:
-              "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
+            className: "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
             children: "Methodology",
           }),
           _jsx("a", {
             href: REPO_URL,
             target: "_blank",
             rel: "noreferrer noopener",
-            className:
-              "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
+            className: "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
             children: "GitHub",
           }),
           _jsxs("span", {
