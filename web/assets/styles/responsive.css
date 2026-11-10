@@ -348,19 +348,6 @@
 }
 
 /* ── Library pages (Projects · Evaluations · Reports) ───────── */
-@media (min-width: 48rem) {
-  .lib-toolbar-row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .lib-toolbar-row > .lib-search:not(:first-child) {
-    margin-left: auto;
-  }
-  .lib-toolbar-row > .lib-search + .lib-sort {
-    margin-left: 0;
-  }
-}
 @container (min-width: 40rem) {
   .tl-meta {
     margin-left: auto;

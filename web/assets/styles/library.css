@@ -108,6 +108,20 @@
   min-width: 11rem;
 }
 
+@media (min-width: 48rem) {
+  .lib-toolbar-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .lib-toolbar-row > .lib-search:not(:first-child) {
+    margin-left: auto;
+  }
+  .lib-toolbar-row > .lib-search + .lib-sort {
+    margin-left: 0;
+  }
+}
+
 .chip-group {
   display: flex;
   flex-wrap: wrap;
