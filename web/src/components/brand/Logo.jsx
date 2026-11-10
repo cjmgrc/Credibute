@@ -42,16 +42,14 @@ export const LogoMark = ({ size = 32, className }) => {
       height={size}
       viewBox="230 245 790 790"
       aria-hidden
-      className={cn("u-color-var-accent", className)}
-    >
+      className={cn("u-color-var-accent", className)}>
       <defs>
         <radialGradient
           id={i("bodyG")}
           cx={650}
           cy={690}
           r={340}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#13123b" />
           <stop offset="0.55" stopColor="#201e66" />
           <stop offset="1" stopColor="#3b38ad" />
@@ -62,8 +60,7 @@ export const LogoMark = ({ size = 32, className }) => {
           y1={330}
           x2={0}
           y2={620}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#4a47c8" stopOpacity={0.55} />
           <stop offset="1" stopColor="#4a47c8" stopOpacity={0} />
         </linearGradient>
@@ -73,8 +70,7 @@ export const LogoMark = ({ size = 32, className }) => {
           y1={0}
           x2={880}
           y2={0}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#8886ff" />
           <stop offset="0.5" stopColor="#5a57e6" />
           <stop offset="1" stopColor="#3a37b4" />
@@ -85,8 +81,7 @@ export const LogoMark = ({ size = 32, className }) => {
           y1={780}
           x2={0}
           y2={925}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#0c0b2c" stopOpacity={0} />
           <stop offset="1" stopColor="#0c0b2c" stopOpacity={0.6} />
         </linearGradient>
@@ -108,8 +103,7 @@ export const LogoMark = ({ size = 32, className }) => {
           y1={510}
           x2={420}
           y2={880}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#3f3caa" />
           <stop offset="0.5" stopColor="#25236f" />
           <stop offset="1" stopColor="#16144a" />
@@ -122,8 +116,7 @@ export const LogoMark = ({ size = 32, className }) => {
           cx={500}
           cy={436}
           r={52}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#5a58d6" />
           <stop offset="1" stopColor="#3f3cb0" />
         </radialGradient>
@@ -132,8 +125,7 @@ export const LogoMark = ({ size = 32, className }) => {
           cx={786}
           cy={388}
           r={36}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#6360e6" />
           <stop offset="1" stopColor="#3a37b4" />
         </radialGradient>
@@ -155,8 +147,7 @@ export const LogoMark = ({ size = 32, className }) => {
           y1={690}
           x2={0}
           y2={790}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#7573fb" />
           <stop offset="1" stopColor="#4a47c4" />
         </linearGradient>
@@ -166,8 +157,7 @@ export const LogoMark = ({ size = 32, className }) => {
           y1={688}
           x2={0}
           y2={782}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#4b48c2" />
           <stop offset="1" stopColor="#201e68" />
         </linearGradient>
@@ -177,8 +167,7 @@ export const LogoMark = ({ size = 32, className }) => {
           y1={620}
           x2={565}
           y2={905}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#7fd2fc" />
           <stop offset="0.5" stopColor="#78a8fe" />
           <stop offset="1" stopColor="#8a7efb" />
@@ -188,8 +177,7 @@ export const LogoMark = ({ size = 32, className }) => {
           cx={935}
           cy={600}
           r={75}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#92e6fb" />
           <stop offset="1" stopColor="#78c3fb" />
         </radialGradient>
@@ -198,8 +186,7 @@ export const LogoMark = ({ size = 32, className }) => {
           cx={755}
           cy={855}
           r={80}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#85a4fc" />
           <stop offset="1" stopColor="#7a6ff2" />
         </radialGradient>
@@ -208,8 +195,7 @@ export const LogoMark = ({ size = 32, className }) => {
           cx={553}
           cy={880}
           r={80}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#a38efb" />
           <stop offset="1" stopColor="#8a72f2" />
         </radialGradient>
@@ -224,8 +210,7 @@ export const LogoMark = ({ size = 32, className }) => {
             stroke="#5a56d2"
             strokeOpacity={0.4}
             strokeWidth={11}
-            strokeLinecap="round"
-          >
+            strokeLinecap="round">
             {GRID_LINES.map((l, n) => (
               <line key={n} {...l} />
             ))}
@@ -337,8 +322,7 @@ export const LogoMark = ({ size = 32, className }) => {
         stroke={u("linkG")}
         strokeWidth={27}
         strokeLinecap="round"
-        fill="none"
-      >
+        fill="none">
         <line x1={955} y1={626} x2={846} y2={727} />
         <line x1={690} y1={745} x2={782} y2={741} />
         <line x1={690} y1={752} x2={775} y2={877} />
@@ -417,8 +401,7 @@ const Logo = ({ to = "/", light, className }) => (
       "u-display-inline-flex u-align-items-center-2 u-gap-space-2 u-border-radius-var-radius-lg u-transition-property-transform-translate-scale-rotate-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-ui-ease-cubic-bezier-0-23-1-0-32-1-transition-timing-function-cubic-bezier-0-23-1-0-32-1 u-scale-0-97",
       light ? "u-color-var-color-white" : "u-color-var-ink",
       className,
-    )}
-  >
+    )}>
     <LogoMark />
     <span className="u-text-1-0625rem u-ui-weight-var-font-weight-bold-weight-var-font-weight-bold u-ui-tracking-0-03em-letter-spacing-0-03em">
       {BRAND}
