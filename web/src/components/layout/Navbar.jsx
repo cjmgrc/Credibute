@@ -1,74 +1,125 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { NavLink } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { ArrowRight, ExternalLink, Menu, X } from "lucide-react";
 import Logo from "@/components/brand/Logo";
 import Button from "@/components/ui/Button";
 import ThemeToggle from "./ThemeToggle";
 import { useScrolled } from "@/hooks/useScrolled";
 import { useAuth } from "@/context/AuthContext";
 import { REPO_URL } from "@/domain/rubric";
-import { cn } from "@/lib/cn";
-const link =
-  "u-border-radius-var-radius-lg u-padding-inline-space-3 u-padding-block-space-2 u-letter-spacing-0-text-0-8125rem u-ui-weight-var-font-weight-medium-weight-var-font-weight-medium u-color-var-ink-2 u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-15s-transition-duration-0-15s u-color-var-ink-2";
+
 /** Translucent chrome: content scrolls under it; the hairline only appears once there's something beneath. */
 const Navbar = () => {
   const scrolled = useScrolled();
   const { user } = useAuth();
-  return _jsx("header", {
-    className: cn(
-      "u-background-var-material-webkit-backdrop-filter-blur-20px-saturate-180pct u-position-sticky u-top-0 u-z-index-40 u-border-bottom-style-var-ui-border-style-border-bottom-width-1px-2 u-transition-property-border-color-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-ui-duration-0-2s-transition-duration-0-2s",
-      scrolled ? "u-border-color-var-line" : "u-border-color-0000",
-    ),
-    children: _jsxs("div", {
-      className:
-        "u-margin-inline-auto u-display-flex-3 u-height-space-16 u-max-width-var-container-6xl u-align-items-center-2 u-justify-content-space-between u-gap-space-4 u-padding-inline-space-5 u-padding-inline-space-8",
-      children: [
-        _jsx(Logo, {}),
-        _jsxs("nav", {
-          "aria-label": "Primary",
-          className:
-            "u-display-none-3 u-align-items-center-2 u-gap-space u-display-flex",
-          children: [
-            _jsx(NavLink, {
-              to: "/#how-it-works",
-              className: link,
-              children: "How it works",
-            }),
-            _jsx(NavLink, {
-              to: "/methodology",
-              className: ({ isActive }) =>
-                cn(link, isActive && "u-color-var-ink"),
-              children: "Methodology",
-            }),
-            _jsx("a", {
-              href: REPO_URL,
-              target: "_blank",
-              rel: "noreferrer noopener",
-              className: link,
-              children: "Open source",
-            }),
-          ],
-        }),
-        _jsxs("div", {
-          className: "u-display-flex-3 u-align-items-center-2 u-gap-space-2",
-          children: [
-            _jsx(ThemeToggle, {}),
-            !user &&
-              _jsx(Button, {
-                to: "/signin",
-                variant: "ghost",
-                className: "u-display-none-3 u-display-inline-flex-2",
-                children: "Sign in",
-              }),
-            _jsx(Button, {
-              to: user ? "/app" : "/signup",
-              trailing: _jsx(ArrowRight, { size: 16 }),
-              children: user ? "Open app" : "Start an evaluation",
-            }),
-          ],
-        }),
-      ],
-    }),
-  });
+  const { pathname, hash } = useLocation();
+  const [open, setOpen] = useState(false);
+  const headerRef = useRef(null);
+  const menuBtnRef = useRef(null);
+
+  // Any navigation closes the menu.
+  useEffect(() => setOpen(false), [pathname, hash]);
+
+  // Escape closes it (and returns focus to the button); so does tapping outside.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => {
+      if (e.key !== "Escape") return;
+      setOpen(false);
+      menuBtnRef.current?.focus();
+    };
+    const onPointer = (e) => {
+      if (!headerRef.current?.contains(e.target)) setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("pointerdown", onPointer);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("pointerdown", onPointer);
+    };
+  }, [open]);
+
+  return (
+    <header ref={headerRef} className="lp-nav" data-scrolled={scrolled}>
+      <div className="lp-nav-bar">
+        <Logo />
+        <nav aria-label="Primary" className="lp-nav-links">
+          <Link to="/#how-it-works" className="lp-nav-link">
+            How it works
+          </Link>
+          <NavLink to="/methodology" className="lp-nav-link">
+            Methodology
+          </NavLink>
+          <NavLink to="/sample" className="lp-nav-link">
+            Sample report
+          </NavLink>
+          <a
+            href={REPO_URL}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="lp-nav-link"
+          >
+            Open source
+          </a>
+        </nav>
+        <div className="lp-nav-actions">
+          <ThemeToggle />
+          {!user && (
+            <Button
+              to="/signin"
+              variant="ghost"
+              className="lp-nav-signin"
+              size="md"
+            >
+              Sign in
+            </Button>
+          )}
+          <Button
+            to={user ? "/app" : "/signup"}
+            trailing={<ArrowRight size={16} className="lp-wide" aria-hidden="true" />}
+          >
+            <span className="lp-wide">{user ? "Open app" : "Start an evaluation"}</span>
+            <span className="lp-narrow">{user ? "Open app" : "Start"}</span>
+          </Button>
+          <button
+            ref={menuBtnRef}
+            type="button"
+            className="lp-menu-btn"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />}
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-nav" aria-label="Menu" className="lp-mobile-nav" hidden={!open}>
+        <Link to="/#how-it-works" className="lp-mobile-link">
+          How it works
+        </Link>
+        <Link to="/methodology" className="lp-mobile-link">
+          Methodology
+        </Link>
+        <Link to="/sample" className="lp-mobile-link">
+          Sample report
+        </Link>
+        <a
+          href={REPO_URL}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="lp-mobile-link"
+        >
+          Open source <ExternalLink size={16} aria-hidden="true" />
+        </a>
+        {!user && (
+          <Link to="/signin" className="lp-mobile-link lp-mobile-signin">
+            Sign in
+          </Link>
+        )}
+      </nav>
+    </header>
+  );
 };
+
 export default Navbar;

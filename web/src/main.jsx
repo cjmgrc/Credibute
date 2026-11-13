@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import "@fontsource-variable/manrope";
 import "../assets/styles/variables.css";
 import "../assets/styles/main.css";
+import "../assets/styles/landing.css";
 import "../assets/styles/responsive.css";
 import "../assets/styles/dialog.css";
 import "../assets/styles/components.css";

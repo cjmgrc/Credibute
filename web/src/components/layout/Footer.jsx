@@ -1,50 +1,75 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Link } from "react-router-dom";
 import Logo from "@/components/brand/Logo";
 import { BRAND, REPO_URL } from "@/domain/rubric";
-const Footer = () =>
-  _jsxs("footer", {
-    className:
-      "u-margin-inline-auto u-display-flex-3 u-max-width-var-container-6xl u-flex-direction-column u-align-items-flex-start-2 u-justify-content-space-between u-gap-space-4 u-padding-inline-space-5 u-padding-block-space-10 u-padding-inline-space-8 u-flex-direction-row u-align-items-center-3",
-    children: [
-      _jsxs("div", {
-        className:
-          "u-display-flex-3 u-flex-wrap-wrap u-align-items-center-2 u-column-gap-space-4 u-row-gap-space",
-        children: [
-          _jsx(Logo, {}),
-          _jsx("p", {
-            className: "u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
-            children: "Clearer evidence for collaborative work.",
-          }),
-        ],
-      }),
-      _jsxs("nav", {
-        "aria-label": "Footer",
-        className:
-          "u-display-flex-3 u-flex-wrap-wrap u-align-items-center-2 u-column-gap-space-5 u-row-gap-space u-letter-spacing-0-text-0-8125rem u-color-var-ink-3-2",
-        children: [
-          _jsx(Link, {
-            to: "/privacy",
-            className: "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
-            children: "Privacy",
-          }),
-          _jsx(Link, {
-            to: "/methodology",
-            className: "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
-            children: "Methodology",
-          }),
-          _jsx("a", {
-            href: REPO_URL,
-            target: "_blank",
-            rel: "noreferrer noopener",
-            className: "u-transition-property-color-background-color-border-color-outline-color-text-decoration-color-fill-stroke-ui-gradient-from-ui-gradient-via-ui-gradient-to-transition-timing-function-var-ui-ease-var-default-transition-timing-function u-color-var-ink-2",
-            children: "GitHub",
-          }),
-          _jsxs("span", {
-            children: ["\u00A9 ", new Date().getFullYear(), " ", BRAND],
-          }),
-        ],
-      }),
+
+const COLUMNS = [
+  {
+    title: "Product",
+    links: [
+      { to: "/#how-it-works", label: "How it works" },
+      { to: "/sample", label: "Sample report" },
+      { to: "/methodology", label: "Methodology" },
     ],
-  });
+  },
+  {
+    title: "Trust",
+    links: [
+      { to: "/privacy", label: "Privacy" },
+      { href: REPO_URL, label: "Source on GitHub" },
+    ],
+  },
+  {
+    title: "Account",
+    links: [
+      { to: "/signup", label: "Start an evaluation" },
+      { to: "/signin", label: "Sign in" },
+    ],
+  },
+];
+
+const Footer = () => (
+  <footer className="lp-footer">
+    <div className="lp-foot-grid">
+      <div className="lp-foot-brand">
+        <Logo />
+        <p>
+          Clearer evidence for collaborative work. Transparent, rule-based
+          contribution reports, with no AI and no hidden scores.
+        </p>
+      </div>
+      {COLUMNS.map((col) => (
+        <nav key={col.title} aria-label={col.title} className="lp-foot-col">
+          <p className="lp-foot-head">{col.title}</p>
+          <ul>
+            {col.links.map((l) => (
+              <li key={l.label}>
+                {l.to ? (
+                  <Link to={l.to} className="lp-foot-link">
+                    {l.label}
+                  </Link>
+                ) : (
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="lp-foot-link"
+                  >
+                    {l.label}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ))}
+    </div>
+    <div className="lp-foot-base">
+      <span>
+        © {new Date().getFullYear()} {BRAND}
+      </span>
+      <span>Open source · Rule-based · AI-free</span>
+    </div>
+  </footer>
+);
+
 export default Footer;
